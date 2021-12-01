@@ -1,6 +1,10 @@
 <template>
   <div class="home">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="hero-container">
+   <img src="http://" alt="">
+  <a href="https://"><p>Become a host</p></a>
+  </div>
+    <HelloWorld msg="temporary app body :)"/>
   </div>
 </template>
 

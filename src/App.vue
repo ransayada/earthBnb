@@ -1,11 +1,8 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/explore">Explore</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
+    <appHeader></appHeader>
     <router-view/>
+    <app-footer></app-footer>
   </div>
 </template>
 
@@ -31,3 +28,17 @@
   }
 }
 </style>
+
+<script>
+// @ is an alias to /src
+import appHeader from '@/cmps/app-header.vue'
+import appFooter from '@/cmps/app-footer.vue'
+
+export default {
+  name: 'app',
+  components: {
+    appHeader,
+    appFooter
+  }
+}
+</script>
