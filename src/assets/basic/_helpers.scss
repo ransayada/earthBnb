@@ -1,0 +1,36 @@
+.text-center {
+  text-align: center;
+}
+
+.gird {
+  display: grid;
+}
+// flex helpers
+.flex {
+  display: flex;
+
+  > *.full {
+    flex: 1;
+  }
+  &.column {
+    flex-direction: column;
+  }
+  &.justify-center {
+    justify-content: center;
+  }
+  &.align-center {
+    align-items: center;
+  }
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.clean-list {
+  text-decoration: none;
+  list-style-type: none;
+  color: inherit;
+  margin: 0;
+  padding: 0;
+}
