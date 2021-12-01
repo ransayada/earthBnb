@@ -1,76 +1,114 @@
+import { storageService } from './async-storage.service'
+// import { httpService } from './http.service'
+// import { socketService, SOCKET_EVENT_USER_UPDATED } from './socket.service'
 
-// USER FRONTEND SERVICE
-
-import Axios from 'axios';
-var axios = Axios.create({ withCredentials: true });
-// const axios = require('axios')
-const USER_URL = 'http://localhost:3030/api/user/'
-const AUTH_URL = 'http://localhost:3030/api/auth/'
-const STORAGE_KEY = 'loggedinUser'
+const STORAGE_KEY_LOGGEDIN_USER = 'loggedinUser'
+    // var gWatchedUser = null;
 
 export const userService = {
-  getLoggedinUsers,
-  getLoggedinUser,
-  login,
-  logout,
-  signup
+    login,
+    logout,
+    signup,
+    getLoggedinUser,
+    getUsers,
+    getById,
+    remove,
+    update,
 }
 
-async function getLoggedinUsers() {
-  try {
-    const res = await axios.get(USER_URL)
-    return res.data
-  } catch (err) {
-    console.log('Error in getLoggedinUsers (Front User Service):', err);
-    throw err;
-  }
+// Debug technique
+window.userService = userService
+
+
+function getUsers() {
+    return storageService.query('user')
+        // return httpService.get(`user`)
 }
 
-async function getLoggedinUser() {
-  try {
-    // const res = await axios.get(USER_URL + id)
-    // return res.data
-    return JSON.parse(sessionStorage.getItem(STORAGE_KEY))
-  } catch (err) {
-    console.log('Error in getLoggedinUser (Front User Service):', err);
-    throw err;
-  }
+async function getById(userId) {
+    const user = await storageService.get('user', userId)
+        // const user = await httpService.get(`user/${userId}`)
+        // gWatchedUser = user;
+    return user;
 }
 
-async function login(username, password) {
-  try {
-    const res = await axios.post(AUTH_URL + '/login', { username, password })
-    const user = res.data
-    sessionStorage.setItem(STORAGE_KEY, JSON.stringify(user))
-    console.log(`${user.username} just logged in`);
-    return user
-  } catch (err) {
-    console.log('Error in Login (Front User Service):', err);
-    throw err;
-  }
+function remove(userId) {
+    return storageService.remove('user', userId)
+        // return httpService.delete(`user/${userId}`)
 }
 
-async function signup(username, password, fullname) {
-  try {
-    const res = await axios.post(AUTH_URL + '/signup', { username, password, fullname })
-    const user = res.data
-    sessionStorage.setItem(STORAGE_KEY, JSON.stringify(user))
-    console.log(`${user.username} just signed up`);
-    return user
-  } catch (err) {
-    console.log('Error in Sign Up (Front User Service):', err);
-    throw err;
-  }
+async function update(user) {
+    await storageService.put('user', user)
+        // user = await httpService.put(`user/${user._id}`, user)
+        // Handle case in which admin updates other user's details
+    if (getLoggedinUser()._id === user._id) _saveLocalUser(user)
+    return user;
 }
 
+async function login(userCred) {
+    const users = await storageService.query('user')
+    const user = users.find(user => user.username === userCred.username)
+    return _saveLocalUser(user)
+        // console.log(userCred);
+        // const user = await httpService.post('auth/login', userCred)
+        // socketService.emit('set-user-socket', user._id);
+        // if (user) return _saveLocalUser(user)
+}
+async function signup(userCred) {
+    // userCred.score = 10000;
+    const user = await storageService.post('user', userCred)
+        // const user = await httpService.post('auth/signup', userCred)
+        // socketService.emit('set-user-socket', user._id);
+    return _saveLocalUser(user)
+}
 async function logout() {
-  try {
-    const res = await axios.post(AUTH_URL + '/logout')
-    sessionStorage.removeItem(STORAGE_KEY)
-    console.log(res.data.msg);
-    return res.data;
-  } catch (err) {
-    console.log('Error in Logout (Front User Service):', err);
-    throw err;
-  }
+    sessionStorage.removeItem(STORAGE_KEY_LOGGEDIN_USER)
+        // socketService.emit('unset-user-socket');
+        // return await httpService.post('auth/logout')
 }
+
+function _saveLocalUser(user) {
+    sessionStorage.setItem(STORAGE_KEY_LOGGEDIN_USER, JSON.stringify(user))
+    return user
+}
+
+function getLoggedinUser() {
+    return JSON.parse(sessionStorage.getItem(STORAGE_KEY_LOGGEDIN_USER) || 'null')
+}
+
+
+(async() => {
+    await userService.signup({ fullname: 'Admin admin', username: 'admin1', password: 'admin1', isAdmin: true, imgUrl: 'http://' })
+    await userService.signup({ fullname: 'Admin2 admin', username: 'admin2', password: 'admin2', isAdmin: false, imgUrl: 'http://' })
+    await userService.signup({ fullname: 'Admin3 admin', username: 'admin3', password: 'admin3', isAdmin: false, imgUrl: 'http://' })
+    await userService.signup({ fullname: 'Admin4 admin', username: 'admin4', password: 'admin4', isAdmin: false, imgUrl: 'http://' })
+
+})();
+
+
+
+// This IIFE functions for Dev purposes 
+// It allows testing of real time updates (such as sockets) by listening to storage events
+// (async () => {
+// var user = getLoggedinUser()
+// Dev Helper: Listens to when localStorage changes in OTHER browser
+
+// Here we are listening to changes for the watched user (comming from other browsers)
+//     window.addEventListener('storage', async () => {
+//         if (!gWatchedUser) return;
+//         const freshUsers = await storageService.query('user')
+//         const watchedUser = freshUsers.find(u => u._id === gWatchedUser._id)
+//         if (!watchedUser) return;
+//         if (gWatchedUser.score !== watchedUser.score) {
+//             console.log('Watched user score changed - localStorage updated from another browser')
+//             // socketService.emit(SOCKET_EVENT_USER_UPDATED, watchedUser)
+//         }
+//         gWatchedUser = watchedUser
+//     })
+// })();
+
+// This is relevant when backend is connected
+// (async () => {
+//     var user = getLoggedinUser()
+//     if (user) socketService.emit('set-user-socket', user._id)
+// })();
