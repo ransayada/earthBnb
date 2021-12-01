@@ -5,9 +5,9 @@
 @import 'setup/typography';
 
 // Basics
-@import 'basics/helpers';
-@import 'basics/layout';
-@import 'basics/base';
+@import 'basic/helpers';
+@import 'basic/layout';
+@import 'basic/base';
 
 
 // Components
@@ -21,9 +21,9 @@
 @import 'cmps/stay-reserve';
 
 // Views
-@import './home';
-@import './about';
-@import './explore';
-@import './stay-details';
-@import './stay-edit';
-@import './user-details'
+@import 'views/home';
+@import 'views/about';
+@import 'views/explore';
+@import 'views/stay-details';
+@import 'views/stay-edit';
+@import 'views/user-details'

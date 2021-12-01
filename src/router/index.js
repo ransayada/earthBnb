@@ -1,7 +1,6 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
-// import homePage from '@/views/home-page.vue';
+import homePage from '@/views/home-page.vue';
 import stayEdit from '@/views/stay-edit.vue';
 import explorePage from '@/views/explore-page.vue';
 import stayDetails from '@/views/stay-details.vue';
@@ -9,11 +8,7 @@ import userDetails from '@/views/user-details.vue';
 
 Vue.use(VueRouter)
 
-const routes = [{
-        path: '/',
-        name: 'Home',
-        component: Home
-    },
+const routes = [
     {
         path: '/about',
         name: 'About',
@@ -23,11 +18,11 @@ const routes = [{
         component: () =>
             import ( /* webpackChunkName: "about" */ '../views/About.vue')
     },
-    // {
-    //   path: '/',
-    //   name: 'homePage',
-    //   component: homePage,
-    // },
+    {
+      path: '/',
+      name: 'homePage',
+      component: homePage,
+    },
     {
         path: '/explore/edit/:stayId?',
         name: 'stayEdit',
