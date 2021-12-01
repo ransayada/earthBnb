@@ -112,6 +112,6 @@ function _createOrders() {
 function _createOrder() {
     const order = getEmptyOrder();
     order._id = utilService.makeId()
-    order.createdAt = Date.now().toLocaleString();
+    order.createdAt = Date.now();
     return order
 }

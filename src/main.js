@@ -11,6 +11,12 @@ import '@fortawesome/fontawesome-free/js/all.js';
 Vue.config.productionTip = false
 
 new Vue({
+    created(){
+        this.$store.dispatch({ type: 'loadStays' })
+        // this.$store.dispatch({ type: 'loadUser' })
+        this.$store.dispatch({ type: 'loadOrders' })
+
+      },
     router,
     store,
     render: h => h(App)
