@@ -1,4 +1,4 @@
-// import { stayService } from '../services/stay.service.js';
+import { stayService } from '../services/stay.service.js';
 
 export const stayStore = {
     state: {
