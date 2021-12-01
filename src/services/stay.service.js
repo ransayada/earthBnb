@@ -113,7 +113,7 @@ function _createStay(name) {
     const stay = getEmptyStay(name, utilService.getRandomInt(80, 300))
     stay._id = utilService.makeId()
     stay.reviews.push({txt: 'good stay'})
-    stay.createdAt = Date.now().toLocaleString()
+    stay.createdAt = Date.now();
     stay.imgUrls = ['../assets/logo.png','../assets/logo.png','../assets/logo.png','../assets/logo.png','../assets/logo.png']
     return stay
 }
