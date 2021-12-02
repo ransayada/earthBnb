@@ -1,9 +1,35 @@
+
 <template>
-    
+  <div class="stay-list">
+    <ul class="stay-list">
+      <li v-for="stay in stays" :key="stay._id" class="stay-preview-container">
+        <a :href="buildStay(stay._id)">
+          <stay-preview :stay="stay" />
+        </a>
+      </li>
+    </ul>
+  </div>
 </template>
+
 <script>
+import stayPreview from "./stay-preview.vue";
 export default {
-  name: 'stayList',
-  
-}
+  name: "stay-list",
+  props: {
+    stays: Array,
+  },
+  methods: {
+    // remove(stayId) {
+    //   this.$emit("remove", stayId);
+    // },
+    buildStay(id){
+           return `/#/explore/${id}`
+    }
+  },
+  components: {
+    stayPreview,
+  },
+};
 </script>
+
+
