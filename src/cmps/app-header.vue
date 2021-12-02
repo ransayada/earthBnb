@@ -1,23 +1,30 @@
 <template>
   <div id="app-header" class="flex space-between">
-    <div class="logo">
-      <router-link to="/"> <p><span style="color:blue" class="logo-thing">V</span>earthBnb</p></router-link> 
-    </div>
-    <div class="filter-container">
-      <input type="text" placeholder="Search" v-model="search">
-    </div>
+    <a class="logo" href="#/">
+      <h1 class="logo-text">
+        <i class="fab fa-airbnb"></i>
+        EarthBnb
+      </h1>
+    </a>
+    <stayFilter/>
     <div class="nav-container flex">
       <a href="https://"><p>Become a host</p></a> |
       <router-link to="/explore">Explore</router-link> |
-      <div class="hamburger-container">
-        <div  class="closed-hamburger flex space-between">
-          <a href="https://">&#9786;</a>
-          <a href="https://">&#9776;</a>
-        </div>
-        <div class="opened-hamburger flex">
-          <p></p>
-          <p></p>
-        </div>
+      <div class="dropdown">
+      <button class="dropbtn flex space-between" @click="btnClicked">
+        <span>
+          <i class="fas fa-bars"></i>
+          <i class="fas fa-user-circle"></i>
+          <!-- <img src="https://res.cloudinary.com/dzfqfnuet/image/upload/v1599095444/avatar_pwjxqe.png" alt="" headen> -->
+        </span>
+      </button>
+      <!-- <div class="dropDown-content" >
+        <a href="#/login">Login</a>
+        <a href="#/signup">Signup</a>
+        <a href="#/becomeAHost">Become a host</a>
+        <a href="#/my-listings">My Listings</a>
+        <a href="#/logout">Logout</a> -->
+      <!-- </div> -->
       </div>
     </div>
   </div>
@@ -32,40 +39,34 @@
   color: #2c3e50;
 }
 
-#nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
-
-  
+.space-between {
+  justify-content: space-between;
 }
-.closed-hamburger {
-    border: 2px solid rgb(0, 0, 0);
-    border-radius: 25px;
-    width: 50px;
-    height: 25px;
-  }
-
-  .flex{
-    display: flex;
-  }
 
 
-  .space-between{
-    justify-content: space-between;
-  }
 </style>
 
 <script>
+import stayFilter from './stay-filter.vue'
+
 export default {
   name: 'appHeader',
-  
+  data() {
+    return {
+      search: ''
+    }
+  },
+  methods: {
+    // onSearch() {
+    //   this.$router.push({ name: 'explore', query: { search: this.search } })
+    // }
+    btnClicked(){
+      console.log('clicked')
+    }
+    },
+  components: {
+      stayFilter
+    }
+    
 }
 </script>

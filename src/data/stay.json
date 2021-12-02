@@ -1,0 +1,152 @@
+[
+  {
+    "_id": "1000654678995",
+    "name": "House of cards",
+    "imgUrls": [
+      "https://a0.muscache.com/im/pictures/e83e702f-ef49-40fb-8fa0-6512d7e26e9b.jpg?aki_policy=large",
+      "otherImg.jpg"
+    ],
+    "price": 150.00,
+    "summary": "The house of your dreams, you can live within and enjoy your vacation",
+    "capacity": 5,
+    "amenities": [
+      "TV",
+      "Wifi",
+      "Kitchen",
+      "Smoking allowed",
+      "Pets allowed",
+      "Cooking basics"
+    ],
+    "host": {
+      "_id": "u101",
+      "fullname": "User 3",
+      "imgUrl": "https://a0.muscache.com/im/pictures/fab79f25-2e10-4f0f-9711-663cb69dc7d8.jpg?aki_policy=profile_small"
+    },
+    "loc": {
+      "country": "Portugal",
+      "countryCode": "PT",
+      "address": "Porto, Portugal",
+      "lat": -8.61308,
+      "lng": 41.1413
+    },
+    "reviews": [
+      {
+        "id": "madeId",
+        "txt": "awesome place, really enjoyed it",
+        "rate": 4,
+        "by": {
+          "_id": "u102",
+          "fullname": "user2",
+          "imgUrl": "/img/img2.jpg"
+        }
+      }
+    ],
+    "likedByUsers": [
+      {
+        "_id": "u101",
+        "fullname": "user1",
+        "imgUrl": "/img/img1.jpg"
+      }
+    ]
+  },
+  {
+    "_id": "100065464789",
+    "name": "monto villa",
+    "imgUrls": [
+      "https://a0.muscache.com/im/pictures/e83e702f-ef49-40fb-8fa0-6512d7e26e9b.jpg?aki_policy=large",
+      "otherImg.jpg"
+    ],
+    "price": 800.00,
+    "summary": "Fantastic villa on the sea",
+    "capacity": 8,
+    "amenities": [
+      "TV",
+      "Wifi",
+      "Kitchen",
+      "Smoking allowed",
+      "Pets allowed",
+      "Cooking basics"
+    ],
+    "host": {
+      "_id": "51399391",
+      "fullname": "User 4",
+      "imgUrl": "https://a0.muscache.com/im/pictures/fab79f25-2e10-4f0f-9711-663cb69dc7d8.jpg?aki_policy=profile_small"
+    },
+    "loc": {
+      "country": "Portugal",
+      "countryCode": "PT",
+      "address": "Porto, Portugal",
+      "lat": -8.61308,
+      "lng": 42.1413
+    },
+    "reviews": [
+      {
+        "id": "madeId",
+        "txt": "Very helpful hosts. Cooked traditional...",
+        "rate": 4,
+        "by": {
+          "_id": "u102",
+          "fullname": "user2",
+          "imgUrl": "/img/img2.jpg"
+        }
+      }
+    ],
+    "likedByUsers": [
+      {
+        "_id": "u101",
+        "fullname": "user1",
+        "imgUrl": "/img/img1.jpg"
+      }
+    ]
+  },
+  {
+    "_id": "10006546",
+    "name": "Ribeira Charming Duplex",
+    "imgUrls": [
+      "https://a0.muscache.com/im/pictures/e83e702f-ef49-40fb-8fa0-6512d7e26e9b.jpg?aki_policy=large",
+      "otherImg.jpg"
+    ],
+    "price": 80.00,
+    "summary": "Fantastic duplex apartment with three bedrooms, located in the historic area of Porto, Ribeira (Cube)...",
+    "capacity": 8,
+    "amenities": [
+      "TV",
+      "Wifi",
+      "Kitchen",
+      "Smoking allowed",
+      "Pets allowed",
+      "Cooking basics"
+    ],
+    "host": {
+      "_id": "51399391",
+      "fullname": "Davit Pok",
+      "imgUrl": "https://a0.muscache.com/im/pictures/fab79f25-2e10-4f0f-9711-663cb69dc7d8.jpg?aki_policy=profile_small"
+    },
+    "loc": {
+      "country": "Portugal",
+      "countryCode": "PT",
+      "address": "Porto, Portugal",
+      "lat": -8.61308,
+      "lng": 41.1413
+    },
+    "reviews": [
+      {
+        "id": "madeId",
+        "txt": "Very helpful hosts. Cooked traditional...",
+        "rate": 4,
+        "by": {
+          "_id": "u102",
+          "fullname": "user2",
+          "imgUrl": "/img/img2.jpg"
+        }
+      }
+    ],
+    "likedByUsers": [
+      {
+        "_id": "u101",
+        "fullname": "user1",
+        "imgUrl": "/img/img1.jpg"
+      }
+    ]
+  }
+]
