@@ -6,7 +6,7 @@
         EarthBnb
       </h1>
     </a>
-    <stayFilter/>
+    <stayFilter @filtered="setFilter" />
     <div class="nav-container flex">
       <a href="https://"><p>Become a host</p></a> |
       <router-link to="/explore">Explore</router-link> |
@@ -62,8 +62,11 @@ export default {
     // }
     btnClicked(){
       console.log('clicked')
-    }
     },
+    setFilter(filter) {
+     
+      this.$store.commit({type: 'setFilterBy', filterBy: filter})}
+  },
   components: {
       stayFilter
     }

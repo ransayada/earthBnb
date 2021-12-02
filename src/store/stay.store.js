@@ -5,6 +5,7 @@ export const stayStore = {
         stays: [],
         filterBy: {
             name: '',
+            place: '',
             labels: [],
             amenities: [],
             typeOfPlace: '',
@@ -85,8 +86,16 @@ export const stayStore = {
 
     },
     getters: {
+        // staysToShow(state) {
+        //     return state.stays
+        // },
         staysToShow(state) {
-            return state.stays
+            var stays = JSON.parse(JSON.stringify(state.stays));
+            let filteredStays = [];
+            //filtered by location
+            const regex = new RegExp(state.filterBy.place, 'i');
+            filteredStays = stays.filter(stay => regex.test(stay.loc.country) || regex.test(stay.loc.city));
+            return filteredStays;
         },
         totalStays(state) {
             return state.stays.length

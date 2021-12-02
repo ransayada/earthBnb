@@ -1,8 +1,8 @@
 <template>
      <section class="filter-container">
         <form class="min-filter">
-          <input type="text" placeholder="Search a place to stay" v-model="filterBy.city">
-          <button @click="setFilter"><a href="#/explore"><i class="fas fa-search" ></i> </a></button>
+          <input type="text" placeholder="Search a place to stay" v-model="filterBy.loc.country">
+          <button @click="setFilter"><i class="fas fa-search" ></i></button>
           </form>
     </section>
 </template>
@@ -13,18 +13,28 @@ export default {
   data() {
     return {
       filterBy:{
-        city: '',
+        loc: {
+          country: '',
+          city: '',
+        },
         price: '',
         rating: '',
         type: ''
       }
     }
   },
+  
   methods:{
     setFilter() {
-      this.$emit('filtered', ...this.filterBy);
+      const cpFilter = JSON.parse(JSON.stringify(this.filterBy));
+      console.log(cpFilter);
+      this.$emit('filtered', cpFilter);
     }
   }
-  
 }
+
 </script>
+    // setFilter(){
+    //   const cpFilter = JSON.parse(JSON.stringify(this.filterBy.loc.country));
+    //   this.$store.stay.commit({type: setFilterBy, filter: cpFilter})}
+    // }

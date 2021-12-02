@@ -28,7 +28,8 @@ export const stayService = {
 _createStays()
 
 // TODO: support paging and filtering and sorting
-async function query() {
+async function query(filterBy = {}) {
+    console.log(filterBy);
     return storageService.query(KEY)
         //  return axios.get(TOY_URL).then(res => res.data)
         // const res = await axios.get(TOY_URL)
