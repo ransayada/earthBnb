@@ -77,6 +77,10 @@ export const stayStore = {
                 commit({ type: 'setCurrStay', stay })
             })
         },
+        getStayById({ commit }, { stayId }) {
+            console.log(commit);
+            return stayService.getById(stayId)
+        }
 
 
     },
