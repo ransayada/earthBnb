@@ -68,14 +68,19 @@
         </div>
       </a>
     </section>
-<!-- 
+
     <div class="hero-image full">
       <div class="hero-text">
         <p>Travel to the ends of earth... earthBnb</p>
 
         <a href="#/explore"><button>Become a fucking host</button> </a>
       </div>
-    </div> -->
+    </div>
+  </div>
+  <div v-else>
+    <img 
+      src="https://cdn.dribbble.com/users/44323/screenshots/1655310/loadinganimation.gif"
+    />
   </div>
 </template>
 
@@ -108,7 +113,7 @@ export default {
       this.nerby3 = this.$store.getters.staysToShow[6];
       this.nerby4 = this.$store.getters.staysToShow[7];
       this.isLoading = true;
-    }, 500);
+    }, 1500);
   },
   components: {},
   mounted() {
@@ -125,30 +130,3 @@ export default {
 </script>
 
 
-<style>
-.hero-image {
-  grid-column: 1 / -1;
-  /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("https://travel-jaunt.herokuapp.com/static/media/hero2.03f8de84.jpg");
-
-  /* Set a specific height */
-  height: 50%;
-
-  /* Position and center the image to scale nicely on all screens */
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
-}
-
-/* Place text in the middle of the image */
-.hero-text {
-  text-align: center;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: white;
-}
-</style>
