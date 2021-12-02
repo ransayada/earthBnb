@@ -23,6 +23,11 @@
       @content;
     }
   }
+  @mixin for-super-wide-layout {
+    @media (min-width: $break-super-wide) { // twiked home page 
+      @content;
+    }
+  }
   
   @mixin layoutGTC($max) {
     grid-template-columns:
