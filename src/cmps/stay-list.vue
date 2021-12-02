@@ -1,6 +1,6 @@
 
 <template>
-  <div class="stay-list">
+  <div>
     <ul class="stay-list">
       <li v-for="stay in stays" :key="stay._id" class="stay-preview-container">
         <a :href="buildStay(stay._id)">
