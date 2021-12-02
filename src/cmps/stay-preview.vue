@@ -2,7 +2,7 @@
 <template>
   <div class="stay-preview-container">
  
-    <img  src="../assets/imgs/villa.jpg" class="listImg"/>
+    <img  :src="`${stay.imgUrls[0]}`" class="listImg"/>
     
         <!-- <el-carousel :interval="5000" arrow="always">
     <el-carousel-item v-for="img in slideImgs" :key="img">
