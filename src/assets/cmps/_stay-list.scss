@@ -1,0 +1,19 @@
+.stay-list {
+    display: -webkit-flex;
+    display: flex;
+    grid-gap: 17px;
+    gap: 17px;
+    margin-top: 20px;
+    margin-bottom: 75px;
+    flex-wrap: wrap;
+  }
+
+
+.stay-preview-container{
+    flex-basis: 30%
+}
+
+.listImg{
+    border-radius: 13px;
+    object-fit: cover;
+}
