@@ -1,11 +1,10 @@
-
 <template>
   <div class="stay-list">
     <ul class="stay-list">
       <li v-for="stay in stays" :key="stay._id" class="stay-preview-container">
-        <a :href="buildStay(stay._id)">
+        <router-link :to="'/explore/'+stay._id">
           <stay-preview :stay="stay" />
-        </a>
+        </router-link>
       </li>
     </ul>
   </div>
@@ -22,14 +21,12 @@ export default {
     // remove(stayId) {
     //   this.$emit("remove", stayId);
     // },
-    buildStay(id){
-           return `/#/explore/${id}`
-    }
+    buildStay(id) {
+      return `/#/explore/${id}`;
+    },
   },
   components: {
     stayPreview,
   },
 };
 </script>
-
-
