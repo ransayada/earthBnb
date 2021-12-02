@@ -1,9 +1,14 @@
+
 .stay-first-info {
   text-transform: capitalize;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1607843137254902);
 }
-
+.stay-left-container {
+  border-bottom: 1px solid #ddd;
+}
 .stay-features-container {
+  flex-direction: column;
+  
   div {
     display: flex;
     // flex-direction: column;
@@ -12,7 +17,7 @@
     padding-bottom: 30px;
     text-align: left;
     i::before {
-        content: "\f015";
+      content: "\f015";
     }
 
     div {
@@ -36,4 +41,8 @@
       }
     }
   }
+}
+
+.stay-left-container {
+
 }
