@@ -103,6 +103,17 @@ function _createStays() {
                 _createStay('Buzz'),
                 _createStay('woodie'),
                 _createStay('tmnt'),
+                _createStay('tel aviv flat'),
+                _createStay('villa of love'),
+                _createStay('leonardo motel'),
+                _createStay('paris duplex'),
+                _createStay('stam house'),
+                _createStay('dirot for sale'),
+                _createStay('alarm clock for bro'),
+                _createStay('corona bidod house'),
+                _createStay('dark house'),
+                _createStay('mabokh'),
+                _createStay('dubai hotel'),
             ]
         localStorage.setItem(KEY, JSON.stringify(stays))
     }
