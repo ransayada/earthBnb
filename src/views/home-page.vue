@@ -10,25 +10,25 @@
       <a href="#/explore">Show more</a>
     </section>
     <section class="gallery">
-      <a href="#/stay/4567">
+      <a href="#/explore/4567">
         <div>
           <img src="../assets/imgs/logo.png" />
           <h4 class="flex">house</h4>
         </div>
       </a>
-      <a href="#/stay/4567">
+      <a href="#/explore/4567">
         <div>
           <img src="../assets/imgs/logo.png" />
           <h4>villa</h4>
         </div>
       </a>
-      <a href="#/stay/4567">
+      <a href="#/explore/4567">
         <div>
           <img src="../assets/imgs/logo.png" />
           <h4>vedio</h4>
         </div>
       </a>
-      <a href="#/stay/4567">
+      <a href="#/explore/4567">
         <div>
           <img src="../assets/imgs/logo.png" />
           <h4>castle</h4>
@@ -41,25 +41,25 @@
       <a href="#/explore">Show more</a>
     </section>
     <section class="gallery">
-      <a href="#/stay/4567">
+      <a href="#/explore/4567">
         <div>
           <img src="../assets/imgs/logo.png" />
           <h4 class="flex">house</h4>
         </div>
       </a>
-      <a href="#/stay/4567">
+      <a href="#/explore/4567">
         <div>
           <img src="../assets/imgs/logo.png" />
           <h4>villa</h4>
         </div>
       </a>
-      <a href="#/stay/4567">
+      <a href="#/explore/4567">
         <div>
           <img src="../assets/imgs/logo.png" />
           <h4>vedio</h4>
         </div>
       </a>
-      <a href="#/stay/4567">
+      <a href="#/explore/4567">
         <div>
           <img src="../assets/imgs/logo.png" />
           <h4>castle</h4>

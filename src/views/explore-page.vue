@@ -1,32 +1,25 @@
 <template>
   <div class="explore">
     <h1>This is an explore page</h1>
-
-       <ul class="stay-list">
-      <li v-for="stay in stays" :key="stay._id" class="stay-preview-container">
-        {{stay.name}}
-      </li>
-    </ul>
-
-
-
+    <stay-list  :stays="stays" />
   </div>
 </template>
 
 <script>
-
+import stayList from "../cmps/stay-list.vue";
 
 export default {
-
-  data(){
+  data() {
     return {
-      stays: []
-    }
+      stays: [],
+    };
   },
-  created(){
+  created() {
     this.stays = this.$store.getters.staysToShow;
-  }
-
-}
+  },
+  components: {
+    stayList,
+  },
+};
 </script>
 
