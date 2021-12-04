@@ -1,5 +1,5 @@
 <template>
-  <div class="explore-container main-layout">
+  <div class="explore-container">
     <h1>This is an explore page</h1>
 
     <div class="stay-filter"> 

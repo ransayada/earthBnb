@@ -6,11 +6,12 @@
     margin-top: 20px;
     margin-bottom: 75px;
     flex-wrap: wrap;
+    justify-content: space-between;
   }
 
 
 .stay-preview-container{
-    flex-basis: 30%
+    flex-basis: 23%
 }
 
 .listImg{
@@ -18,3 +19,24 @@
     object-fit: cover;
     height: 157px;
 }
+
+ul.stay-list{
+    padding-inline-start: 0px;
+}
+
+.list-rating {
+    font-size: 0.9rem;
+
+    span {
+      color: #717171;
+    }
+    text-align: start;
+  }
+
+  .fa-star {
+    color: rgb(255, 56, 92);
+  }
+
+  .prevDiv{
+      text-align: start;
+  }
