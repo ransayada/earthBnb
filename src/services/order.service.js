@@ -68,7 +68,7 @@ async function save(order) {
 
 function getEmptyOrder() {
     return {
-        _id: "",
+        _id: utilService.makeId(),
         hostId: "",
         createdAt: 0,
         buyer: {
