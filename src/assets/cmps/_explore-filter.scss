@@ -1,0 +1,85 @@
+.explore-filter {
+    .explore-filter-container {
+      height: 2rem;
+      margin-top: 20px;
+      color: $clr03;
+      > * {
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0 10px;
+        margin-right: 10px;
+        border-radius: 100px;
+        border: 1px solid rgba($color: #dadada, $alpha: 1);
+        transition: 100ms;
+        &:focus {
+          outline: 0px;
+        }
+        &.filter-active {
+          box-shadow: 0 0 0 1px $clr05;
+        }
+      }
+    }
+  }
+  
+  .filter-popper {
+    cursor: pointer;
+    @include for-normal-layout {
+      max-width: 310px;
+    }
+    * {
+      font-family: inherit;
+    }
+    .el-slider__bar {
+      background-color: $clr03;
+    }
+    .el-slider__button {
+      border-color: $clr03;
+    }
+    .filter-input {
+      width: 50%;
+      span::before {
+        content: "$";
+      }
+    }
+    .el-checkbox__input.is-checked .el-checkbox__inner,
+    .el-checkbox__input.is-indeterminate .el-checkbox__inner {
+      background-color: $clr03 !important;
+      border-color: $clr03 !important;
+    }
+  
+    .el-checkbox__input.is-checked + .el-checkbox__label {
+      color: $clr03 !important;
+    }
+    .el-checkbox__inner {
+      border-color: $clr03 !important;
+    }
+    .explore-filter-btns {
+      align-self: flex-end;
+    }
+  }
+  
+  .explore-filter-btns {
+    text-align: start;
+    padding: 0 20px 0 0;
+    margin-top: 1rem;
+    .clear {
+      color: $clr03;
+      background-color: $clr01;
+      &:hover {
+        color: $clr03;
+        background-color: $clr01;
+        border-color: $clr03;
+      }
+    }
+    .update {
+      color: $clr01;
+      background-color: $clr03;
+      &:hover {
+        color: $clr03;
+        background-color: $clr01;
+        border-color: $clr03;
+      }
+    }
+  }

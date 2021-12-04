@@ -8,7 +8,7 @@ export const stayStore = {
             place: '',
             labels: [],
             amenities: [],
-            typeOfPlace: '',
+            typeOfPlace: [],
             price: {
                 fromPrice: -Infinity,
                 toPrice: Infinity
@@ -95,6 +95,26 @@ export const stayStore = {
             //filtered by location
             const regex = new RegExp(state.filterBy.place, 'i');
             filteredStays = stays.filter(stay => regex.test(stay.loc.country) || regex.test(stay.loc.city));
+            //by Price
+            var minPrice = state.filterBy.price.fromPrice;
+            var maxPrice = state.filterBy.price.toPrice;
+            filteredStays = filteredStays.filter(stay => ((stay.price >= minPrice) && (stay.price <= maxPrice)))
+            //by Type
+            if (state.filterBy.typeOfPlace.length) {
+                filteredStays = filteredStays.filter(stay => {
+                    var propType = stay.propertyType.charAt(0).toUpperCase() + stay.propertyType.slice(1);
+                    console.log(propType);
+                    return state.filterBy.typeOfPlace.includes(propType)
+                })
+            }
+            // by amenities
+            if (state.filterBy.amenities.length)
+                state.filterBy.amenities.forEach(amenity => {
+                    filteredStays = filteredStays.filter(stay => {
+                        return stay.amenities.includes(amenity)
+                    })
+                })
+
             return filteredStays;
         },
         totalStays(state) {
@@ -111,6 +131,9 @@ export const stayStore = {
         // },
         getCurrStay(state) {
             return state.currStay
+        },
+        getFilterBy(state) {
+            return state.filterBy
         }
     }
 }
