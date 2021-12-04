@@ -1,4 +1,4 @@
-# mister-toy-frontend
+# earth-bnb-frontend
 
 ## Project setup
 ```
