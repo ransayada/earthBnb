@@ -37,7 +37,6 @@ export default {
     },
     stayRating() {
       const reviews = this.stay.reviews;
-      console.log(reviews);
       var ratingSum = 0;
       if (reviews.length) {
         reviews.forEach((review) => {

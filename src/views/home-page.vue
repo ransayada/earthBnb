@@ -104,27 +104,27 @@ export default {
   },
   created() {
     setTimeout(() => {
-      this.topStay1 = this.$store.getters.staysToShow[0];
-      this.topStay2 = this.$store.getters.staysToShow[1];
-      this.topStay3 = this.$store.getters.staysToShow[2];
-      this.topStay4 = this.$store.getters.staysToShow[3];
-      this.nerby1 = this.$store.getters.staysToShow[4];
-      this.nerby2 = this.$store.getters.staysToShow[5];
-      this.nerby3 = this.$store.getters.staysToShow[6];
-      this.nerby4 = this.$store.getters.staysToShow[7];
+      this.topStay1 = this.$store.getters.allStays[0];
+      this.topStay2 = this.$store.getters.allStays[1];
+      this.topStay3 = this.$store.getters.allStays[2];
+      this.topStay4 = this.$store.getters.allStays[3];
+      this.nerby1 = this.$store.getters.allStays[4];
+      this.nerby2 = this.$store.getters.allStays[5];
+      this.nerby3 = this.$store.getters.allStays[6];
+      this.nerby4 = this.$store.getters.allStays[7];
       this.isLoading = true;
     }, 2500);
   },
   components: {},
   mounted() {
-    this.topStay1 = this.$store.getters.staysToShow[0];
-    this.topStay2 = this.$store.getters.staysToShow[1];
-    this.topStay3 = this.$store.getters.staysToShow[2];
-    this.topStay4 = this.$store.getters.staysToShow[3];
-    this.nerby1 = this.$store.getters.staysToShow[4];
-    this.nerby2 = this.$store.getters.staysToShow[5];
-    this.nerby3 = this.$store.getters.staysToShow[6];
-    this.nerby4 = this.$store.getters.staysToShow[7];
+    this.topStay1 = this.$store.getters.allStays[0];
+    this.topStay2 = this.$store.getters.allStays[1];
+    this.topStay3 = this.$store.getters.allStays[2];
+    this.topStay4 = this.$store.getters.allStays[3];
+    this.nerby1 = this.$store.getters.allStays[4];
+    this.nerby2 = this.$store.getters.allStays[5];
+    this.nerby3 = this.$store.getters.allStays[6];
+    this.nerby4 = this.$store.getters.allStays[7];
   },
 };
 </script>

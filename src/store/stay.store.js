@@ -100,6 +100,9 @@ export const stayStore = {
         totalStays(state) {
             return state.stays.length
         },
+        allStays(state) {
+            return state.stays;
+        },
         // totalInStock(state) { //Type of Place???????????
         //     return state.stays.map((stay => stay.inStock))
         // },
