@@ -82,7 +82,6 @@ function getLoggedinUser() {
     await userService.signup({ fullname: 'Admin2 admin', username: 'admin2', password: 'admin2', isAdmin: false, imgUrl: 'http://' })
     await userService.signup({ fullname: 'Admin3 admin', username: 'admin3', password: 'admin3', isAdmin: false, imgUrl: 'http://' })
     await userService.signup({ fullname: 'Admin4 admin', username: 'admin4', password: 'admin4', isAdmin: false, imgUrl: 'http://' })
-
 })();
 
 

@@ -3,6 +3,7 @@ import { userService } from '../services/user.service.js';
 export const userStore = {
     state: {
         user: null,
+        users: [],
     },
     mutations: {
         login(state, { user }) {
@@ -80,5 +81,8 @@ export const userStore = {
         user(state) {
             return state.user;
         },
+        users(state) {
+            return state.users;
+        }
     }
 }
