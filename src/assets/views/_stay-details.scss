@@ -16,8 +16,84 @@
     margin-inline-end: 6px;
   }
   .stay-info-container {
+    gap: 100px;
     .stay-summary-contanier {
       border-bottom: 1px solid #ddd;
+    }
+    .order-form-container {
+      flex: 1 1;
+
+      .order-form-sticky {
+        margin: 20px 0;
+        position: -webkit-sticky;
+        position: sticky;
+        top: 120px;
+      }
+      .order-form {
+        border: 1px solid #dadada;
+        border-radius: 13px;
+        box-shadow: 0 6px 16px -2px #d8d8d8;
+        padding: 20px 25px 15px;
+
+        input {
+          // font-size: 14px;
+          // border: none;
+          // line-height: 15px;
+          // height: 15px;
+          // outline: none;
+          // background-color: transparent;
+          // cursor: pointer;
+          // color: #717171;
+          // // font-family: airbnb-book, sans-serif;
+          // width: 136px;
+          // text-align: start;
+          // margin: 0;
+          // padding: 0;
+        }
+        .date-picker {
+          text-align: center;
+          border-top-right-radius: 13px;
+          border-top-left-radius: 13px;
+          border-bottom: 1px solid gray;
+          .el-input__inner {
+            border: 0;
+          }
+
+          .options {
+            border-radius: 8px;
+            border: 1px solid gray;
+            margin-bottom: 2rem;
+          }
+        }
+        // label {
+        //   border: 1px solid gray;
+        //   border-radius: 5px;
+        // }
+      }
+
+      .order-form-header {
+        align-items: center;
+        padding-bottom: 15px;
+
+        p {
+          margin-bottom: 0;
+        }
+      }
+
+      .gradient-btn {
+        margin: 15px 0 10px;
+        border-radius: 13px;
+        width: 100%;
+        position: relative;
+        height: 48px;
+        padding: 0;
+        color: white;
+        font-size: 16px;
+        line-height: 20px;
+        font-family: "cereal-Medium";
+        border: none;
+        cursor: pointer;
+      }
     }
   }
 }
@@ -27,7 +103,7 @@
   border-bottom: 1px solid rgba(0, 0, 0, 0.1607843137254902);
   margin-bottom: 20px;
 }
-.stay-left-container {
+.stay-long-info {
   border-bottom: 1px solid #ddd;
 }
 .stay-features-container {
@@ -73,4 +149,15 @@
 }
 
 .stay-left-container {
+}
+
+
+// temp
+.el-date-editor .el-range-separator {
+  border-left: 1px solid gray;
+  height: 115%;
+}
+
+.el-date-editor--datetimerange.el-input, .el-date-editor--datetimerange.el-input__inner {
+  width: 340px;
 }

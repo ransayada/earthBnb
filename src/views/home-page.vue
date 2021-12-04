@@ -113,7 +113,7 @@ export default {
       this.nerby3 = this.$store.getters.staysToShow[6];
       this.nerby4 = this.$store.getters.staysToShow[7];
       this.isLoading = true;
-    }, 1500);
+    }, 2500);
   },
   components: {},
   mounted() {
