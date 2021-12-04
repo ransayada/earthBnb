@@ -60,9 +60,10 @@ export const orderStore = {
         totalOrders(state) {
             return state.orders.length
         },
-        // totalInStock(state) { //Type of Place???????????
-        //     return state.orders.map((order => order.inStock))
-        // },
+        getEmptyOrder(state) {
+            console.log(state);
+            return orderService.getEmptyOrder()
+        },
         // totalOutStock(state) {
         //     return state.orders.map((order => !order.inStock))
         // },

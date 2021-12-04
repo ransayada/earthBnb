@@ -105,7 +105,7 @@
             <div class="order-form">
               <div class="order-form-header flex space-between">
                 <p>
-                  <span>${{ stay.price }}</span
+                  <span class="order-form-price">${{ stay.price }}</span
                   >/night
                 </p>
                 <span class="stay-rate-display">
@@ -113,23 +113,28 @@
                   4.73
                 </span>
               </div>
-              <form @submit="makeOrder">
+              <form @submit.prevent="makeOrder">
                 <div class="order-form-date-picker flex">
                   <div class="options">
-                  <div class="block">
-                    <!-- <span class="demonstration">Start date time 12:00:00</span> -->
-                    <el-date-picker
-                      class="date-picker"
-                      v-model="value1"
-                      type="datetimerange"
-                      range-separator=""
-                      prefix-icon=" "
-                      start-placeholder="Check in"
-                      end-placeholder="Check out"
-                      :default-time="['12:00:00']"
-                    >
-                    </el-date-picker>
-                  </div>
+                    <div class="block">
+                      <!-- <span class="demonstration">Start date time 12:00:00</span> -->
+                      <el-date-picker
+                        class="date-picker"
+                        title="Choose Your date"
+                        style="width: 100%"
+                        v-model="value1"
+                        type="daterange"
+                        range-separator=""
+                        prefix-icon=" "
+                        start-placeholder="Check in"
+                        end-placeholder="Check out"
+                        :default-time="['12:00:00', '12:00:00']"
+                      >
+                      </el-date-picker>
+                      <!-- <label for="" style="position: absolute">
+                          <span>Check in</span>
+                        </label> -->
+                    </div>
                   </div>
                   <!-- <label for="">
                     <span>Check in</span>
@@ -143,10 +148,23 @@
                 <label for="" class="oreder-form-guests">
                   <!-- <span>Guests</span> -->
                   <!-- <input type="text" /> -->
-                  <el-input placeholder="Guests" v-model="input"></el-input>
+                  <el-input
+                    placeholder="Guests"
+                    type="number"
+                    controls="false"
+                    v-model.number="numOfGuests"
+                    @change="incNumOfGuests"
+                  ></el-input>
                 </label>
                 <gradient-btn :text="'Reserve'" />
               </form>
+              <div class="order-from-total">
+                <p v-if="value1">
+                  ${{ stay.price }} X {{ calcTime() }}\Nights =
+                  ${{ stay.price * calcTime() }}
+                </p>
+                <!-- <p>Total: 450</p> -->
+              </div>
             </div>
           </div>
         </section>
@@ -164,12 +182,14 @@ export default {
   data() {
     return {
       stay: null,
+      order: null,
       value1: "",
-      value2: "",
+      numOfGuests: "",
     };
   },
   created() {
     this.getStayById();
+    this.order = this.$store.getters.getEmptyOrder;
   },
   methods: {
     getStayById() {
@@ -180,6 +200,35 @@ export default {
     },
     makeOrder() {
       console.log("making order");
+      this.setOrder();
+    },
+    setOrder() {
+      this.order.startDate = this.value1[0];
+      this.order.endDate = this.value1[1];
+      this.order.totalPrice = this.stay.price * this.calcTime();
+      this.order.buyer.fullname = "TEST";
+      this.order.stay._id = this.stay._id;
+      this.order.stay.name = this.stay.name;
+      this.order.stay.price = this.stay.price;
+      const order = JSON.parse(JSON.stringify(this.order));
+      this.$store.dispatch({ type: "addOrder", order });
+      this.$notify({
+        title: "Success",
+        message: "Trip reserved",
+        type: "success",
+        position: "bottom-right",
+      });
+      // console.log(this.order.totalPrice);
+    },
+    calcTime() {
+      let date1 = new Date(this.value1[0]);
+      let date2 = new Date(this.value1[1]);
+      let timeDiffrence = date2 - date1;
+      let daysDiffrence = Math.ceil(timeDiffrence / (1000 * 60 * 60 * 24));
+      return daysDiffrence;
+    },
+    incNumOfGuests() {
+      if (this.numOfGuests < 1) this.numOfGuests = 1;
     },
   },
   computed: {

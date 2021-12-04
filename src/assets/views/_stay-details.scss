@@ -34,30 +34,43 @@
         border-radius: 13px;
         box-shadow: 0 6px 16px -2px #d8d8d8;
         padding: 20px 25px 15px;
+        width: 360px;
 
-        input {
-          // font-size: 14px;
-          // border: none;
-          // line-height: 15px;
-          // height: 15px;
-          // outline: none;
-          // background-color: transparent;
-          // cursor: pointer;
-          // color: #717171;
-          // // font-family: airbnb-book, sans-serif;
-          // width: 136px;
-          // text-align: start;
-          // margin: 0;
-          // padding: 0;
+        .order-from-total {
+          
+          p {
+            text-align: center;
+          }
+        }
+
+        .order-form-price {
+          font-size: 22px;
+        }
+
+        .el-input__inner {
+          border: 1px solid gray;
+          border-top-right-radius: 0;
+          border-top-left-radius: 0;
+          cursor: pointer;
+          ::placeholder {
+            color: black;
+            font-family: "cereal-Medium";
+          }
         }
         .date-picker {
           text-align: center;
-          border-top-right-radius: 13px;
-          border-top-left-radius: 13px;
-          border-bottom: 1px solid gray;
-          .el-input__inner {
-            border: 0;
+          border-top-right-radius: 5px;
+          border-top-left-radius: 5px;
+          border-bottom-right-radius: 0;
+          border-bottom-left-radius: 0;
+          border: 1px solid gray;
+          cursor: pointer;
+          ::placeholder {
+            color: black;
           }
+          // .el-date-table span {
+          //   background-color: $clr1;
+          // }
 
           .options {
             border-radius: 8px;
@@ -151,13 +164,27 @@
 .stay-left-container {
 }
 
-
 // temp
 .el-date-editor .el-range-separator {
   border-left: 1px solid gray;
   height: 115%;
 }
 
-.el-date-editor--datetimerange.el-input, .el-date-editor--datetimerange.el-input__inner {
-  width: 340px;
+.el-date-editor--datetimerange.el-input,
+.el-date-editor--datetimerange.el-input__inner {
+  // width: 340px;
+  width: 100%;
 }
+
+// .el-input {
+//   .el-input__inner {
+//     border: 1px solid gray;
+//     border-top-right-radius: 0;
+//     border-top-left-radius: 0;
+//     cursor: pointer;
+//     ::placeholder {
+//       color: black !important;
+//       font-family: "cereal-Medium";
+//     }
+//   }
+// }
