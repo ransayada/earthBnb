@@ -1,14 +1,14 @@
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 html {
-  line-height: 1.8;
+    line-height: 1.8;
 }
 
 body {
-  font-family: "cereal-regular";
-  margin: 0;
+    font-family: "cereal-regular";
+    margin: 0;
 }
 
 h1,
@@ -17,37 +17,35 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: cereal-Black;
-  font-weight: 500;
-  margin: 0 0 1rem;
+    font-family: cereal-Black;
+    font-weight: 500;
+    margin: 0 0 1rem;
 }
 
 // h1 {
 // font-size: rem(60px);
 // }
-
 p {
-  font-family: cereal-Medium;
-  margin: 0 0 1rem;
-  max-width: 60ch;
-  text-align: start;
+    font-family: cereal-Medium;
+    margin: 0 0 1rem;
+    max-width: 60ch;
+    text-align: start;
 }
 
 img {
-  // object-fit: contain;
-  width: 100%;
-  height: 100%;
+    // object-fit: contain;
+    width: 100%;
+    height: 100%;
 }
 
 ul {
-  list-style-type: none;
-  padding-inline-start: 0px;
+    list-style-type: none;
+    padding-inline-start: 0px;
 }
 
 a {
-  text-decoration: none;
+    text-decoration: none;
 }
-
 
 // .material-icons {
 //   font-family: "Material Icons";
@@ -61,15 +59,12 @@ a {
 //   word-wrap: normal;
 //   white-space: nowrap;
 //   direction: ltr;
-
 //   /* Support for all WebKit browsers. */
 //   -webkit-font-smoothing: antialiased;
 //   /* Support for Safari and Chrome. */
 //   text-rendering: optimizeLegibility;
-
 //   /* Support for Firefox. */
 //   -moz-osx-font-smoothing: grayscale;
-
 //   /* Support for IE. */
 //   font-feature-settings: "liga";
 // }

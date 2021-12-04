@@ -70,10 +70,10 @@
     </section>
 
     <div class="hero-image full">
-      <div class="hero-text">
-        <p>Travel to the ends of earth... earthBnb</p>
+      <div class="hero-text flex column">
+        <p class="">Travel to the ends of earth... earthBnb</p>
 
-        <a href="#/explore"><button>Become a fucking host</button> </a>
+        <a href="#/explore"><button>Become a host</button> </a>
       </div>
     </div>
   </div>

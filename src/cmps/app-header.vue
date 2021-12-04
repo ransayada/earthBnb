@@ -1,32 +1,42 @@
 <template>
-  <div id="app-header" class="flex space-between">
+  <div id="app-header" class="flex space-between align-center">
+    <div class=header-logo>
     <a class="logo" href="#/">
       <h1 class="logo-text">
         <i class="fab fa-airbnb"></i>
         EarthBnb
       </h1>
     </a>
-    <stayFilter @filtered="setFilter" />
-    <div class="nav-container flex">
-      <a href="https://"><p>Become a host</p></a> |
-      <router-link to="/explore">Explore</router-link> |
-      <div class="dropdown">
-      <button class="dropbtn flex space-between" @click="btnClicked">
-        <span>
-          <i class="fas fa-bars"></i>
-          <i class="fas fa-user-circle"></i>
-          <!-- <img src="https://res.cloudinary.com/dzfqfnuet/image/upload/v1599095444/avatar_pwjxqe.png" alt="" headen> -->
-        </span>
-      </button>
-      <!-- <div class="dropDown-content" >
-        <a href="#/login">Login</a>
-        <a href="#/signup">Signup</a>
-        <a href="#/becomeAHost">Become a host</a>
-        <a href="#/my-listings">My Listings</a>
-        <a href="#/logout">Logout</a> -->
-      <!-- </div> -->
-      </div>
     </div>
+    <div class="header-filter">
+      <stayFilter @filtered="setFilter" />
+    </div>
+    <div class="header-nav">
+    <nav class="nav-container flex space-between">
+      <a class="bahA pointer" href="#/becomeahost"><p>Become a host</p></a> 
+      <a class="bahA pointer" href="#/explore"><p>Explore</p></a>
+      <div class="flex align-center"> 
+      <button class="dropbtn" @click="openNav()">
+        <span>
+          <i class="fas fa-bars dropI"></i>
+        </span>
+          <img class="dropImg" src="https://res.cloudinary.com/sprint4rad/image/upload/v1638615860/profilepics/profilePics_faozet.jpg" alt="profilePic">
+      </button>
+      </div>
+    </nav>
+    </div>
+      <!-- <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="#">Messages</a>
+        <a href="#">Notifications</a>
+        <a href="#">Trips</a>
+        <a href="#">Wish List</a>
+        <a href="#">Dashboard</a>
+        <a href="#">Account</a>
+        <a href="#">Help</a>
+        <a href="#">logout</a>
+      </div> -->
+    
   </div>
 </template>
 
@@ -65,7 +75,13 @@ export default {
     },
     setFilter(filter) {
      
-      this.$store.commit({type: 'setFilterBy', filterBy: filter})}
+      this.$store.commit({type: 'setFilterBy', filterBy: filter})},
+    openNav() {
+      document.getElementById("mySidenav").style.width = "250px";
+    },
+    closeNav() {
+      document.getElementById("mySidenav").style.width = "0";
+    }
   },
   components: {
       stayFilter
