@@ -17,71 +17,140 @@
         <!-- <img src="../assets/logo.png" alt=""> -->
         <stay-imgs :imgUrls="stay.imgUrls" />
       </div>
-      <div class="stay-info-container">
-        <div class="stay-first-info">
-          <h2 class="flex">{{ stay.propertyType }} Hosted By Woodie</h2>
-          <ul class="clean-list flex">
-            <li>
-              <span>10 guests</span>
-              <span> · </span>
-            </li>
-            <li>
-              <span>4 Bedrooms</span>
-              <span> · </span>
-            </li>
-            <li>
-              <span>5 Beds</span>
-              <span> · </span>
-            </li>
-            <li>
-              <span>3 Baths</span>
-            </li>
-          </ul>
-        </div>
-        <section class="stay-left-container flex">
-          <div class="stay-features-container flex">
-            <div>
-              <i class="fas fa-home" aria-hidden="true"></i>
-              <div>
-                <h3>Entire Place</h3>
-                <h4>You'll have the place to yourself.</h4>
-              </div>
-            </div>
-            <div>
-              <i class="fas fa-book-open" aria-hidden="true"></i>
-              <div>
-                <h3>House Rules</h3>
-                <h4>You'll have the place to yourself.</h4>
-              </div>
-            </div>
-            <div>
-              <i class="fas fa-medal" aria-hidden="true"></i>
-              <div>
-                <h3>Woddie is a SuperHost</h3>
-                <h4>You'll have the place to yourself.</h4>
-              </div>
-            </div>
-            <div>
-              <i class="fas fa-wifi" aria-hidden="true"></i>
-              <div>
-                <h3>Wifi</h3>
-                <h4>You'll have the place to yourself.</h4>
-              </div>
-            </div>
+      <div class="stay-info-container flex">
+        <section class="stay-long-info">
+          <div class="stay-first-info">
+            <h2 class="flex">{{ stay.propertyType }} Hosted By Woodie</h2>
+            <ul class="clean-list flex">
+              <li>
+                <span>10 guests</span>
+                <span> · </span>
+              </li>
+              <li>
+                <span>4 Bedrooms</span>
+                <span> · </span>
+              </li>
+              <li>
+                <span>5 Beds</span>
+                <span> · </span>
+              </li>
+              <li>
+                <span>3 Baths</span>
+              </li>
+            </ul>
           </div>
-          <!-- <section class="temp-login">
+          <section class="stay-long-info flex">
+            <div class="stay-features-container flex">
+              <div>
+                <i class="fas fa-home" aria-hidden="true"></i>
+                <div>
+                  <h3>Entire Place</h3>
+                  <h4>You'll have the place to yourself.</h4>
+                </div>
+              </div>
+              <div>
+                <i class="fas fa-book-open" aria-hidden="true"></i>
+                <div>
+                  <h3>House Rules</h3>
+                  <h4>You'll have the place to yourself.</h4>
+                </div>
+              </div>
+              <div>
+                <i class="fas fa-medal" aria-hidden="true"></i>
+                <div>
+                  <h3>Woddie is a SuperHost</h3>
+                  <h4>You'll have the place to yourself.</h4>
+                </div>
+              </div>
+              <div>
+                <i class="fas fa-wifi" aria-hidden="true"></i>
+                <div>
+                  <h3>Wifi</h3>
+                  <h4>You'll have the place to yourself.</h4>
+                </div>
+              </div>
+            </div>
+            <!-- <section class="temp-login">
             <div>
               <h1>Login</h1>
             </div>
           </section> -->
-        </section>
+          </section>
 
-        <div class="stay-summary-contanier">
-          <!-- <h5>Stay description</h5> -->
-          <p>{{ stay.summary }}</p>
-        </div>
+          <div class="stay-summary-contanier">
+            <!-- <h5>Stay description</h5> -->
+            <p>{{ stay.summary }}</p>
+          </div>
+          <div class="amenities-container">
+            <h1>Ameneties section</h1>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Blanditiis quo quaerat hic libero distinctio! Sequi expedita
+              consequuntur nisi aliquam vero exercitationem aperiam animi quis
+              provident necessitatibus reiciendis unde commodi, neque enim in
+              blanditiis repudiandae incidunt impedit itaque corrupti! Impedit
+              dolores reprehenderit consectetur rem, minima amet veniam sit
+              veritatis ratione atque ullam laborum sint nulla eius fugiat
+              reiciendis saepe nemo sed repellat ipsa. Iure neque vel
+              recusandae, laborum necessitatibus sint laboriosam eos inventore
+              deserunt illo soluta voluptates suscipit dolorem ipsum, doloremque
+              similique. Maxime vitae dicta, quas vel praesentium provident cum
+              sit animi! Deserunt, minima explicabo ex adipisci fuga eum ratione
+              corrupti!
+            </p>
+          </div>
+        </section>
+        <section class="order-form-container">
+          <div class="order-form-sticky">
+            <div class="order-form">
+              <div class="order-form-header flex space-between">
+                <p>
+                  <span>${{ stay.price }}</span
+                  >/night
+                </p>
+                <span class="stay-rate-display">
+                  <i class="fas fa-star review-star"></i>
+                  4.73
+                </span>
+              </div>
+              <form @submit="makeOrder">
+                <div class="order-form-date-picker flex">
+                  <div class="options">
+                  <div class="block">
+                    <!-- <span class="demonstration">Start date time 12:00:00</span> -->
+                    <el-date-picker
+                      class="date-picker"
+                      v-model="value1"
+                      type="datetimerange"
+                      range-separator=""
+                      prefix-icon=" "
+                      start-placeholder="Check in"
+                      end-placeholder="Check out"
+                      :default-time="['12:00:00']"
+                    >
+                    </el-date-picker>
+                  </div>
+                  </div>
+                  <!-- <label for="">
+                    <span>Check in</span>
+                    <input type="date" placeholder="Add Dates" />
+                  </label>
+                  <label for="">
+                    <span>Check out</span>
+                    <input type="date" placeholder="Add Dates" />
+                  </label> -->
+                </div>
+                <label for="" class="oreder-form-guests">
+                  <!-- <span>Guests</span> -->
+                  <!-- <input type="text" /> -->
+                  <el-input placeholder="Guests" v-model="input"></el-input>
+                </label>
+                <gradient-btn :text="'Reserve'" />
+              </form>
+            </div>
+          </div>
+        </section>
       </div>
-      <h1>Ameneties section</h1>
       <h1>Review section</h1>
       <h1>Map section</h1>
     </div>
@@ -89,11 +158,14 @@
 </template>
 <script>
 import stayImgs from "../cmps/stay-imgs.vue";
+import gradientBtn from "../cmps/gradient-btn.vue";
 export default {
   name: "stayDetails",
   data() {
     return {
       stay: null,
+      value1: "",
+      value2: "",
     };
   },
   created() {
@@ -106,17 +178,11 @@ export default {
         .dispatch({ type: "getStayById", stayId: this.$route.params.stayId })
         .then((stay) => (this.stay = JSON.parse(JSON.stringify(stay))));
     },
+    makeOrder() {
+      console.log("making order");
+    },
   },
   computed: {
-    // todoTitle() {
-    //   return this.todo.title
-    // },
-    // todoDesc() {
-    //   return this.todo.description
-    // },
-    // todoIsDone() {
-    //   return this.todo.isDone
-    // },
     // isLoading() {
     //   console.log(this.$store.getters.isLoading)
     //   return this.$store.getters.isLoading
@@ -124,6 +190,7 @@ export default {
   },
   components: {
     stayImgs,
+    gradientBtn,
   },
 };
 </script>
