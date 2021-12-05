@@ -1,52 +1,56 @@
 .main-footer {
-    grid-column: 1 / span 3;
-    background-color: rgb(236, 236, 236);
+  grid-column: 1 / span 3;
+  background-color: rgb(236, 236, 236);
+  align-items: center;
+  font-size: 14px;
+  @include for-narrow-layout {
+    padding: unset;
+    font-size: 0.875rem;
+  }
+  .footer-container {
+    grid-column: 2 / span 1;
+    display: flex;
+    justify-content: space-between;
     align-items: center;
-    font-size: 14px;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    border-top: 1px solid #ddd;
+    p {
+      margin: 0;
+    }
+    a {
+      margin: 0 5px;
+    //   margin-inline-end: 5px;
+    }
+  }
+  .footer-lang {
+    text-decoration: underline;
+    gap: 10px;
+  }
+  .social {
+    width: fit-content;
+    justify-content: space-evenly;
+    fill: currentcolor;
+    font-size: 1rem;
+    svg {
+      cursor: pointer;
+      margin: 0 5px;
+      &.fa-twitter {
+        margin-inline-end: 0;
+      }
+      &.fa-facebook {
+        margin-inline-start: 0;
+      }
+      @include for-narrow-layout {
+        margin: 0 10px;
+      }
+    }
     @include for-narrow-layout {
-        padding: unset;
-        font-size: 0.875rem;
+      width: fit-content;
+      font-size: 1.2rem;
     }
-    .footer-container {
-        grid-column: 2 / span 1;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding-top: 24px;
-        padding-bottom: 24px;
-        border-top: 1px solid #ddd;
-        p {
-            margin: 0;
-        }
-    }
-    .footer-lang {
-        text-decoration: underline;
-        gap: 10px;
-    }
-    .social {
-        width: fit-content;
-        justify-content: space-evenly;
-        fill: currentcolor;
-        font-size: 1rem;
-        svg {
-            cursor: pointer;
-            margin: 0 5px;
-            &.fa-twitter {
-                margin-inline-end: 0;
-            }
-            &.fa-facebook {
-                margin-inline-start: 0;
-            }
-            @include for-narrow-layout {
-                margin: 0 10px;
-            }
-        }
-        @include for-narrow-layout {
-            width: fit-content;
-            font-size: 1.2rem;
-        }
-    }
-    .footer-money {
-        margin: 0 5px;
-    }
+  }
+  .footer-money {
+    margin: 0 5px;
+  }
 }

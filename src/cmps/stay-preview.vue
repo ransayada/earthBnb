@@ -10,15 +10,15 @@
   </el-carousel> -->
     <div class="list-rating">
       <i class="fas fa-star"></i>{{ stayRating }}
-      <span>({{ ratingNum }})</span>
+      <span >({{ ratingNum }})</span>
     </div>
     <!-- <p>name: {{ stay.name }}</p>
     <p>price: ${{ stay.price }}/night</p> -->
     <div class="prevDiv">
-      {{ stayType }} • {{ stay.loc.city }}-{{ stay.loc.country }}
+      {{ stayType }} • {{ stay.loc.city }}
     </div>
     <div class="prevDiv">{{ staySummary }}</div>
-    <div class="prevDiv">${{ stay.price }}/night</div>
+    <div class="prevDiv"><span class="previe-stay-bold">${{ stay.price }}</span>/night</div>
   </div>
 </template>
 

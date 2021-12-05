@@ -3,7 +3,6 @@
     <div class="hero-image full">
       <div class="hero-text">
         <p>Travel to the ends of earth... earthBnb</p>
-
         <a href="#/explore"><button>explore</button> </a>
       </div>
     </div>
@@ -118,7 +117,7 @@ export default {
       this.nerby3 = this.$store.getters.allStays[6];
       this.nerby4 = this.$store.getters.allStays[7];
       this.isLoading = true;
-    }, 2500);
+    }, 1500);
   },
   components: {},
   mounted() {
