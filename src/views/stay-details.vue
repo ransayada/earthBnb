@@ -161,12 +161,23 @@
                 <gradient-btn :text="'Reserve'" />
               </form>
               <div v-if="value1" class="order-from-total">
-                <p>
-                  ${{ stay.price }} X {{ calcTime() }}\Nights = ${{
-                    stay.price * calcTime()
-                  }}
-                </p>
-                <p>Service fee = ${{ serviceFee }}</p>
+                <h5>You wont be charged yet.</h5>
+                <div>
+                  <p class="total-description">
+                    ${{ stay.price }} X {{ calcTime() }}\Nights 
+                  </p>
+                    <p>${{ stay.price * calcTime() }}</p>
+                </div>
+                <div>
+                  <p class="total-description">Service fee  </p>
+                  <p>${{ serviceFee }}</p>
+                </div>
+                <div>
+                  <p class="total-description">Taxes </p>
+                  <p>${{ taxes }}</p>
+                </div>
+                <div class="total-price"><p class="total-description">Total</p>
+                <p>${{this.totalPrice}}</p></div>
               </div>
             </div>
           </div>
@@ -198,9 +209,10 @@ export default {
       stay: null,
       order: null,
       value1: "",
-      numOfGuests: "",
+      numOfGuests: 1,
       totalPrice: 0,
       serviceFee: 0,
+      taxes: 0,
     };
   },
   created() {
@@ -221,7 +233,7 @@ export default {
     setOrder() {
       this.order.startDate = this.value1[0];
       this.order.endDate = this.value1[1];
-      this.order.totalPrice = this.calcPrice(this.calcTime());
+      this.order.totalPrice = this.totalPrice
       this.calcServiceFee(this.order.totalPrice);
       this.order.buyer.fullname = "TEST";
       this.order.stay._id = this.stay._id;
@@ -252,12 +264,18 @@ export default {
       if (this.numOfGuests < 1) this.numOfGuests = 1;
     },
     calcServiceFee(TotalPrice) {
-      return Math.round(TotalPrice * 0.003);
+      return Math.round(TotalPrice * 0.02);
     },
     setOrderDetails() {
-      this.order.totalPrice = this.calcPrice(this.calcTime());
-      console.log(this.order.totalPrice);
-      this.serviceFee = this.calcServiceFee(this.order.totalPrice);
+      let initialPrice = this.calcPrice(this.calcTime());
+      console.log(initialPrice);
+      this.serviceFee = this.calcServiceFee(initialPrice);
+      this.taxes = this.calcTaxes(initialPrice);
+      this.totalPrice= initialPrice + this.serviceFee + this.taxes
+      console.log(this.serviceFee );
+    },
+    calcTaxes(TotalPrice) {
+      return Math.round(TotalPrice * 0.005);
     },
   },
   computed: {
@@ -276,6 +294,9 @@ export default {
     },
     showServiceFee() {
       return this.serviceFee;
+    },
+    showOtherFee() {
+      return this.otherFees;
     },
   },
   components: {
