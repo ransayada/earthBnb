@@ -9,3 +9,25 @@
     border-radius: 20px;
     text-align: center;
 }
+
+
+.sub-filter .sub-filter-container {
+    height: 2rem;
+    margin-top: 20px;
+    color: #6b6a6a;
+}
+
+.flex-justStart {
+    display: flex;
+    justify-content: start;
+}
+
+.column{
+    flex-direction: column;
+}
+.el-dropdown {
+    display: inline-block;
+    position: relative;
+    color: #606266;
+    font-size: 14px;
+}

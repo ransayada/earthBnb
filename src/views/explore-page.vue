@@ -1,18 +1,13 @@
 <template>
   <div class="explore-container">
-    <div class="stay-filter">
-      <button>filter1</button>
-      <button>filter2</button>
-      <button>filter3</button>
-      <button>filter4</button>
-    </div>
+    <exploreFilter @filtered="setFilterBy" />
     <stay-list :stays="stays" />
   </div>
 </template>
 
 <script>
 import stayList from "../cmps/stay-list.vue";
-
+import exploreFilter from "../cmps/explore-filter.vue";
 export default {
   data() {
     return {
@@ -22,7 +17,7 @@ export default {
         place: "",
         labels: [],
         amenities: [],
-        typeOfPlace: "",
+        typeOfPlace: [],
         price: {
           fromPrice: -Infinity,
           toPrice: Infinity,
@@ -31,14 +26,23 @@ export default {
     };
   },
   created() {
-    console.log('hello kalb');
     if (this.$route.path !== "/explore") {
-      this.stays = this.$store.getters.allStays;
+      this.stays = this.$store.getters.staysToShow;
     } else {
       this.filterBy.place = this.$route.query.place;
-      this.$store.commit({ type: 'setFilterBy', filterBy: this.filterBy })
+      this.$store.commit({ type: "setFilterBy", filterBy: this.filterBy });
       this.stays = this.$store.getters.staysToShow;
     }
+  },
+  methods: {
+    setFilterBy(filterBy) {
+      this.filterBy.amenities = filterBy.amenities;
+      this.filterBy.typeOfPlace = filterBy.type;
+      this.filterBy.price.fromPrice = filterBy.minPrice;
+      this.filterBy.price.toPrice = filterBy.maxPrice;
+      this.$store.commit({ type: "setFilterBy", filterBy: this.filterBy });
+      this.stays = this.$store.getters.staysToShow;
+    },
   },
   // mounted(){
   //  if (this.$route.path !== "/explore") {
@@ -51,6 +55,7 @@ export default {
   // },
   components: {
     stayList,
+    exploreFilter,
   },
 };
 </script>

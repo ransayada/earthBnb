@@ -14,8 +14,11 @@
     </div>
     <!-- <p>name: {{ stay.name }}</p>
     <p>price: ${{ stay.price }}/night</p> -->
-     <div class="prevDiv">{{ stayType }} • {{ stay.loc.city }}-{{stay.loc.country }}</div>
-     <div class="prevDiv">{{ staySummary }}</div>
+    <div class="prevDiv">
+      {{ stayType }} • {{ stay.loc.city }}-{{ stay.loc.country }}
+    </div>
+    <div class="prevDiv">{{ staySummary }}</div>
+    <div class="prevDiv">${{ stay.price }}/night</div>
   </div>
 </template>
 
@@ -25,7 +28,17 @@ export default {
   props: {
     stay: Object,
   },
-  methods: {},
+  methods: {
+    reviewRatingAvg(categories) {
+      var sum = 0;
+      var categoryNum=0;
+      for (const property in categories) {
+        sum += categories[property];
+        categoryNum++;
+      }
+      return (sum / categoryNum);
+    },
+  },
   computed: {
     slideImgs() {
       // var imgs = this.stay.imgUrls;
@@ -37,29 +50,31 @@ export default {
     },
     stayRating() {
       const reviews = this.stay.reviews;
-      var ratingSum = 0;
       if (reviews.length) {
+        var ratingSum = 0;
         reviews.forEach((review) => {
-          ratingSum += +review.rating;
+          ratingSum += this.reviewRatingAvg(review.categories)
         });
-        return ratingSum / reviews.length;
+      
+        return (ratingSum/ reviews.length).toFixed(2);
       }
       return 0;
     },
-    ratingNum(){
-      return this.stay.reviews.length
+    ratingNum() {
+      return this.stay.reviews.length;
     },
-    stayType(){
-      if(!this.stay.type){ //this is temporary
-        return (Math.random() < 0.5)? 'Loft':'Villa'
+    stayType() {
+      if (!this.stay.type) {
+        //this is temporary
+        return Math.random() < 0.5 ? "Loft" : "Villa";
       }
-      return this.stay.type
+      return this.stay.type;
     },
-    staySummary(){
+    staySummary() {
       if (this.stay.summary.length > 28) {
         return this.stay.summary.substr(0, 28) + "...";
-      } else return this.stay.summary; 
-    }
+      } else return this.stay.summary;
+    },
   },
 };
 </script>
