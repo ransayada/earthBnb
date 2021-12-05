@@ -23,6 +23,11 @@
       @content;
     }
   }
+  @mixin for-big-wide-layout {
+    @media (min-width: $break-big-wide) {
+      @content;
+    }
+  }
   @mixin for-super-wide-layout {
     @media (min-width: $break-super-wide) { // twiked home page 
       @content;
