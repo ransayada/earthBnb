@@ -17,8 +17,27 @@
   }
   .stay-info-container {
     gap: 100px;
+
+    .amenities-container {
+      text-align: left;
+
+      li {
+        display: flex;
+        gap: 40px;
+        padding: 5px 0;
+        align-items: center;
+      }
+      svg {
+        width: 24px;
+        height: 24px;
+      }
+    }
     .stay-summary-contanier {
       border-bottom: 1px solid #ddd;
+      p {
+        padding: 15px 0;
+        margin: 0;
+      }
     }
     .order-form-container {
       flex: 1 1;

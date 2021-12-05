@@ -49,24 +49,27 @@
                 </div>
               </div>
               <div>
-                <i class="fas fa-book-open" aria-hidden="true"></i>
+                <i class="fas fa-key" aria-hidden="true"></i>
                 <div>
-                  <h3>House Rules</h3>
-                  <h4>You'll have the place to yourself.</h4>
+                  <h3>Great check-in experience</h3>
+                  <h4>
+                    100% of recent guests gave the check-in process a 5-star
+                    rating.
+                  </h4>
                 </div>
               </div>
               <div>
                 <i class="fas fa-medal" aria-hidden="true"></i>
                 <div>
                   <h3>Woddie is a SuperHost</h3>
-                  <h4>You'll have the place to yourself.</h4>
+                  <h4>Superhosts are experienced, highly rated hosts.</h4>
                 </div>
               </div>
               <div>
                 <i class="fas fa-wifi" aria-hidden="true"></i>
                 <div>
                   <h3>Wifi</h3>
-                  <h4>You'll have the place to yourself.</h4>
+                  <h4>Guests often search for this popular amenity.</h4>
                 </div>
               </div>
             </div>
@@ -82,22 +85,33 @@
             <p>{{ stay.summary }}</p>
           </div>
           <div class="amenities-container">
-            <h1>Ameneties section</h1>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Blanditiis quo quaerat hic libero distinctio! Sequi expedita
-              consequuntur nisi aliquam vero exercitationem aperiam animi quis
-              provident necessitatibus reiciendis unde commodi, neque enim in
-              blanditiis repudiandae incidunt impedit itaque corrupti! Impedit
-              dolores reprehenderit consectetur rem, minima amet veniam sit
-              veritatis ratione atque ullam laborum sint nulla eius fugiat
-              reiciendis saepe nemo sed repellat ipsa. Iure neque vel
-              recusandae, laborum necessitatibus sint laboriosam eos inventore
-              deserunt illo soluta voluptates suscipit dolorem ipsum, doloremque
-              similique. Maxime vitae dicta, quas vel praesentium provident cum
-              sit animi! Deserunt, minima explicabo ex adipisci fuga eum ratione
-              corrupti!
-            </p>
+            <h1>What this place offers</h1>
+            <ul>
+              <li>
+                <i class="fas fa-wifi" aria-hidden="true"></i>
+                <span>Wifi</span>
+              </li>
+              <li>
+                <i class="fas fa-utensils" aria-hidden="true"></i>
+                <span>Kitchen</span>
+              </li>
+              <li>
+                <i class="fas fa-smoking"></i>
+                <span>Smoking allowed</span>
+              </li>
+              <li>
+                <i class="fas fa-paw"></i>
+                <span>Pets allowed</span>
+              </li>
+              <li>
+                <i class="fas fa-blender"></i>
+                <span>Cooking basics</span>
+              </li>
+              <li>
+                <i class="fas fa-wind"></i>
+                <span>Air conditioning</span>
+              </li>
+            </ul>
           </div>
         </section>
         <section class="order-form-container">
@@ -129,25 +143,13 @@
                         start-placeholder="Check in"
                         end-placeholder="Check out"
                         :default-time="['12:00:00', '12:00:00']"
+                        @change="setOrderDetails"
                       >
                       </el-date-picker>
-                      <!-- <label for="" style="position: absolute">
-                          <span>Check in</span>
-                        </label> -->
                     </div>
                   </div>
-                  <!-- <label for="">
-                    <span>Check in</span>
-                    <input type="date" placeholder="Add Dates" />
-                  </label>
-                  <label for="">
-                    <span>Check out</span>
-                    <input type="date" placeholder="Add Dates" />
-                  </label> -->
                 </div>
                 <label for="" class="oreder-form-guests">
-                  <!-- <span>Guests</span> -->
-                  <!-- <input type="text" /> -->
                   <el-input
                     placeholder="Guests"
                     type="number"
@@ -158,18 +160,30 @@
                 </label>
                 <gradient-btn :text="'Reserve'" />
               </form>
-              <div class="order-from-total">
-                <p v-if="value1">
-                  ${{ stay.price }} X {{ calcTime() }}\Nights =
-                  ${{ stay.price * calcTime() }}
+              <div v-if="value1" class="order-from-total">
+                <p>
+                  ${{ stay.price }} X {{ calcTime() }}\Nights = ${{
+                    stay.price * calcTime()
+                  }}
                 </p>
-                <!-- <p>Total: 450</p> -->
+                <p>Service fee = ${{ serviceFee }}</p>
               </div>
             </div>
           </div>
         </section>
       </div>
-      <h1>Review section</h1>
+      <section class="stay-review-container">
+        <div class="stay-review-header flex">
+          <h2>
+            <span><i class="fas fa-star review-star"></i>{{ reviewSum }}</span>
+          </h2>
+          <div class="stay-review-stat grid">
+            <div class="ctg-stats">
+              <h3>Cleanliness</h3>
+            </div>
+          </div>
+        </div>
+      </section>
       <h1>Map section</h1>
     </div>
   </div>
@@ -185,6 +199,8 @@ export default {
       order: null,
       value1: "",
       numOfGuests: "",
+      totalPrice: 0,
+      serviceFee: 0,
     };
   },
   created() {
@@ -205,7 +221,8 @@ export default {
     setOrder() {
       this.order.startDate = this.value1[0];
       this.order.endDate = this.value1[1];
-      this.order.totalPrice = this.stay.price * this.calcTime();
+      this.order.totalPrice = this.calcPrice(this.calcTime());
+      this.calcServiceFee(this.order.totalPrice);
       this.order.buyer.fullname = "TEST";
       this.order.stay._id = this.stay._id;
       this.order.stay.name = this.stay.name;
@@ -227,15 +244,38 @@ export default {
       let daysDiffrence = Math.ceil(timeDiffrence / (1000 * 60 * 60 * 24));
       return daysDiffrence;
     },
+    calcPrice(Days) {
+      return this.stay.price * Days;
+    },
     incNumOfGuests() {
       if (this.numOfGuests < 1) this.numOfGuests = 1;
+    },
+    calcServiceFee(TotalPrice) {
+      return Math.round(TotalPrice * 0.003);
+    },
+    setOrderDetails() {
+      this.order.totalPrice = this.calcPrice(this.calcTime());
+      console.log(this.order.totalPrice);
+      this.serviceFee = this.calcServiceFee(this.order.totalPrice);
     },
   },
   computed: {
     // isLoading() {
     //   console.log(this.$store.getters.isLoading)
     //   return this.$store.getters.isLoading
-    // }
+    // },
+    reviewSum() {
+      if (this.stay.reviews.length) {
+        let sum = 0;
+        this.stay.reviews.forEach((review) => {
+          sum += +review.categories.value;
+        });
+        return sum / this.stay.reviews.length;
+      } else return 4.73;
+    },
+    showServiceFee() {
+      return this.serviceFee;
+    },
   },
   components: {
     stayImgs,
