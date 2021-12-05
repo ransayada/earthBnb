@@ -1,5 +1,5 @@
 <template>
-  <div id="app-header" class="flex space-between align-center">
+  <div id="app-header" class="app header flex space-between align-center">
     <div class=header-logo>
     <a class="logo" href="#/">
       <h1 class="logo-text">
