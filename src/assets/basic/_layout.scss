@@ -21,9 +21,13 @@
     @include for-wide-layout {
         @include layoutGTC($break-wide);
     }
+    @include for-big-wide-layout {
+        @include layoutGTC($break-big-wide);
+    }
     @include for-super-wide-layout {
         @include layoutGTC($break-super-wide); // twiked home page 
     }
+
 }
 
 

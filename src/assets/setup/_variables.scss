@@ -18,7 +18,8 @@ $layoutPadding: 20px;
 $break-narrow: 460px;
 $break-normal: 640px;
 $break-wide: 960px;
-$break-super-wide: 1080px; // twiked home page need to be reviewed 
+$break-big-wide: 1200px;
+$break-super-wide: 1580px; // twiked home page need to be reviewed 
 
 $padded-break-narrow: $break-narrow + $layoutPadding * 2;
 $padded-break-normal: $break-normal + $layoutPadding * 2;
