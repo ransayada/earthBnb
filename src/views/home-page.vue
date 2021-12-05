@@ -11,36 +11,7 @@
       <img class="gallery-image" src="" alt="">    
       </a>
     </section> -->
-    <section class="gallery-header">
-      <h2 class="head">Explore nearby</h2>
-      <a href="#/explore">Show more</a>
-    </section>
-    <section class="gallery">
-      <a class="gallery-link" :href="`#/explore/${this.nerby1._id}`">
-        <div>
-          <img :src="`${this.nerby1.imgUrls[0]}`" class="listImg" />
-          <h4 class="flex">{{ this.nerby1.name }}</h4>
-        </div>
-      </a>
-      <a class="gallery-link" :href="`#/explore/${this.nerby2._id}`">
-        <div>
-          <img :src="`${this.nerby2.imgUrls[0]}`" class="listImg" />
-          <h4 class="flex">{{ this.nerby2.name }}</h4>
-        </div>
-      </a>
-      <a class="gallery-link" :href="`#/explore/${this.nerby3._id}`">
-        <div>
-          <img :src="`${this.nerby3.imgUrls[0]}`" class="listImg" />
-          <h4 class="flex">{{ this.nerby3.name }}</h4>
-        </div>
-      </a>
-      <a class="gallery-link" :href="`#/explore/${this.nerby4._id}`">
-        <div>
-          <img :src="`${this.nerby4.imgUrls[0]}`" class="listImg" />
-          <h4 class="flex">{{ this.nerby4.name }}</h4>
-        </div>
-      </a>
-    </section>
+   
 
     <section class="gallery-header">
       <h2 class="head">Top Rated</h2>
@@ -69,6 +40,36 @@
         <div>
           <img :src="`${this.topStay4.imgUrls[0]}`" class="listImg" />
           <h4 class="flex">{{ this.topStay4.name }}</h4>
+        </div>
+      </a>
+    </section>
+     <section class="gallery-header">
+      <h2 class="head">Explore nearby</h2>
+      <a href="#/explore">Show more</a>
+    </section>
+    <section class="gallery">
+      <a class="gallery-link" :href="`#/explore/${this.nerby1._id}`">
+        <div>
+          <img :src="`${this.nerby1.imgUrls[0]}`" class="listImg" />
+          <h4 class="flex">{{ this.nerby1.name }}</h4>
+        </div>
+      </a>
+      <a class="gallery-link" :href="`#/explore/${this.nerby2._id}`">
+        <div>
+          <img :src="`${this.nerby2.imgUrls[0]}`" class="listImg" />
+          <h4 class="flex">{{ this.nerby2.name }}</h4>
+        </div>
+      </a>
+      <a class="gallery-link" :href="`#/explore/${this.nerby3._id}`">
+        <div>
+          <img :src="`${this.nerby3.imgUrls[0]}`" class="listImg" />
+          <h4 class="flex">{{ this.nerby3.name }}</h4>
+        </div>
+      </a>
+      <a class="gallery-link" :href="`#/explore/${this.nerby4._id}`">
+        <div>
+          <img :src="`${this.nerby4.imgUrls[0]}`" class="listImg" />
+          <h4 class="flex">{{ this.nerby4.name }}</h4>
         </div>
       </a>
     </section>

@@ -226,6 +226,7 @@ export default {
       this.order.buyer.fullname = "TEST";
       this.order.stay._id = this.stay._id;
       this.order.stay.name = this.stay.name;
+      this.order.guests.adults = this.numOfGuests;
       this.order.stay.price = this.stay.price;
       const order = JSON.parse(JSON.stringify(this.order));
       this.$store.dispatch({ type: "addOrder", order });
