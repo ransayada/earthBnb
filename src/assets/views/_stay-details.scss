@@ -21,6 +21,9 @@
 
     .amenities-container {
       text-align: left;
+      h1 {
+        margin-top: 20px;
+      }
 
       li {
         display: flex;
@@ -32,16 +35,20 @@
         width: 24px;
         height: 24px;
       }
+      
     }
     .stay-summary-contanier {
       border-bottom: 1px solid #ddd;
+      border-top: 1px solid #ddd;
       p {
-        padding: 15px 0;
+        padding: 30px 0;
         margin: 0;
       }
     }
     .order-form-container {
       flex: 1 1;
+
+      
 
       .order-form-sticky {
         margin: 20px 0;
@@ -57,9 +64,22 @@
         width: 360px;
 
         .order-from-total {
-          
+          div{
+            display: flex;
+            justify-content: space-between;
+          }
+          .total-description {
+            font-family: cereal-Light;
+            text-decoration: underline;
+          }
           p {
-            text-align: center;
+            margin-bottom: 4px;
+          }
+          .total-price {
+            border-top: 1px solid $clr3;
+            p{
+              padding-top: 5px;
+            }
           }
         }
 
@@ -137,7 +157,7 @@
   margin-bottom: 20px;
 }
 .stay-long-info {
-  border-bottom: 1px solid #ddd;
+  
 }
 .stay-features-container {
   flex-direction: column;
@@ -181,7 +201,9 @@
   }
 }
 
-.stay-left-container {
+.stay-review-header {
+  margin-top: 20px;
+  border-top: 1px solid #ddd;
 }
 
 // temp
