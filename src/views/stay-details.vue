@@ -10,7 +10,7 @@
         </div>
         <div class="action-btns flex">
           <p><i class="fas fa-share-alt"></i> Share</p>
-          <p><i class="fas fa-save"></i> Save</p>
+          <p><i class="far fa-heart"></i> Save</p>
         </div>
       </div>
       <div>
