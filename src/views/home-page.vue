@@ -7,6 +7,11 @@
         <a href="#/explore"><button>explore</button> </a>
       </div>
     </div>
+    <!-- <section class="gallery-places">
+      <a class="gallery-link" :href='`#/explore/tel-aviv`'>
+      <img class="gallery-image" src="" alt="">    
+      </a>
+    </section> -->
     <section class="gallery-header">
       <h2 class="head">Explore nearby</h2>
       <a href="#/explore">Show more</a>
