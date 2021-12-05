@@ -5,11 +5,11 @@ import stayEdit from '@/views/stay-edit.vue';
 import explorePage from '@/views/explore-page.vue';
 import stayDetails from '@/views/stay-details.vue';
 import userDetails from '@/views/user-details.vue';
+import allOrders from '@/views/all-orders.vue';
 
 Vue.use(VueRouter)
 
-const routes = [
-    {
+const routes = [{
         path: '/about',
         name: 'About',
         // route level code-splitting
@@ -19,9 +19,9 @@ const routes = [
             import ( /* webpackChunkName: "about" */ '../views/About.vue')
     },
     {
-      path: '/',
-      name: 'homePage',
-      component: homePage,
+        path: '/',
+        name: 'homePage',
+        component: homePage,
     },
     {
         path: '/explore/edit/:stayId?',
@@ -43,6 +43,18 @@ const routes = [
         path: '/user',
         name: 'userDetails',
         component: userDetails,
+    },
+    // {
+    //     //fetch the all user orders
+    //     path: '/user/:orderId',
+    //     name: 'userOrders',
+    //     component: userOrders,
+    // },
+    {
+        //fetch the all orders
+        path: '/orders',
+        name: 'allOrders',
+        component: allOrders,
     },
 
 ]
