@@ -1,10 +1,8 @@
-
-
-.main >* {
+.main>* {
     grid-column: 2;
 }
 
- .gallery-header {
+.gallery-header {
     display: -webkit-flex;
     display: flex;
     -webkit-align-items: flex-end;
@@ -14,12 +12,12 @@
 }
 
 .home {
-  h4 {
-    text-align: left;
-  }
+    h4 {
+        text-align: left;
+    }
 }
 
-.gallery{
+.gallery {
     display: -webkit-flex;
     display: flex;
     grid-gap: 17px;
@@ -29,33 +27,36 @@
     justify-content: space-between;
 }
 
-.gallery-link{
+.gallery-link {
     width: 100%;
 }
-
 
 .hero-image {
     grid-column: 1 / -1;
     /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-      url("https://travel-jaunt.herokuapp.com/static/media/hero2.03f8de84.jpg");
-  
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://travel-jaunt.herokuapp.com/static/media/hero2.03f8de84.jpg");
     /* Set a specific height */
-    height: 300px;
-  
+    height: 600px;
     /* Position and center the image to scale nicely on all screens */
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
-  }
-  
-  /* Place text in the middle of the image */
-  .hero-text {
-    text-align: center;
+    margin-top: 116px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    font-size: 80px;
+    font-weight: bold;
+}
+
+
+/* Place text in the middle of the image */
+
+.hero-text {
+    text-align: left;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     color: white;
-  }
+}
