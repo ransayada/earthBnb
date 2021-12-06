@@ -13,8 +13,8 @@
     </div>
     <div class="header-nav">
     <nav class="nav-container flex space-between">
-      <a class="bahA pointer" href="#/becomeahost"><p>Become a host</p></a> 
       <a class="bahA pointer" href="#/explore"><p>Explore</p></a>
+      <a class="bahA pointer" href="#/becomeahost"><p>Become a host</p></a> 
       <div class="flex align-center"> 
       <button class="dropbtn" @click="openNav()">
         <span>
