@@ -1,5 +1,9 @@
 <template>
   <div class="explore-container">
+    <div class="explore-head-title-visits">
+      <small class="head-title-visits">{{ staysCount }} stays</small>
+    </div>
+    <h1 class="head-title-txt">{{ headTitleText }}</h1>
     <exploreFilter @filtered="setFilterBy" />
     <stay-list :stays="stays" />
   </div>
@@ -42,6 +46,30 @@ export default {
       this.filterBy.price.toPrice = filterBy.maxPrice;
       this.$store.commit({ type: "setFilterBy", filterBy: this.filterBy });
       this.stays = this.$store.getters.staysToShow;
+    },
+    formaStayPlace() {
+      var countryName = this.filterBy.place;
+      var makafIdx = countryName.indexOf("-");
+      if (makafIdx === -1) {
+        return countryName[0].toUpperCase() + countryName.slice(1);
+      }
+      return (
+        countryName[0].toUpperCase() +
+        countryName.substring(1, makafIdx) +
+        countryName[makafIdx] +
+        countryName[makafIdx + 1].toUpperCase() +
+        countryName.substring(makafIdx + 2)
+      );
+    },
+  },
+  computed: {
+    staysCount() {
+      return this.stays.length;
+    },
+    headTitleText() {
+      return this.filterBy.place
+        ? `Stays in ${this.formaStayPlace()}`
+        : "Find a place to stay";
     },
   },
   // mounted(){

@@ -2,9 +2,9 @@
   <div>
     <ul class="stay-list">
       <li v-for="stay in stays" :key="stay._id" class="stay-preview-container">
-        <router-link :to="'/explore/'+stay._id">
+        <!-- <router-link :to="'/explore/'+stay._id"> -->
           <stay-preview :stay="stay" />
-        </router-link>
+        <!-- </router-link> -->
       </li>
     </ul>
   </div>

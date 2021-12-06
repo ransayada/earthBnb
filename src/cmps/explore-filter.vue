@@ -12,13 +12,15 @@
         trigger="click"
         :hide-on-click="false"
         :class="{ 'filter-active': priceActive }"
+        ref="dropDownPrice"
       >
         <span class="item fill-parent f-ac-jc">
           {{
             priceActive
               ? `$${filterBy.minPrice} -  $${filterBy.maxPrice}`
-              : 'Price'
+              : "Price"
           }}
+          <i class="el-icon-arrow-down el-icon--right"></i>
         </span>
         <el-dropdown-menu slot="dropdown" class="filter-popper flex column">
           <el-dropdown-item>
@@ -49,15 +51,7 @@
             />
           </el-dropdown-item>
           <div class="explore-filter-btns">
-            <el-button
-              @click="
-                filterBy.minPrice = 0
-                filterBy.maxPrice = 2000
-              "
-              class="clear"
-            >
-              Clear
-            </el-button>
+            <el-button @click="clearPrice" class="clear"> Clear </el-button>
             <el-button
               @click="updateFilter"
               native-type="submit"
@@ -73,9 +67,11 @@
         :hide-on-click="false"
         placement="top-start"
         trigger="click"
+        ref="dropDownType"
       >
         <span class="item fill-parent f-ac-jc">
-          {{ typeActive ? filterBy.type.join(', ') : 'Type' }}
+          {{ typeActive ? filterBy.type.join(", ") : "Type" }}
+           <i class="el-icon-arrow-down el-icon--right"></i>
         </span>
         <el-dropdown-menu slot="dropdown" class="filter-popper flex column">
           <el-dropdown-item>
@@ -86,9 +82,7 @@
             </el-checkbox-group>
           </el-dropdown-item>
           <div class="explore-filter-btns">
-            <el-button @click="filterBy.type = []" class="clear">
-              Clear
-            </el-button>
+            <el-button @click="clearType" class="clear"> Clear </el-button>
             <el-button
               class="update"
               @click="updateFilter"
@@ -104,9 +98,11 @@
         :hide-on-click="false"
         placement="bottom-start"
         trigger="click"
+        ref="dropDownAmenities"
       >
         <span class="item fill-parent f-ac-jc">
-          {{ amenitiesActive ? filterBy.amenities.join(', ') : 'Amenities' }}
+          {{ amenitiesActive ? filterBy.amenities.join(", ") : "Amenities" }}
+           <i class="el-icon-arrow-down el-icon--right"></i>
         </span>
         <el-dropdown-menu slot="dropdown" class="filter-popper flex column">
           <el-dropdown-item>
@@ -127,9 +123,7 @@
           </el-dropdown-item>
 
           <div class="explore-filter-btns">
-            <el-button @click="filterBy.amenities = []" class="clear">
-              Clear
-            </el-button>
+            <el-button @click="clearAmenities" class="clear"> Clear </el-button>
             <el-button
               class="update"
               @click="updateFilter"
@@ -141,14 +135,14 @@
         </el-dropdown-menu>
       </el-dropdown>
     </div>
-    <div class="explore-filter-btns">
+    <!-- <div class="explore-filter-btns">
       <el-button @click="clearAll" class="clear">
         Clear Filters
       </el-button>
       <el-button @click="updateFilter" class="update">
         Update
       </el-button>
-    </div>
+    </div> -->
   </el-form>
 </template>
 
@@ -157,48 +151,68 @@ export default {
   data() {
     return {
       filterBy: {
-          type:[],
-          amenities:[],
-          minPrice:0,
-          maxPrice:2000
+        type: [],
+        amenities: [],
+        minPrice: 0,
+        maxPrice: 2000,
       },
-    }
+    };
   },
   methods: {
     updateFilter() {
-    //   this.$store.commit({ type: 'setFilterBy', filterBy: this.filterBy })
-        this.$emit("filtered", { ...this.filterBy });
+      //   this.$store.commit({ type: 'setFilterBy', filterBy: this.filterBy })
+      //   this.$refs.dropDown.hide();
+      this.$refs.dropDownType.visible = false;
+      this.$refs.dropDownPrice.visible = false;
+      this.$refs.dropDownAmenities.visible = false;
+      this.$emit("filtered", { ...this.filterBy });
     },
     pricesFromPicker(ev) {
       ev
         ? ([this.filterBy.minPrice, this.filterBy.maxPrice] = ev)
-        : (this.filterBy.minPrice = this.filterBy.maxPrice = null)
+        : (this.filterBy.minPrice = this.filterBy.maxPrice = null);
     },
     clearAll() {
-      this.filterBy.type = []
-      this.filterBy.amenities = []
-      this.filterBy.minPrice = 0
-      this.filterBy.maxPrice = 2000
+      this.filterBy.type = [];
+      this.filterBy.amenities = [];
+      this.filterBy.minPrice = 0;
+      this.filterBy.maxPrice = 2000;
+      this.$emit("filtered", { ...this.filterBy });
+    },
+    clearPrice() {
+      this.$refs.dropDownPrice.visible = false;
+      this.filterBy.minPrice = 0;
+      this.filterBy.maxPrice = 2000;
+      this.$emit("filtered", { ...this.filterBy });
+    },
+    clearType() {
+      this.$refs.dropDownType.visible = false;
+      this.filterBy.type = [];
+      this.$emit("filtered", { ...this.filterBy });
+    },
+    clearAmenities() {
+      this.$refs.dropDownAmenities.visible = false;
+      this.filterBy.amenities = [];
       this.$emit("filtered", { ...this.filterBy });
     },
   },
   computed: {
     pricesToPicker() {
-      return [this.filterBy.minPrice, this.filterBy.maxPrice]
+      return [this.filterBy.minPrice, this.filterBy.maxPrice];
     },
     priceActive() {
       return this.filterBy.minPrice || this.filterBy.maxPrice < 2000
         ? true
-        : false
+        : false;
     },
     typeActive() {
-      return this.filterBy.type.length ? true : false
+      return this.filterBy.type.length ? true : false;
     },
     amenitiesActive() {
-      return this.filterBy.amenities.length ? true : false
+      return this.filterBy.amenities.length ? true : false;
     },
     getFilterBy() {
-      return this.$store.getters.getFilterBy
+      return this.$store.getters.getFilterBy;
     },
   },
   watch: {
@@ -209,5 +223,5 @@ export default {
       },
     },
   },
-}
+};
 </script>
