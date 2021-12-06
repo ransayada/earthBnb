@@ -8,9 +8,17 @@ import '@/assets/main.scss'
 import locale from 'element-ui/lib/locale/lang/en'
 import '@fortawesome/fontawesome-free/css/all.css';
 import '@fortawesome/fontawesome-free/js/all.js';
+import * as VueGoogleMaps from 'vue2-google-maps'; 
 
 Vue.use(element, { locale })
 Vue.config.productionTip = false
+
+Vue.use(VueGoogleMaps, {
+  load: {
+    key: 'AIzaSyCXvZqRU_DCYIFXrUgXmAar8vH_PiQY9BU',
+    libraries: 'places', // This is required if you use the Autocomplete plugin
+  },
+})
 
 new Vue({
   created() {

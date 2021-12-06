@@ -33,7 +33,7 @@
       <a class="gallery-link" :href="`#/explore/${this.topStay3._id}`">
         <div>
           <img :src="`${this.topStay3.imgUrls[0]}`" class="listImg" />
-          <h4 class="flex">{{ this.topStay2.name }}</h4>
+          <h4 class="flex">{{ this.topStay3.name }}</h4>
         </div>
       </a>
       <a class="gallery-link" :href="`#/explore/${this.topStay4._id}`">

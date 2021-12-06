@@ -129,9 +129,8 @@
               </div>
               <form @submit.prevent="makeOrder">
                 <div class="order-form-date-picker flex">
-                  <div class="options">
+                  <!-- <div class="options">
                     <div class="block">
-                      <!-- <span class="demonstration">Start date time 12:00:00</span> -->
                       <el-date-picker
                         class="date-picker"
                         title="Choose Your date"
@@ -147,59 +146,270 @@
                       >
                       </el-date-picker>
                     </div>
+                  </div> -->
+                  <!-- find -->
+                  <div class="checking">
+                    <div class="check-in">
+                      <div class="category-stay-label">CHECK-IN</div>
+                      <div class="add">Add date</div>
+                    </div>
+                    <div class="check-out">
+                      <div class="category-stay-label">CHECK-OUT</div>
+                      <div class="add">Add date</div>
+                    </div>
+                    <div class="guests-num">
+                      <div class="category-stay-label" @click="openModal('guests')"  >GUESTS</div>
+                      <div class="add">{{numOfGuests}} guest</div>
+                      <reserve-guests @closeRGuests="closeRGuests" @addGuests="addGuests" :clicked="this.clickedOn" />
+                    </div>
                   </div>
                 </div>
-                <label for="" class="oreder-form-guests">
-                  <el-input
-                    placeholder="Guests"
-                    type="number"
-                    controls="false"
-                    v-model.number="numOfGuests"
-                    @change="incNumOfGuests"
-                  ></el-input>
-                </label>
                 <gradient-btn :text="'Reserve'" />
               </form>
               <div v-if="value1" class="order-from-total">
                 <h5>You wont be charged yet.</h5>
                 <div>
                   <p class="total-description">
-                    ${{ stay.price }} X {{ calcTime() }}\Nights 
+                    ${{ stay.price }} X {{ calcTime() }}\Nights
                   </p>
-                    <p>${{ stay.price * calcTime() }}</p>
+                  <p>${{ stay.price * calcTime() }}</p>
                 </div>
                 <div>
-                  <p class="total-description">Service fee  </p>
+                  <p class="total-description">Service fee</p>
                   <p>${{ serviceFee }}</p>
                 </div>
                 <div>
-                  <p class="total-description">Taxes </p>
+                  <p class="total-description">Taxes</p>
                   <p>${{ taxes }}</p>
                 </div>
-                <div class="total-price"><p class="total-description">Total</p>
-                <p>${{this.totalPrice}}</p></div>
+                <div class="total-price">
+                  <p class="total-description">Total</p>
+                  <p>${{ this.totalPrice }}</p>
+                </div>
               </div>
             </div>
           </div>
         </section>
       </div>
-      <section class="stay-review-container">
-        <div class="stay-review-header flex">
-          <h2>
-            <span><i class="fas fa-star review-star"></i>{{ reviewSum }}</span>
-          </h2>
-          <div class="stay-review-stat grid">
-            <div class="ctg-stats">
-              <h3>Cleanliness</h3>
+      <div class="reviews-display">
+        <div class="reviews-headline">
+          <p>
+            <i class="fas fa-star review-star"></i>
+            {{ this.stay.reviews[0].categories.value }} ·
+            {{ this.stay.reviews.length }} reviews
+          </p>
+        </div>
+        <div class="reviews-rating-data airbnb">
+          <div class="flex justify-center space-between">
+            <div>Cleanliness</div>
+            <div class="rate-score">
+              <el-rate
+                v-model="this.stay.reviews[0].categories.cleanliness"
+                disabled
+                show-score
+                show-text=""
+                text-color="#ff9900"
+                score-template="{value} points"
+              >
+              </el-rate>
+            </div>
+          </div>
+          <div class="flex justify-center space-between">
+            <div>Communication</div>
+            <div class="rate-score">
+              <!-- <div>{{ this.stay.reviews[0].categories.communication }}</div> -->
+
+              <el-rate
+                v-model="this.stay.reviews[0].categories.communication"
+                disabled
+                show-score
+                show-text=""
+                text-color="#ff9900"
+                score-template="{value} points"
+              >
+              </el-rate>
+            </div>
+          </div>
+          <div class="flex justify-center space-between">
+            <div>Check-in</div>
+            <div class="rate-score">
+              <el-rate
+                v-model="this.stay.reviews[0].categories.checkIn"
+                disabled
+                show-score
+                show-text=""
+                text-color="#ff9900"
+                score-template="{value} points"
+              >
+              </el-rate>
+            </div>
+          </div>
+          <div class="flex justify-center space-between">
+            <div>Accuracy</div>
+
+            <div class="rate-score">
+              <el-rate
+                v-model="this.stay.reviews[0].categories.accuracy"
+                disabled
+                show-score
+                show-text=""
+                text-color="#ff9900"
+                score-template="{value} points"
+              >
+              </el-rate>
+            </div>
+          </div>
+          <div class="flex justify-center space-between">
+            <div>Location</div>
+
+            <div class="rate-score">
+              <el-rate
+                v-model="this.stay.reviews[0].categories.location"
+                disabled
+                show-score
+                show-text=""
+                text-color="#ff9900"
+                score-template="{value} points"
+              >
+              </el-rate>
+            </div>
+          </div>
+          <div class="flex justify-center space-between">
+            <div>Value</div>
+            <div class="rate-score">
+              <el-rate
+                v-model="this.stay.reviews[0].categories.accuracy"
+                disabled
+                show-score
+                show-text=""
+                text-color="#ff385c"
+                score-template="{value} points"
+              >
+              </el-rate>
             </div>
           </div>
         </div>
-      </section>
-      <h1>Map section</h1>
+        <div class="reviews-display-data airbnb">
+          <div>
+            <div class="flex">
+              <div class="center spacing-10px-right">
+                <img
+                  class="user-review-avatar"
+                  src="../assets/imgs/icons/avatar.png"
+                />
+              </div>
+              <div class="center">
+                <div class="short-exmple">
+                  <!-- {{ this.stay.reviews[0].by.fullName }} -->
+                  Josh Cruze
+                </div>
+                <div class="review-date">March 2021</div>
+              </div>
+            </div>
+            <div class="review-text">{{ this.stay.reviews[0].txt }}</div>
+          </div>
+          <div>
+            <div class="flex">
+              <div class="center spacing-10px-right">
+                <img
+                  class="user-review-avatar"
+                  src="../assets/imgs/icons/avatar.png"
+                />
+              </div>
+              <div class="center">
+                <div class="short-exmple">Josh Cruze</div>
+                <div class="review-date">October 2019</div>
+              </div>
+            </div>
+            <div class="review-text">{{ this.stay.reviews[1].txt }}</div>
+          </div>
+          <div>
+            <div class="flex">
+              <div class="center spacing-10px-right">
+                <img
+                  class="user-review-avatar"
+                  src="../assets/imgs/icons/avatar.png"
+                />
+              </div>
+              <div class="center">
+                <div class="short-exmple">Josh Cruze</div>
+                <div class="review-date">November 2020</div>
+              </div>
+            </div>
+            <div class="review-text">{{ this.stay.reviews[3].txt }}</div>
+          </div>
+          <div>
+            <div class="flex">
+              <div class="center spacing-10px-right">
+                <img
+                  class="user-review-avatar"
+                  src="../assets/imgs/icons/avatar.png"
+                />
+              </div>
+              <div class="center">
+                <div class="short-exmple">Josh Cruze</div>
+                <div class="review-date">July 2020</div>
+              </div>
+            </div>
+            <div class="review-text">{{ this.stay.reviews[2].txt }}</div>
+          </div>
+          <div>
+            <div class="flex">
+              <div class="center spacing-10px-right">
+                <img
+                  class="user-review-avatar"
+                  src="../assets/imgs/icons/avatar.png"
+                />
+              </div>
+              <div class="center">
+                <div class="short-exmple">Josh Cruze</div>
+                <div class="review-date">October 2020</div>
+              </div>
+            </div>
+            <div class="review-text">{{ this.stay.reviews[3].txt }}</div>
+          </div>
+          <div>
+            <div class="flex">
+              <div class="center spacing-10px-right">
+                <img
+                  class="user-review-avatar"
+                  src="../assets/imgs/icons/avatar.png"
+                />
+              </div>
+
+              <div class="center">
+                <div class="short-exmple">Josh Cruze</div>
+                <div class="review-date">January 2021</div>
+              </div>
+            </div>
+            <div class="review-text">{{ this.stay.reviews[1].txt }}</div>
+          </div>
+        </div>
+        <div>
+          <div>
+            <span class="underline airbnb-medium spacing-44px">Show more</span>
+          </div>
+          <div class="spacing-44px">
+            <button class="show-more-amenities airbnb-medium">
+              show all {{ this.stay.reviews.length }} reviews
+            </button>
+          </div>
+        </div>
+      </div>
+      <GmapMap
+        :center="pos"
+        :zoom="12"
+        style="width: 1120px; height: 480px; margin-bottom: 80px"
+      >
+        <GmapMarker :position="pos" :clickable="true" />
+      </GmapMap>
     </div>
   </div>
 </template>
 <script>
+import reserveGuests from "../cmps/reserve-guests.vue";
+// import DatePicker from '../cmps/vue2-datepicker.vue';
+// import "vue2-datepicker/index.css";
 import stayImgs from "../cmps/stay-imgs.vue";
 import gradientBtn from "../cmps/gradient-btn.vue";
 export default {
@@ -213,6 +423,9 @@ export default {
       totalPrice: 0,
       serviceFee: 0,
       taxes: 0,
+      colors: ["#ff385c", "#ff385c"],
+      pos: {},
+      clickedOn: "",
     };
   },
   created() {
@@ -224,7 +437,10 @@ export default {
       console.log("params id ", this.$route.params.stayId);
       this.$store
         .dispatch({ type: "getStayById", stayId: this.$route.params.stayId })
-        .then((stay) => (this.stay = JSON.parse(JSON.stringify(stay))));
+        .then((stay) => {
+          this.stay = JSON.parse(JSON.stringify(stay));
+          this.pos = { lat: +this.stay.loc.lat, lng: +this.stay.loc.lng };
+        });
     },
     makeOrder() {
       console.log("making order");
@@ -233,7 +449,7 @@ export default {
     setOrder() {
       this.order.startDate = this.value1[0];
       this.order.endDate = this.value1[1];
-      this.order.totalPrice = this.totalPrice
+      this.order.totalPrice = this.totalPrice;
       this.calcServiceFee(this.order.totalPrice);
       this.order.buyer.fullname = "TEST";
       this.order.stay._id = this.stay._id;
@@ -271,12 +487,24 @@ export default {
       console.log(initialPrice);
       this.serviceFee = this.calcServiceFee(initialPrice);
       this.taxes = this.calcTaxes(initialPrice);
-      this.totalPrice= initialPrice + this.serviceFee + this.taxes
-      console.log(this.serviceFee );
+      this.totalPrice = initialPrice + this.serviceFee + this.taxes;
+      console.log(this.serviceFee);
     },
     calcTaxes(TotalPrice) {
       return Math.round(TotalPrice * 0.005);
     },
+    openModal(of) {
+      this.clickedOn = of;
+      // console.log(this.clickedOn)
+    },
+    addGuests(val) {
+      console.log('details',val);
+      this.numOfGuests = val
+    },
+    closeRGuests(){
+      this.clickedOn = ""
+
+    }
   },
   computed: {
     // isLoading() {
@@ -298,10 +526,17 @@ export default {
     showOtherFee() {
       return this.otherFees;
     },
+    getFalseValue() {
+      return false;
+    },
+
   },
   components: {
     stayImgs,
     gradientBtn,
+    reserveGuests,
+    // DatePicker,
+    // dynamicModal,
   },
 };
 </script>

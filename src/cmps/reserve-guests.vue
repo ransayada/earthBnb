@@ -1,0 +1,76 @@
+<template>
+  <div v-if="clicked === 'guests'" class="guests-modal">
+    <form>
+      <label class="expanded-search-label" for="adults">
+        <span>Adults</span>
+        <span>Ages 13 or above</span>
+        <el-input-number
+          v-model="newOrder.guests.adults"
+          @change="handleChange"
+          :min="1"
+          :max="10"
+        ></el-input-number>
+      </label>
+      <label class="expanded-search-label" for="children">
+        <span>Children</span>
+        <span>Ages 2-12</span>
+        <el-input-number
+          v-model="newOrder.guests.children"
+          @change="handleChange"
+          :min="0"
+          :max="10"
+        ></el-input-number>
+      </label>
+      <label class="expanded-search-label" for="infants">
+        <span>Infants</span>
+        <span>Under 2</span>
+        <el-input-number
+          v-model="newOrder.guests.infants"
+          @change="handleChange"
+          :min="0"
+          :max="10"
+        ></el-input-number>
+      </label>
+      <label class="expanded-search-label" for="pets">
+        <span>Pets</span>
+        <el-input-number
+          v-model="newOrder.guests.pets"
+          @change="handleChange"
+          :min="0"
+          :max="10"
+        ></el-input-number>
+      </label>
+    </form>
+    <button @click.prevent="closeModal">Close </button>
+  </div>
+</template>
+
+<script>
+export default {
+  name: "Reserve Guests",
+  props: ["clicked"],
+  data() {
+    return {
+      newOrder: {
+        guests: {
+          adults: 0,
+          children: 0,
+          infants: 0,
+          pets: 0,
+        },
+      },
+    };
+  },
+  methods: {
+    handleChange(value) {
+      console.log(value);
+      this.$emit("addGuests", value);
+    },
+    closeModal() {
+        this.$emit('closeRGuests');
+    }
+  },
+};
+</script>
+
+<style></style>
