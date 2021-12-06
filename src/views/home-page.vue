@@ -1,18 +1,32 @@
 <template>
   <div v-if="isLoading" class="home">
-    <div class="hero-image flex">
-        <p>Travel to the ends of earth... earthBnb <a class="imFlex" href="#/explore"><button>I'm flexible</button> </a></p>
+    <div class="hero-image">
+        <p>Not sure where to go? Perfect.</p>
+        <a class="imFlex" href="#/explore"><h1>I'm flexible</h1></a>
     </div>
-    <!-- <section class="gallery-places">
-      <a class="gallery-link" :href='`#/explore/tel-aviv`'>
-      <img class="gallery-image" src="" alt="">
-
-      </a>
-    </section> -->
-   
-
     <section class="gallery-header">
-      <h2 class="head">Top Rated</h2>
+      <p class="head">Explore top destinations</p>
+    </section>
+    <section class="gallery rs-gallery-header">
+      <a class="gallery-link rs-gallery" :href='`#/explore?place=tel-aviv`'>
+        <img class="gallery-image-ran" src="https://res.cloudinary.com/sprint4rad/image/upload/v1638788260/pop-destination/ta2_lapkv3.jpg" alt="Tel Aviv">
+        <h4 class="flex">Tel-Aviv</h4>
+      </a>
+      <a class="gallery-link  rs-gallery" :href='`#/explore?place=new-york`'>
+        <img class="gallery-image-ran" src="https://res.cloudinary.com/sprint4rad/image/upload/v1638788261/pop-destination/ny3_laxvb5.jpg" alt="New York">
+        <h4 class="flex">New-York</h4>
+      </a>
+      <a class="gallery-link  rs-gallery" :href='`#/explore?place=paris`'>
+        <img class="gallery-image-ran" src="https://res.cloudinary.com/sprint4rad/image/upload/v1638788259/pop-destination/pari1_ncwnwg.jpg" alt="Paris">
+        <h4 class="flex">Paris</h4>
+      </a>
+      <a class="gallery-link  rs-gallery" :href='`#/explore?place=london`'>
+        <img class="gallery-image-ran" src="https://res.cloudinary.com/sprint4rad/image/upload/v1638788262/pop-destination/lon3_awg8bc.jpg" alt="London">
+        <h4 class="flex">London</h4>
+      </a>
+    </section>
+    <section class="gallery-header">
+      <p class="head">Top Rated</p>
       <a href="#/explore">Show more</a>
     </section>
     <section class="gallery">
@@ -42,7 +56,7 @@
       </a>
     </section>
      <section class="gallery-header">
-      <h2 class="head">Explore nearby</h2>
+      <p class="head">Explore nearby</p>
       <a href="#/explore">Show more</a>
     </section>
     <section class="gallery">
@@ -72,13 +86,10 @@
       </a>
     </section>
 
-    <div class="hero-image full">
-      <div class="hero-text flex column">
-        <p class="">Travel to the ends of earth... earthBnb</p>
-
-        <a href="#/explore"><button>Become a host</button> </a>
-      </div>
-    </div>
+    <section class="hero-image-but">
+        <p class="">Questions about hosting?</p>
+        <a class="bah" href="#/becomeahost"><h1>Become a host</h1> </a>
+    </section>
   </div>
   <div v-else>
     <img 
