@@ -31,8 +31,8 @@
       <div class="prevDiv">{{ stayType }} • {{ stay.loc.city }}</div>
       <div class="prevDiv">{{ staySummary }}</div>
       <div class="prevDiv">
-        <span class="previe-stay-bold">${{ stay.price }}</span
-        >/night
+        <span class="preview-stay-bold">${{ stay.price }}</span
+        > / night
       </div>
     </div>
   </div>
