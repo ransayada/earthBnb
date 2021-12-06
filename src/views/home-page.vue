@@ -1,14 +1,12 @@
 <template>
   <div v-if="isLoading" class="home">
-    <div class="hero-image full">
-      <div class="hero-text">
-        <p>Travel to the ends of earth... earthBnb</p>
-        <!-- <a href="#/explore"><button>explore</button> </a> -->
-      </div>
+    <div class="hero-image flex">
+        <p>Travel to the ends of earth... earthBnb <a class="imFlex" href="#/explore"><button>I'm flexible</button> </a></p>
     </div>
     <!-- <section class="gallery-places">
       <a class="gallery-link" :href='`#/explore/tel-aviv`'>
-      <img class="gallery-image" src="" alt="">    
+      <img class="gallery-image" src="" alt="">
+
       </a>
     </section> -->
    

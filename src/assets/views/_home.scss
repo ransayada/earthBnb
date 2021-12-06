@@ -32,7 +32,6 @@
 }
 
 .hero-image {
-    grid-column: 1 / -1;
     /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://travel-jaunt.herokuapp.com/static/media/hero2.03f8de84.jpg");
     /* Set a specific height */
@@ -47,6 +46,30 @@
     border-radius: 10px;
     font-size: 80px;
     font-weight: bold;
+    color: white;
+    justify-content: center;
+    p {
+        text-align: left;
+        align-items: center;
+        margin-top: 300px;
+        margin-left: 50px;
+        .imFlex {
+            margin-left: 200px;
+            margin-bottom: 200px;
+            button {
+                background-color: #fff;
+                height: 60px;
+                width: 160px;
+                border-radius: 30px;
+                font-size: 20px;
+                font-weight: bold;
+            }
+        }
+    }
+    button {
+        justify-content: center;
+        align-items: center;
+    }
 }
 
 
