@@ -41,7 +41,7 @@
         ></el-input-number>
       </label>
     </form>
-    <button @click.prevent="closeModal">Close </button>
+    <button @click.stop="closeModal">Close</button>
   </div>
 </template>
 
@@ -67,8 +67,8 @@ export default {
       this.$emit("addGuests", value);
     },
     closeModal() {
-        this.$emit('closeRGuests');
-    }
+      this.$emit("closeRGuests");
+    },
   },
 };
 </script>

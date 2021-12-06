@@ -149,24 +149,35 @@
                   </div> -->
                   <!-- find -->
                   <div class="checking">
-                    <div class="check-in">
+                    <div class="check-in" @click="openModal('date')">
                       <div class="category-stay-label">CHECK-IN</div>
-                      <div class="add">Add date</div>
+                      <date-picker
+                        @setTime="setTime"
+                        :clicked="this.clickedOn"
+                        @setOrderDetails="setOrderDetails"
+                      />
+                      <div class="add" v-if="!time">Add date</div>
+                      <div class="add" else>{{ showCheckInDate }}</div>
                     </div>
-                    <div class="check-out">
+                    <div class="check-out" @click="openModal('date')">
                       <div class="category-stay-label">CHECK-OUT</div>
-                      <div class="add">Add date</div>
+                      <div class="add" v-if="!time">Add date</div>
+                      <div class="add" else>{{ showCheckOutDate }}</div>
                     </div>
-                    <div class="guests-num">
-                      <div class="category-stay-label" @click="openModal('guests')"  >GUESTS</div>
-                      <div class="add">{{numOfGuests}} guest</div>
-                      <reserve-guests @closeRGuests="closeRGuests" @addGuests="addGuests" :clicked="this.clickedOn" />
+                    <div class="guests-num" @click="openModal('guests')">
+                      <div class="category-stay-label">GUESTS</div>
+                      <div class="add">{{ numOfGuests }} guest</div>
+                      <reserve-guests
+                        @closeRGuests="closeRGuests"
+                        @addGuests="addGuests"
+                        :clicked="this.clickedOn"
+                      />
                     </div>
                   </div>
                 </div>
                 <gradient-btn :text="'Reserve'" />
               </form>
-              <div v-if="value1" class="order-from-total">
+              <div v-if="time" class="order-from-total">
                 <h5>You wont be charged yet.</h5>
                 <div>
                   <p class="total-description">
@@ -408,7 +419,7 @@
 </template>
 <script>
 import reserveGuests from "../cmps/reserve-guests.vue";
-// import DatePicker from '../cmps/vue2-datepicker.vue';
+import DatePicker from "../cmps/date-picker.vue";
 // import "vue2-datepicker/index.css";
 import stayImgs from "../cmps/stay-imgs.vue";
 import gradientBtn from "../cmps/gradient-btn.vue";
@@ -418,7 +429,7 @@ export default {
     return {
       stay: null,
       order: null,
-      value1: "",
+      time: "",
       numOfGuests: 1,
       totalPrice: 0,
       serviceFee: 0,
@@ -447,8 +458,8 @@ export default {
       this.setOrder();
     },
     setOrder() {
-      this.order.startDate = this.value1[0];
-      this.order.endDate = this.value1[1];
+      this.order.startDate = this.time[0];
+      this.order.endDate = this.time[1];
       this.order.totalPrice = this.totalPrice;
       this.calcServiceFee(this.order.totalPrice);
       this.order.buyer.fullname = "TEST";
@@ -467,10 +478,11 @@ export default {
       // console.log(this.order.totalPrice);
     },
     calcTime() {
-      let date1 = new Date(this.value1[0]);
-      let date2 = new Date(this.value1[1]);
+      let date1 = new Date(this.time[0]);
+      let date2 = new Date(this.time[1]);
       let timeDiffrence = date2 - date1;
       let daysDiffrence = Math.ceil(timeDiffrence / (1000 * 60 * 60 * 24));
+      console.log("date", daysDiffrence);
       return daysDiffrence;
     },
     calcPrice(Days) {
@@ -498,13 +510,18 @@ export default {
       // console.log(this.clickedOn)
     },
     addGuests(val) {
-      console.log('details',val);
-      this.numOfGuests = val
+      console.log("details", val);
+      this.numOfGuests = val;
     },
-    closeRGuests(){
-      this.clickedOn = ""
-
-    }
+    closeRGuests() {
+      this.clickedOn = "";
+      console.log(this.clickedOn);
+    },
+    setTime(time) {
+      console.log(time);
+      this.clickedOn = "";
+      this.time = time;
+    },
   },
   computed: {
     // isLoading() {
@@ -529,13 +546,20 @@ export default {
     getFalseValue() {
       return false;
     },
-
+    showCheckInDate() {
+      let time = this.time[0] ? this.time[0].toDateString() : "";
+      return time;
+    },
+    showCheckOutDate() {
+      let time = this.time[1] ? this.time[1].toDateString() : "";
+      return time;
+    },
   },
   components: {
     stayImgs,
     gradientBtn,
     reserveGuests,
-    // DatePicker,
+    DatePicker,
     // dynamicModal,
   },
 };
