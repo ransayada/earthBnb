@@ -1,24 +1,40 @@
 
 <template>
   <div class="stay-preview-container">
-    <img :src="`${stay.imgUrls[0]}`" class="listImg" />
+    <!-- <img :src="`${stay.imgUrls[0]}`" class="listImg" /> -->
 
-    <!-- <el-carousel :interval="5000" arrow="always">
-    <el-carousel-item v-for="img in slideImgs" :key="img">
-      <img :src="img">
-    </el-carousel-item>
-  </el-carousel> -->
-    <div class="list-rating">
-      <i class="fas fa-star"></i>{{ stayRating }}
-      <span >({{ ratingNum }})</span>
+    <el-carousel
+      :autoplay="false"
+      trigger="click"
+      @click.native="showStayDetails"
+    >
+
+    <div class="heart-preview-container"><span @click.stop="likeStay" :class="{likeBtn: true,liked: isLiked}"><i class="fa fa-heart likeBorder" aria-hidden="true"></i></span></div>
+      <el-carousel-item
+        v-for="(img, idx) in slideImgs"
+        :key="idx"
+        :autoplay="false"
+      >
+      
+        <img
+          :src="slideImgs[idx]"
+          class="listImg"
+          style="width: 100%; height: 100%"
+        />
+      </el-carousel-item>
+    </el-carousel>
+    <div class="stay-preview-details-container" @click="showStayDetails()">
+      <div class="list-rating">
+        <i class="fas fa-star"></i>{{ stayRating }}
+        <span>({{ ratingNum }})</span>
+      </div>
+      <div class="prevDiv">{{ stayType }} • {{ stay.loc.city }}</div>
+      <div class="prevDiv">{{ staySummary }}</div>
+      <div class="prevDiv">
+        <span class="previe-stay-bold">${{ stay.price }}</span
+        >/night
+      </div>
     </div>
-    <!-- <p>name: {{ stay.name }}</p>
-    <p>price: ${{ stay.price }}/night</p> -->
-    <div class="prevDiv">
-      {{ stayType }} • {{ stay.loc.city }}
-    </div>
-    <div class="prevDiv">{{ staySummary }}</div>
-    <div class="prevDiv"><span class="previe-stay-bold">${{ stay.price }}</span>/night</div>
   </div>
 </template>
 
@@ -28,24 +44,35 @@ export default {
   props: {
     stay: Object,
   },
+  data(){
+    return{
+      isLiked: false
+    }
+  },
   methods: {
     reviewRatingAvg(categories) {
       var sum = 0;
-      var categoryNum=0;
+      var categoryNum = 0;
       for (const property in categories) {
         sum += categories[property];
         categoryNum++;
       }
-      return (sum / categoryNum);
+      return sum / categoryNum;
     },
+    showStayDetails() {
+      this.$router.push(`/explore/${this.stay._id}`);
+    },
+    likeStay(){
+      this.isLiked = !this.isLiked
+    }
   },
   computed: {
     slideImgs() {
-      // var imgs = this.stay.imgUrls;
-      // if (imgs) {
-      //   console.log(imgs);
-      //   return imgs;
-      // }
+      var imgs = this.stay.imgUrls;
+      if (imgs) {
+        // console.log(imgs);
+        return imgs;
+      }
       return ["../assets/imgs/villa.jpg", "../assets/imgs/logo.png"];
     },
     stayRating() {
@@ -53,10 +80,10 @@ export default {
       if (reviews.length) {
         var ratingSum = 0;
         reviews.forEach((review) => {
-          ratingSum += this.reviewRatingAvg(review.categories)
+          ratingSum += this.reviewRatingAvg(review.categories);
         });
-      
-        return (ratingSum/ reviews.length).toFixed(2);
+
+        return (ratingSum / reviews.length).toFixed(2);
       }
       return 0;
     },
