@@ -41,7 +41,9 @@
         ></el-input-number>
       </label>
     </form>
-    <button @click.stop="closeModal">Close</button>
+    <div class="reserve-guest-close flex">
+    <button class="close-btn" @click.stop="closeModal">Close</button>
+    </div>
   </div>
 </template>
 
@@ -63,7 +65,6 @@ export default {
   },
   methods: {
     handleChange(value) {
-      console.log(value);
       this.$emit("addGuests", value);
     },
     closeModal() {

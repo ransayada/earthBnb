@@ -1,0 +1,22 @@
+<template>
+  <section class="review-preview">
+    <div class="center flex">
+      <img class="user-review-avatar" src="../assets/imgs/icons/avatar.png" />
+      <div>
+      <div class="short-exmple">Josh Cruze</div>
+      <div class="review-date">November 2020</div>
+      </div>
+    </div>
+    <div class="review-text">{{ review.txt }}</div>
+  </section>
+</template>
+
+<script>
+
+export default {
+  name: "",
+  props: { review: Object },
+  methods: {},
+  
+};
+</script>

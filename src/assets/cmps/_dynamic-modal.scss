@@ -1,6 +1,8 @@
 .dynamicModal {
   position: absolute;
 
+  
+
   .location-modal {
     display: flex;
     justify-content: center;
@@ -71,6 +73,7 @@
     width: 300px;
     height: 500px;
     background-color: pink;
+
   }
 
   .checkout-modal {
@@ -78,7 +81,6 @@
     height: 500px;
     background-color: rgb(9, 247, 88);
   }
-
 }
 .guests-modal {
   display: flex;
@@ -102,31 +104,73 @@
     flex-direction: column;
   }
 
+  .reserve-guest-close {
+    margin-inline-start: 160px;
+    margin-top: 40px;
+
+    button {
+      /* Font & Text */
+      font-size: 16px;
+      font-style: normal;
+      font-variant: normal;
+      font-weight: 600;
+      letter-spacing: normal;
+      line-height: 20px;
+      text-decoration: underline rgb(0, 0, 0);
+      text-align: center;
+      vertical-align: baseline;
+      word-spacing: 0px; /* Color & Background */
+      background-color: white;
+      color: rgb(0, 0, 0); /* Box */
+      height: 40px;
+      width: 62.3333px;
+      border-collapse: separate;
+      border-spacing: 0px 0px;
+      overflow: visible;
+      cursor: pointer;
+      outline-offset: 0px;
+      box-sizing: border-box;
+      resize: none;
+      text-shadow: none;
+      text-overflow: clip;
+      word-wrap: normal;
+      box-shadow: none;
+      border-top-left-radius: 8px;
+      border-top-right-radius: 8px;
+      border-bottom-left-radius: 8px;
+      border-bottom-right-radius: 8px;
+      border: none;
+      :hover {
+        background-color: #2f2d2d ;
+      }
+    }
+  }
+
   .expanded-search-label {
     margin-inline-start: 20px;
     padding-top: 16px;
-    padding-bottom: 16px;
+    // padding-bottom: 16px;
     padding-right: 4px;
     padding-left: 15px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    border-bottom: 1px solid rgb(235, 235, 235);
 
     .filter-description {
       display: flex;
       flex-direction: column;
     }
     span:first-of-type {
-      font-family: airbnb-book;
+      font-family: cereal-bold;
       font-size: 16px;
+      color: #222222;
     }
 
     span:nth-of-type(2) {
-      font-family: airbnb;
+      font-family: cereal-light;
       font-size: 14px;
       font-weight: 400;
-      color: $gray;
+      color: #222222;
     }
 
     .sub-header-lable {
