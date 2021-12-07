@@ -4,7 +4,7 @@
       <h1 class="stay-name">{{ stay.name }}</h1>
       <div class="stay-share-container flex space-between">
         <div class="stay-city-info flex align-center">
-          <p><i class="fas fa-star review-star"></i> 4.73</p>
+          <p><i class="fas fa-star review-star"></i>{{stayRating}}</p>
           <p>({{ stay.reviews.length }} reviews)</p>
           <p>·</p>
           <p>{{ stay.loc.country }},</p>
@@ -44,7 +44,7 @@
             <div class="host-img">
               <img
                 class="user-review-avatar"
-                src="../assets/imgs/icons/avatar.png"
+                src="../assets/imgs/icons/user.jpg"
               />
             </div>
           </div>
@@ -135,7 +135,7 @@
                 </p>
                 <span class="stay-rate-display">
                   <i class="fas fa-star review-star"></i>
-                  <span class="rate-avarage">4.73</span>
+                  <span class="rate-avarage">{{stayRating}}</span>
                   <span style="text-decoration: underline"
                     >({{ stay.reviews.length }} reviews)</span
                   >
@@ -201,28 +201,28 @@
         <div class="reviews-headline">
           <p>
             <i class="fas fa-star review-star"></i>
-            4.73 ·
+           {{stayRating}} ·
             {{ this.stay.reviews.length }} reviews
           </p>
         </div>
         <div class="reviews-rating-data airbnb">
           <div class="flex justify-center space-between">
             <div>Cleanliness</div>
-            <div class="rate-score"></div>
-            <div class="flex">
-              <el-progress
-                color="#222222"
-                :percentage="this.stay.reviews[0].categories.cleanliness * 20"
-                :format="format"
-                show-text=""
-              ></el-progress>
-              <span>{{ this.stay.reviews[0].categories.cleanliness }}</span>
+            <div class="rate-score">
+              <div class="flex">
+                <el-progress
+                  color="#222222"
+                  :percentage="this.stay.reviews[0].categories.cleanliness * 20"
+                  :format="format"
+                  show-text=""
+                ></el-progress>
+                <span>{{ this.stay.reviews[0].categories.cleanliness }}</span>
+              </div>
             </div>
           </div>
           <div class="flex justify-center space-between">
             <div>Communication</div>
             <div class="rate-score">
-              <!-- <div>{{ this.stay.reviews[0].categories.communication }}</div> -->
               <div class="flex">
                 <el-progress
                   color="#222222"
@@ -467,7 +467,7 @@ export default {
         title: "Trip Reserved",
         message: "Your order has been sent to the host",
         position: "bottom-right",
-        customClass: "reserve-popup"
+        customClass: "reserve-popup",
       });
 
       // console.log(this.order.totalPrice);
@@ -526,6 +526,15 @@ export default {
         this.stay.reviews.push(this.newReview);
       }
     },
+    reviewRatingAvg(categories) {
+      var sum = 0;
+      var categoryNum = 0;
+      for (const property in categories) {
+        sum += categories[property];
+        categoryNum++;
+      }
+      return sum / categoryNum;
+    },
   },
   computed: {
     reviewSum() {
@@ -559,6 +568,19 @@ export default {
       if (!reviews) return;
 
       return reviews.slice(0, 6);
+    },
+
+    stayRating() {
+      const reviews = this.stay.reviews;
+      if (reviews.length) {
+        var ratingSum = 0;
+        reviews.forEach((review) => {
+          ratingSum += this.reviewRatingAvg(review.categories);
+        });
+
+        return (ratingSum / reviews.length).toFixed(2);
+      }
+      return 0;
     },
   },
   components: {

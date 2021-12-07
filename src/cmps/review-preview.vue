@@ -1,7 +1,7 @@
 <template>
   <section class="review-preview">
     <div class="center flex">
-      <img class="user-review-avatar" src="../assets/imgs/icons/avatar.png" />
+      <img class="user-review-avatar" src="../assets/imgs/icons/user.jpg" />
       <div>
       <div class="short-exmple">Josh Cruze</div>
       <div class="review-date">November 2020</div>

@@ -243,7 +243,6 @@
 }
 
 .reviews-display {
-  width: 1120px;
   border-bottom: $separate solid 1px;
   margin-bottom: 50px;
   img {
@@ -445,15 +444,14 @@
     margin-bottom: 40px;
     border: none;
     cursor: pointer;
+    font-family: cereal-medium;
   }
 }
 
 .details-map {
   text-align: left;
 
-  h3 {
-    font-family: cereal-normal;
-  }
+ 
 }
 
 .reserve-popup {
