@@ -8,10 +8,10 @@ p.head {
 }
 
 .gallery-header {
-    // display: -webkit-flex;
+    display: -webkit-flex;
     display: flex;
-    // -webkit-align-items: flex-end;
-    // align-items: flex-end;
+    -webkit-align-items: flex-end;
+    align-items: flex-end;
     -webkit-justify-content: space-between;
     justify-content: space-between;
     p {
@@ -28,16 +28,13 @@ p.head {
 }
 
 .gallery {
-    display: -webkit-flex;
-    display: flex;
-    grid-gap: 17px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 17px;
     margin-top: 20px;
     margin-bottom: -60px;
-    justify-content: space-between;
     img {
         height: 325px;
-        width: 320px;
     }
 }
 
