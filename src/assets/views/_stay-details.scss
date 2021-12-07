@@ -172,6 +172,10 @@
   border-bottom: 1px solid #ddd;
   margin-bottom: 20px;
   align-items: center;
+  span {
+    margin-inline-end: 5px;
+
+  }
 }
 
 .stay-long-info {
@@ -450,6 +454,11 @@
   h3 {
     font-family: cereal-normal;
   }
+}
+
+.reserve-popup {
+  width: 600px;
+  color: $clr1;
 }
 // .el-input {
 //   .el-input__inner {

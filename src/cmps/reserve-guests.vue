@@ -49,7 +49,7 @@
 
 <script>
 export default {
-  name: "Reserve Guests",
+  name: "Reserve-guests",
   props: ["clicked"],
   data() {
     return {

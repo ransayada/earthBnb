@@ -16,7 +16,6 @@
         </div>
       </div>
       <div>
-        <!-- <img src="../assets/logo.png" alt=""> -->
         <stay-imgs :imgUrls="stay.imgUrls" />
       </div>
       <div class="stay-info-container flex">
@@ -27,15 +26,15 @@
               <ul class="clean-list flex">
                 <li>
                   <span>10 guests</span>
-                  <span> · </span>
+                  <span>·</span>
                 </li>
                 <li>
                   <span>4 Bedrooms</span>
-                  <span> · </span>
+                  <span>·</span>
                 </li>
                 <li>
-                  <span>5 Beds</span>
-                  <span> · </span>
+                  <span> 5 Beds</span>
+                  <span>·</span>
                 </li>
                 <li>
                   <span>3 Baths</span>
@@ -202,7 +201,7 @@
         <div class="reviews-headline">
           <p>
             <i class="fas fa-star review-star"></i>
-            {{ this.stay.reviews[0].categories.value }} ·
+            4.73 ·
             {{ this.stay.reviews.length }} reviews
           </p>
         </div>
@@ -313,49 +312,76 @@
                   <div class="ctg-statistics flex">
                     <div>Cleanliness</div>
                     <div class="block">
-                      <el-rate v-model="value2" :colors="colors"> </el-rate>
+                      <el-rate
+                        v-model="newReview.categories.cleanliness"
+                        :colors="colors"
+                      >
+                      </el-rate>
                     </div>
                   </div>
                   <div class="ctg-statistics flex">
                     <div>Check-in</div>
                     <div class="block">
-                      <el-rate v-model="value2" :colors="colors"> </el-rate>
+                      <el-rate
+                        v-model="newReview.categories.checkIn"
+                        :colors="colors"
+                      >
+                      </el-rate>
                     </div>
                   </div>
                   <div class="ctg-statistics flex">
                     <div>Location</div>
                     <div class="block">
-                      <el-rate v-model="value2" :colors="colors"> </el-rate>
+                      <el-rate
+                        v-model="newReview.categories.location"
+                        :colors="colors"
+                      >
+                      </el-rate>
                     </div>
                   </div>
                   <div class="ctg-statistics flex">
                     <div>Communication</div>
                     <div class="block">
-                      <el-rate v-model="value2" :colors="colors"> </el-rate>
+                      <el-rate
+                        v-model="newReview.categories.communication"
+                        :colors="colors"
+                      >
+                      </el-rate>
                     </div>
                   </div>
                   <div class="ctg-statistics flex">
                     <div>Accuracy</div>
                     <div class="block">
-                      <el-rate v-model="value2" :colors="colors"> </el-rate>
+                      <el-rate
+                        v-model="newReview.categories.accuracy"
+                        :colors="colors"
+                      >
+                      </el-rate>
                     </div>
                   </div>
                   <div class="ctg-statistics flex">
                     <div>Value</div>
                     <div class="block">
-                      <el-rate v-model="value2" :colors="colors"> </el-rate>
+                      <el-rate
+                        v-model="newReview.categories.value"
+                        :colors="colors"
+                      >
+                      </el-rate>
                     </div>
                   </div>
                 </div>
                 <div class="add-review-txt">
                   <textarea
+                    v-model="newReview.txt"
                     placeholder="Write your opinion about this stay..."
                     type="text"
                     name="txt"
                   ></textarea>
                 </div>
                 <div class="review-btn-container flex">
-                  <button class="add-review-btn">Send</button>
+                  <button @click.prevent="addReview" class="add-review-btn">
+                    Send
+                  </button>
                 </div>
               </section>
             </section>
@@ -403,11 +429,13 @@ export default {
       value1: null,
       value2: null,
       colors: ["#99A9BF", "#fc111b", "#ff385c"],
+      newReview: null,
     };
   },
   created() {
     this.getStayById();
     this.order = this.$store.getters.getEmptyOrder;
+    this.newReview = this.$store.getters.getEmptyReview;
   },
   methods: {
     getStayById() {
@@ -436,11 +464,12 @@ export default {
       const order = JSON.parse(JSON.stringify(this.order));
       this.$store.dispatch({ type: "addOrder", order });
       this.$notify({
-        title: "Success",
-        message: "Trip reserved",
-        type: "success",
+        title: "Trip Reserved",
+        message: "Your order has been sent to the host",
         position: "bottom-right",
+        customClass: "reserve-popup"
       });
+
       // console.log(this.order.totalPrice);
     },
     calcTime() {
@@ -491,6 +520,11 @@ export default {
     },
     format(percentage) {
       return percentage === 100 ? "Full" : `${percentage}%`;
+    },
+    addReview() {
+      if (this.newReview.txt) {
+        this.stay.reviews.push(this.newReview);
+      }
     },
   },
   computed: {

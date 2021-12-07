@@ -123,6 +123,10 @@ export const stayStore = {
         allStays(state) {
             return state.stays;
         },
+        getEmptyReview(state) {
+            console.log(state);
+            return stayService.createEmptyReview()
+        },
         // totalInStock(state) { //Type of Place???????????
         //     return state.stays.map((stay => stay.inStock))
         // },

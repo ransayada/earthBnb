@@ -19,7 +19,8 @@ export const stayService = {
     getById,
     remove,
     save,
-    getEmptyStay
+    getEmptyStay,
+    createEmptyReview
 }
 
 // const labels = ["On wheels", "Box game", "Art", "Baby", "Doll", "Puzzle", "Outdoor"]
@@ -31,23 +32,23 @@ _createStays()
 async function query(filterBy = {}) {
     console.log(filterBy);
     return storageService.query(KEY)
-        //  return axios.get(TOY_URL).then(res => res.data)
-        // const res = await axios.get(TOY_URL)
-        // return res.data
+    //  return axios.get(TOY_URL).then(res => res.data)
+    // const res = await axios.get(TOY_URL)
+    // return res.data
 }
 
 async function getById(id) {
     return storageService.get(KEY, id)
-        // return axios.get(TOY_URL + id).then(res => res.data)
-        // const res = await axios.get(TOY_URL + id)
-        // return res.data
+    // return axios.get(TOY_URL + id).then(res => res.data)
+    // const res = await axios.get(TOY_URL + id)
+    // return res.data
 }
 
 async function remove(id) {
     return storageService.remove(KEY, id)
-        // return axios.delete(TOY_URL + id).then(res => res.data)
-        // const res = await axios.delete(TOY_URL + id)
-        // return res.data
+    // return axios.delete(TOY_URL + id).then(res => res.data)
+    // const res = await axios.delete(TOY_URL + id)
+    // return res.data
 }
 
 async function save(stay) {
@@ -67,7 +68,7 @@ async function save(stay) {
     // }
 }
 
-function getEmptyStay(name = '', price = 100, ) {
+function getEmptyStay(name = '', price = 100,) {
     return {
         _id: '',
         name,
@@ -184,6 +185,15 @@ function _createStay2(name, loc, price, imgUrls, summary, reviews, propertyType,
     stay.host = host
     stay.createdAt = Date.now();
     return stay
+}
+
+function createEmptyReview() {
+    const review = {
+        txt: '',
+        categories: { cleanliness: 0, accuracy: 0, communication: 0, location: 0, checkIn: 0, value: 0, },
+        createdAt: Date.now()
+    }  
+    return review 
 }
 
 function _createStayForDemoOne(name, loc, price, imgUrls, summary, reviews, propertyType, capacity, amenities, host) {
