@@ -31,7 +31,7 @@
       <div class="prevDiv">{{ stayType }} • {{ stay.loc.city }}</div>
       <div class="prevDiv">{{ staySummary }}</div>
       <div class="prevDiv">
-        <span class="preview-stay-bold">${{ stay.price }}</span
+        <span class="preview-stay-bold">${{ formatPrice }}</span
         > / night
       </div>
     </div>
@@ -102,6 +102,9 @@ export default {
         return this.stay.summary.substr(0, 28) + "...";
       } else return this.stay.summary;
     },
+    formatPrice(){
+      return this.stay.price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
   },
 };
 </script>

@@ -14,6 +14,7 @@
     div {
         // margin-bottom: -8px;
     }
+    height: 150%;
 }
 
 .listImg {
@@ -60,7 +61,8 @@ ul.stay-list {
   margin-bottom: 6px;
 
   @include for-narrow-layout {
-    height: 165px;
+    height: 17.1875rem; //275px
+    width: 17.1875rem;
 }
 
   // img {
@@ -125,12 +127,20 @@ ul.stay-list {
 }
 
 
+
+
+
 .likeBtn{
-  color: gray;
-  
+  color: rgba(0, 0, 0, 0.5);
+  //text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
+  // content: "\f004";
+  font-size: 20px;
 }
 
-
+.fa-heart path{
+  stroke: white;
+  stroke-width: 25px;
+}
 
 .liked{
   color: $clr1;
