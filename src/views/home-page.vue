@@ -31,7 +31,7 @@
     </section>
     <section class="gallery">
       <a class="gallery-link" :href="`#/explore/${this.topStay1._id}`">
-        <div>
+        <div class="gallery-card">
           <img :src="`${this.topStay1.imgUrls[0]}`" class="listImg" />
           <h4 class="flex">{{ this.topStay1.name }}</h4>
         </div>
