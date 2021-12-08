@@ -7,6 +7,7 @@ import stayDetails from '@/views/stay-details.vue';
 import userDetails from '@/views/user-details.vue';
 import allOrders from '@/views/all-orders.vue';
 
+
 Vue.use(VueRouter)
 
 const routes = [{

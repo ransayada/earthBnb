@@ -4,7 +4,7 @@
       <h1 class="stay-name">{{ stay.name }}</h1>
       <div class="stay-share-container flex space-between">
         <div class="stay-city-info flex align-center">
-          <p><i class="fas fa-star review-star"></i>{{stayRating}}</p>
+          <p><i class="fas fa-star review-star"></i>{{ stayRating }}</p>
           <p>({{ stay.reviews.length }} reviews)</p>
           <p>·</p>
           <p>{{ stay.loc.country }},</p>
@@ -126,7 +126,9 @@
         <section class="order-form-container">
           <div class="order-form-sticky">
             <div class="order-form">
-              <div class="order-form-header flex space-between">
+              <div
+                class="order-form-header flex space-between homepage-datepicker"
+              >
                 <p>
                   <span class="order-form-price"
                     >${{ stay.price.toLocaleString() }}</span
@@ -135,18 +137,18 @@
                 </p>
                 <span class="stay-rate-display">
                   <i class="fas fa-star review-star"></i>
-                  <span class="rate-avarage">{{stayRating}}</span>
+                  <span class="rate-avarage">{{ stayRating }}</span>
                   <span style="text-decoration: underline"
                     >({{ stay.reviews.length }} reviews)</span
                   >
                 </span>
               </div>
               <form @submit.prevent="makeOrder">
-                <div class="order-form-date-picker flex">
+                <div class="order-form-date-picker flex homepage-datepicker">
                   <div class="checking">
                     <div class="check-in" @click="openModal('date')">
                       <div class="category-stay-label">CHECK-IN</div>
-                      <date-picker
+                      <Details-date-picker
                         @setTime="setTime"
                         :clicked="this.clickedOn"
                         @setOrderDetails="setOrderDetails"
@@ -162,7 +164,7 @@
                     <div class="guests-num" @click="openModal('guests')">
                       <div class="category-stay-label">GUESTS</div>
                       <div class="add">{{ numOfGuests }} guest</div>
-                      <reserve-guests
+                      <details-reserve-guests
                         @closeRGuests="closeRGuests"
                         @addGuests="addGuests"
                         :clicked="this.clickedOn"
@@ -201,8 +203,7 @@
         <div class="reviews-headline">
           <p>
             <i class="fas fa-star review-star"></i>
-           {{stayRating}} ·
-            {{ this.stay.reviews.length }} reviews
+            {{ stayRating }} · {{ this.stay.reviews.length }} reviews
           </p>
         </div>
         <div class="reviews-rating-data airbnb">
@@ -398,20 +399,35 @@
         <GmapMap
           :center="pos"
           :zoom="12"
-          style="width: 1120px; height: 480px; margin-bottom: 80px"
+          style="width: 100%; height: 480px; margin-bottom: 80px"
         >
-          <GmapMarker :position="pos" :clickable="true" />
+          <GmapMarker :position="pos" :clickable="true"  />
         </GmapMap>
       </section>
     </div>
+    <div v-else>
+    <img 
+      src="https://cdn.dribbble.com/users/44323/screenshots/1655310/loadinganimation.gif"
+    />
+  </div>
   </div>
 </template>
 <script>
-import reserveGuests from "../cmps/reserve-guests.vue";
-import DatePicker from "../cmps/date-picker.vue";
+import DetailsReserveGuests from "../cmps/details-reserve-guests.vue";
+// import DatePicker from "../cmps/date-picker.vue";
 import stayImgs from "../cmps/stay-imgs.vue";
 import gradientBtn from "../cmps/gradient-btn.vue";
 import reviewList from "../cmps/review-list.vue";
+import DetailsDatePicker from "../cmps/details-date-picker.vue";
+import "vue2-datepicker/index.css";
+
+// DatePicker.methods.displayPopup = function () {
+//   this.position = {
+//     left: 0,
+//     bottom: "100%",
+//   };
+// };
+
 export default {
   name: "stayDetails",
   data() {
@@ -502,11 +518,10 @@ export default {
     },
     openModal(of) {
       this.clickedOn = of;
-      // console.log(this.clickedOn)
     },
     addGuests(val) {
       console.log("details", val);
-      if (val === 0) val += 1;
+      // if (val === 0) return;
       this.numOfGuests = val;
     },
     closeRGuests() {
@@ -586,8 +601,8 @@ export default {
   components: {
     stayImgs,
     gradientBtn,
-    reserveGuests,
-    DatePicker,
+    DetailsReserveGuests,
+    DetailsDatePicker,
     reviewList,
     // dynamicModal,
   },

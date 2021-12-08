@@ -3,7 +3,7 @@
         <form class="min-filter">
           <!-- <input type="text" placeholder="Start your search" v-model="filterBy.loc.country"> -->
           <span>Start your search</span>
-          <button class="flex center" @click="setFilter"><a href="#/explore"><i class="fas fa-search"></i></a></button>
+          <button class="flex center" @click="setFilter"><a href="#/explore"><i class="fas fa-search filter-btn"></i></a></button>
           </form>
     </section>
 </template>

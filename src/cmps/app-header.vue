@@ -1,91 +1,265 @@
 <template>
-  <div id="app-header" class="app header flex space-between align-center">
-    <div class=header-logo>
-    <a class="logo" href="#/">
-      <h1 class="logo-text">
-        <i class="fab fa-airbnb"></i>
-        EarthBnb
-      </h1>
-    </a>
-    </div>
-    <div class="header-filter">
-      <stayFilter @filtered="setFilter" />
-    </div>
-    <div class="header-nav">
-    <nav class="nav-container flex space-between">
-      <a class="bahA pointer" href="#/explore"><p>Explore</p></a>
-      <a class="bahA pointer" href="#/becomeahost"><p>Become a host</p></a> 
-      <div class="flex align-center"> 
-      <button class="dropbtn" @click="openNav()">
-        <span>
-          <i class="fas fa-bars dropI"></i>
-        </span>
-          <img class="dropImg" src="https://res.cloudinary.com/sprint4rad/image/upload/v1638615860/profilepics/profilePics_faozet.jpg" alt="profilePic">
-      </button>
+  <header
+    :class="{ 'app-header': !this.isTop, 'app-header-expanded': this.isTop }"
+    :style="navColor"
+  >
+    <section class="main-nav">
+      <div class="logo">
+        <img
+          :class="logo"
+          :src="require(`@/assets/logo.png`)"
+          @click="toHome"
+        />
       </div>
-    </nav>
-    </div>
-      <!-- <div id="mySidenav" class="sidenav">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <a href="#">Messages</a>
-        <a href="#">Notifications</a>
-        <a href="#">Trips</a>
-        <a href="#">Wish List</a>
-        <a href="#">Dashboard</a>
-        <a href="#">Account</a>
-        <a href="#">Help</a>
-        <a href="#">logout</a>
-      </div> -->
-    
-  </div>
+      <div @click="expandToSearch()" v-if="!isTop" class="initial-search-bar">
+        <p>Start your search</p>
+        <div class="circle">
+          <img
+            class="search-icon"
+            src="../assets/logo.png"
+          />
+        </div>
+      </div>
+      <div v-if="isTop" class="nav-link">
+        <span>Explore</span>
+        <span>Experiences</span>
+        <span>Online Experiences</span>
+      </div>
+      <div v-if="expandedSearch" class="expty-space"></div>
+      <div v-if="isTop" class="secondary-search-bar">
+        <form @submit.prevent="">
+          <label class="main-search-label" @click="openModal('location')">
+            <span>Location</span>
+            <input placeholder="Where are you going?" @input="openModal('s-location')"  v-model="location" />
+          </label>
+          <label class="main-search-label" @click="openModal()">
+            <span>Check in</span>
+            <date-picker
+              :placeholder="getCheckinDate"
+              @input="renderDates($event)"
+              v-model="checkinDate"
+              range
+            ></date-picker>
+          </label>
+          <label class="main-search-label" @click="openModal()">
+            <span>Check out</span>
+            <input
+            :placeholder="getCheckoutDate"
+              v-model="checkoutDate"
+              ref="myDatePicker"
+              range
+            />
+            <!-- <date-picker placeholder="Add dates" v-model="time3" range></date-picker> -->
+          </label>
+          <label class="main-search-label" @click="openModal('guests')">
+            <span>Guests</span>
+            <input :placeholder="getGuestsAmount" />
+          </label>
+          <div class="expanded circle">
+            <img
+              @click="openModal('submit')"
+              class="search-icon"
+              src="../assets/logo.png"
+            />
+          </div>
+          <dynamic-modal :clicked="this.clickedOn" />
+        </form>
+      </div>
+      <div class="host-options">
+        <p class="become" @click="toHost">Become a Host</p>
+      </div>
+      <div class="global">
+        <img :src="require(`@/assets/logo.png`)" />
+      </div>
+      <!-- <login /> -->
+    </section>
+  </header>
 </template>
-
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-
-.space-between {
-  justify-content: space-between;
-}
-
-
-</style>
-
 <script>
-import stayFilter from './stay-filter.vue'
+import dynamicModal from "./dynamic-modal.vue";
+import DatePicker from "vue2-datepicker";
+import "vue2-datepicker/index.css";
+// import login from "./login.vue";
+import {eventBus} from '../services/eventBus.js'
 
+DatePicker.methods.displayPopup = function () {
+  this.position = {
+    left: 0,
+    bottom: "100%",
+  };
+};
 export default {
-  name: 'appHeader',
+  components: {
+    DatePicker,
+    dynamicModal,
+  },
   data() {
     return {
-      search: ''
-    }
+      num: 1,
+      windowWidth: window.innerWidth,
+      isTop: true,
+      imgSrc: "logo-white",
+      globalSrc: "global-white",
+      currPage: "",
+      expandedSearch: false,
+      clickedOn: "",
+      checkinDate: 'Add dates',
+      checkoutDate: 'Add dates',
+      location: '',
+      guests: 'Add guests'
+    };
+  },
+  created() {
+    eventBus.$on('selectedLocation', this.setLocation)
+    eventBus.$on('setGuests', this.setGuests)
+    this.setCurrPage();
+    window.addEventListener("scroll", this.handleScroll);
+  },
+  mounted() {
+    this.$nextTick(() => {
+      window.addEventListener("resize", this.onResize);
+    });
   },
   methods: {
-    // onSearch() {
-    //   this.$router.push({ name: 'explore', query: { search: this.search } })
-    // }
-    btnClicked(){
-      console.log('clicked')
+    onResize() {
+      this.windowWidth = window.innerWidth;
+      if (this.windowWidth <= 980) {
+        if (this.currPage === "home") {
+          this.imgSrc = this.isTop ? "airbnb-white" : "airbnb";
+        } else if (this.currPage === "all") {
+          this.imgSrc = "airbnb";
+        }
+      } else if (this.windowWidth > 980) {
+        if (this.currPage === "home") {
+          this.imgSrc = this.isTop ? "logo-white" : "airbnb-logo";
+        } else if (this.currPage === "all") {
+          this.imgSrc = "airbnb-logo";
+        }
+      }
     },
-    setFilter(filter) {
-     
-      this.$store.commit({type: 'setFilterBy', filterBy: filter})},
-    openNav() {
-      document.getElementById("mySidenav").style.width = "250px";
+    toHome() {
+      this.$router.push("/");
+      this.$store.dispatch({type:'updateTrip', trip: ''})
     },
-    closeNav() {
-      document.getElementById("mySidenav").style.width = "0";
+    toHost() {
+      this.$router.push("/host");
+    },
+    handleScroll() {
+      let scrollBarPos = window.top.scrollY;
+      if (!scrollBarPos) this.topMode();
+      else this.scrollMode();
+    },
+    topMode() {
+      this.isTop = this.currPage === "all" ? false : true;
+      this.imgSrc = this.currPage === "all" ? "airbnb-logo" : "logo-white";
+      this.globalSrc = this.currPage === "all" ? "global" : "global-white";
+    },
+    scrollMode() {
+      this.isTop = false;
+      this.imgSrc = "airbnb-logo";
+      this.globalSrc = "global";
+    },
+    setCurrPage() {
+      if (this.$route.name !== "home") {
+        this.isTop = false;
+        this.currPage = "all";
+      } else {
+        this.isTop = true;
+        this.currPage = "home";
+      }
+    },
+    expandToSearch() {
+      this.isTop = true;
+      this.expandedSearch;
+    },
+    handleChange() {},
+    openModal(of) {
+      this.clickedOn = of;
+      if (of === 'submit') {
+        if (this.checkinDate && this.checkoutDate) {
+          const dates = [this.checkinDate, this.checkoutDate]
+          eventBus.$emit('setDates', dates)
+        }
+      }
+    },
+      setLocation(location) {
+        this.location = location
+        this.openModal()
+        
+      },
+      renderDates(event) {
+      this.checkinDate = `${new Date(event[0]).getDate()}/${
+        new Date(event[0]).getMonth() + 1
+      }/${new Date(event[0]).getFullYear()}`
+
+      this.checkoutDate = `${new Date(event[1]).getDate()}/${
+        new Date(event[1]).getMonth() + 1
+      }/${new Date(event[1]).getFullYear()}`
+
+      },
+      setGuests(amount) {
+       this.guests = amount
+      }
+  },
+  computed: {
+    logo() {
+      if (this.imgSrc === "airbnb") {
+        return "logo-icon";
+      } else {
+        return "logo-img";
+      }
+    },
+    navColor() {
+      if (this.currPage === "all") return;
+      else if (
+        this.imgSrc === "logo-white" ||
+        (this.imgSrc === "airbnb-white" && this.isTop)
+      ) {
+        return {
+          backgroundColor: "transparent",
+          position: "fixed",
+          width: 100 + "%",
+        };
+      } else {
+        return {
+          backgroundColor: "white",
+          position: "fixed",
+          width: 100 + "%",
+          "z-index": 200,
+        };
+      }
+    },
+    
+    getCheckinDate() {
+      return this.checkinDate
+    },
+        getCheckoutDate() {
+      return this.checkoutDate
+    },
+    getGuestsAmount() {
+      if (!this.guests) return 'Add guests'
+      return this.guests
     }
   },
-  components: {
-      stayFilter
+  destroyed() {
+    window.removeEventListener("scroll", this.handleScroll);
+  },
+  watch: {
+    "$route.params": {
+      handler() {
+        this.setCurrPage();
+        if (this.currPage === "all") {
+          // console.log('not at home anymore')
+          this.globalSrc = "global";
+          this.imgSrc = "airbnb-logo";
+        } else if (this.currPage === "home" && this.isTop) {
+          this.openModal();
+          this.imgSrc = "logo-white";
+          this.globalSrc = "global-white";
+        }
+      },
+      immediate: true,
     }
-    
-}
+  },
+};
 </script>
