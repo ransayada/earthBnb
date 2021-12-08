@@ -6,6 +6,7 @@ import explorePage from '@/views/explore-page.vue';
 import stayDetails from '@/views/stay-details.vue';
 import userDetails from '@/views/user-details.vue';
 import allOrders from '@/views/all-orders.vue';
+import dashboard from '@/views/dashboard.vue';
 
 Vue.use(VueRouter)
 
@@ -56,6 +57,11 @@ const routes = [{
         name: 'allOrders',
         component: allOrders,
     },
+    {
+        path:'/dashboard/:userId',
+        name: 'dashboard',
+        component: dashboard
+    }
 
 ]
 

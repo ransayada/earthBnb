@@ -1,11 +1,16 @@
 <template>
-  <div class="explore-container">
+  <div v-if="isLoading" class="explore-container">
     <div class="explore-head-title-visits">
       <small class="head-title-visits">{{ staysCount }} stays</small>
     </div>
     <h1 class="head-title-txt">{{ headTitleText }}</h1>
     <exploreFilter @filtered="setFilterBy" />
     <stay-list :stays="stays" />
+  </div>
+   <div v-else>
+    <img 
+      src="https://cdn.dribbble.com/users/44323/screenshots/1655310/loadinganimation.gif"
+    />
   </div>
 </template>
 
@@ -27,6 +32,7 @@ export default {
           toPrice: Infinity,
         },
       },
+      isLoading:false
     };
   },
   created() {
@@ -37,6 +43,9 @@ export default {
       this.$store.commit({ type: "setFilterBy", filterBy: this.filterBy });
       this.stays = this.$store.getters.staysToShow;
     }
+    setTimeout(()=>{
+      this.isLoading = true;
+    },1500)
   },
   methods: {
     setFilterBy(filterBy) {
