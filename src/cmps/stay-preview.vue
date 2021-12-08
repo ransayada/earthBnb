@@ -91,11 +91,11 @@ export default {
       return this.stay.reviews.length;
     },
     stayType() {
-      if (!this.stay.type) {
+      if (!this.stay.propertyType) {
         //this is temporary
         return Math.random() < 0.5 ? "Loft" : "Villa";
       }
-      return this.stay.type;
+      return this.stay.propertyType;
     },
     staySummary() {
       if (this.stay.summary.length > 28) {
