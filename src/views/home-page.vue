@@ -127,7 +127,7 @@ export default {
       this.nerby3 = this.$store.getters.allStays[6];
       this.nerby4 = this.$store.getters.allStays[7];
       this.isLoading = true;
-    }, 1500);
+    }, 1000);
   },
   components: {},
   mounted() {
