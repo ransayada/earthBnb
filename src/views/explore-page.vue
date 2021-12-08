@@ -45,7 +45,7 @@ export default {
     }
     setTimeout(()=>{
       this.isLoading = true;
-    },1500)
+    },500)
   },
   methods: {
     setFilterBy(filterBy) {
