@@ -1,0 +1,33 @@
+.stay-imgs {
+  padding: 15px 0 30px;
+  > *:not(:first-child) {
+    display: none;
+  }
+  @include for-wide-layout {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(180px, 1fr));
+    grid-template-rows: 180px 180px;
+    gap: 8px;
+    > *:not(:first-child) {
+      display: block;
+    }
+  }
+  img {
+    object-fit: cover;
+  }
+  :first-child {
+    grid-column: 1 / span 2;
+    grid-row: 1 / span 2;
+    border-radius: 13px;
+    @include for-wide-layout {
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+  }
+  :nth-child(2) {
+    border-top-right-radius: 13px;
+  }
+  :nth-child(3) {
+    border-bottom-right-radius: 13px;
+  }
+}

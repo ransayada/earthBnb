@@ -88,7 +88,8 @@ function getEmptyOrder() {
             name: "",
             price: 0
         },
-        status: "pending"
+        status: "pending",
+        imgUrls: []
     }
 
 }
@@ -113,5 +114,6 @@ function _createOrder() {
     const order = getEmptyOrder();
     order._id = utilService.makeId()
     order.createdAt = Date.now();
+    order.imgUrls = ['https://res.cloudinary.com/sprint4rad/image/upload/v1638611196/Demo1/1/1_a55tgj.jpg', 'https://res.cloudinary.com/sprint4rad/image/upload/v1638611196/Demo1/1/7_agmyfv.jpg', 'https://res.cloudinary.com/sprint4rad/image/upload/v1638611196/Demo1/1/3_nvickq.jpg', 'https://res.cloudinary.com/sprint4rad/image/upload/v1638611196/Demo1/1/6_ybwvcs.jpg', 'https://res.cloudinary.com/sprint4rad/image/upload/v1638611196/Demo1/1/4_pwjrtl.jpg', 'https://res.cloudinary.com/sprint4rad/image/upload/v1638611195/Demo1/1/2_vv2wqn.jpg', 'https://res.cloudinary.com/sprint4rad/image/upload/v1638611195/Demo1/1/8_kd7vqz.jpg', 'https://res.cloudinary.com/sprint4rad/image/upload/v1638611195/Demo1/1/5_gk0j3m.jpg']
     return order
 }
