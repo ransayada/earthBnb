@@ -27,6 +27,10 @@
   .stay-info-container {
     gap: 100px;
     border-bottom: 1px solid #ddd;
+    flex-direction: column-reverse;
+    @include for-wide-layout {
+      flex-direction: row;
+    }
 
     .amenities-container {
       text-align: left;
@@ -67,7 +71,10 @@
         border-radius: 13px;
         box-shadow: 0 6px 16px -2px #d8d8d8;
         padding: 20px 25px 15px;
-        width: 372px;
+        width: 100%;
+        @include for-wide-layout {
+          width: 372px;
+        }
 
         .order-form-span {
           font-size: 16px;
@@ -174,7 +181,6 @@
   align-items: center;
   span {
     margin-inline-end: 5px;
-
   }
 }
 
@@ -431,6 +437,14 @@
   }
 }
 
+.add-review-header {
+  margin-bottom: -25px;
+}
+
+.review-date {
+  font-family: cereal-light;
+}
+
 .review-btn-container {
   justify-content: start;
   button {
@@ -450,13 +464,14 @@
 
 .details-map {
   text-align: left;
-
- 
 }
 
 .reserve-popup {
   width: 600px;
   color: $clr1;
+}
+
+.vue-map-container {
 }
 // .el-input {
 //   .el-input__inner {

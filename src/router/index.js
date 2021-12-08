@@ -8,6 +8,7 @@ import userDetails from '@/views/user-details.vue';
 import allOrders from '@/views/all-orders.vue';
 import dashboard from '@/views/dashboard.vue';
 
+
 Vue.use(VueRouter)
 
 const routes = [{
