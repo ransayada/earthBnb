@@ -42,7 +42,7 @@ async function query(filterBy = {}) {
 async function getById(id) {
     // return storageService.get(KEY, id)
 
-    return httpService.get(`stay/${id}`)   
+    return httpService.get(`stay/${id}`)
     // return axios.get(TOY_URL + id).then(res => res.data)
     // const res = await axios.get(TOY_URL + id)
     // return res.data
@@ -202,9 +202,10 @@ function createEmptyReview() {
     const review = {
         txt: '',
         categories: { cleanliness: 0, accuracy: 0, communication: 0, location: 0, checkIn: 0, value: 0, },
-        createdAt: Date.now()
-    }  
-    return review 
+        createdAt: Date.now(),
+        user: { fullName: '' }
+    }
+    return review
 }
 
 // function _createStayForDemoOne(name, loc, price, imgUrls, summary, reviews, propertyType, capacity, amenities, host) {
