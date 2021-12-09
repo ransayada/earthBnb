@@ -5,7 +5,7 @@
       'app-header-expanded': this.isTop && !this.isExplore,
       'app-header-explore': this.isExplore && !this.isTop,
     }"
-    :style="navColor"
+    
   >
     <section class="main-nav">
       <div class="logo">

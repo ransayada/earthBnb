@@ -468,8 +468,11 @@ export default {
         .then((stay) => {
           this.stay = JSON.parse(JSON.stringify(stay));
           this.pos = { lat: +this.stay.loc.lat, lng: +this.stay.loc.lng };
-          if (this.$route.query.from !== "undefined" && this.$route.query.from) {
-            console.log('entered');
+          if (
+            this.$route.query.from !== "undefined" &&
+            this.$route.query.from
+          ) {
+            console.log("entered");
             this.time = [];
             this.time[0] = this.$route.query.from;
             if (this.$route.query.to) this.time[1] = this.$route.query.to;
@@ -509,7 +512,7 @@ export default {
     calcTime() {
       console.log(this.time[0]);
       let date1 = new Date(this.time[0]);
-      console.log(date1)
+      console.log(date1);
       let date2 = new Date(this.time[1]);
       let timeDiffrence = date2 - date1;
       let daysDiffrence = Math.ceil(timeDiffrence / (1000 * 60 * 60 * 24));
@@ -549,13 +552,13 @@ export default {
       console.log(this.clickedOn);
     },
     setTime(time) {
-      console.log('settime',time[0].toDateString());
-      let currtime = time[0].toDateString()
-      let currtime2 = time[1].toDateString()
+      console.log("settime", time[0].toDateString());
+      let currtime = time[0].toDateString();
+      let currtime2 = time[1].toDateString();
       this.clickedOn = "";
-      this.time = []
-      this.time.push(currtime)
-      this.time.push(currtime2)
+      this.time = [];
+      this.time.push(currtime);
+      this.time.push(currtime2);
     },
     format(percentage) {
       return percentage === 100 ? "Full" : `${percentage}%`;
@@ -595,14 +598,14 @@ export default {
       return false;
     },
     showCheckInDate() {
-      if (!this.$route.query.from && this.$route.query.from !== 'undefined') {
-        console.log('hdfgdfgdfgdf',this.time[0]);
+      if (!this.$route.query.from && this.$route.query.from !== "undefined") {
+        console.log("hdfgdfgdfgdf", this.time[0]);
         let time = this.time[0] ? this.time[0] : "";
         return time;
       } else return this.time[0];
     },
     showCheckOutDate() {
-      if (!this.$route.query.to && this.$route.query.from !== 'undefined') {
+      if (!this.$route.query.to && this.$route.query.from !== "undefined") {
         let time = this.time[1] ? this.time[1] : "";
         return time;
       } else return this.time[1];
