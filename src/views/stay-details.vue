@@ -468,13 +468,13 @@ export default {
         .then((stay) => {
           this.stay = JSON.parse(JSON.stringify(stay));
           this.pos = { lat: +this.stay.loc.lat, lng: +this.stay.loc.lng };
-          if (this.$route.query.from) {
+          if (this.$route.query.from !== "undefined") {
             this.time = [];
             this.time[0] = this.$route.query.from;
-          }
           if (this.$route.query.to) this.time[1] = this.$route.query.to;
           if (this.$route.query.nog) this.numOfGuests = this.$route.query.nog;
           this.setOrderDetails();
+          }
         });
     },
     makeOrder() {
