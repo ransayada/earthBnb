@@ -16,7 +16,7 @@ export default {
     setTime() {
       // console.log(this.time3);
       this.time3[0] = new Date(this.time3[0].toDateString());
-      console.log(this.time3[0].toDateString());
+      console.log('datepicker',this.time3[0]);
       this.$emit("setTime", this.time3);
       this.$emit("setOrderDetails");
     },
