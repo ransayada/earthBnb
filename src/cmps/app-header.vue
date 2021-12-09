@@ -245,12 +245,8 @@ export default {
       this.openModal();
     },
     renderDates(event) {
-      this.checkinDate = `${new Date(event[0]).getDate()}/${
-        new Date(event[0]).getMonth() + 1
-      }`;
-      this.checkoutDate = `${new Date(event[1]).getDate()}/${
-        new Date(event[1]).getMonth() + 1
-      }`;
+      this.checkinDate = `${new Date(event[0]).toDateString()}`;
+      this.checkoutDate = `${new Date(event[1]).toDateString()}`;
     },
     setGuests(nog) {
       this.guests = nog;

@@ -60,6 +60,14 @@
     .order-form-container {
       flex: 1 1;
 
+      .mx-input {
+        display: none;
+      }
+
+      .mx-icon-calendar {
+        display: none;
+      }
+
       .order-form-sticky {
         margin: 20px 0;
         position: -webkit-sticky;
@@ -88,6 +96,10 @@
         }
 
         .order-from-total {
+
+          h5 {
+            text-align: center;
+          }
           div {
             display: flex;
             justify-content: space-between;

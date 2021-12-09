@@ -154,12 +154,16 @@
                         @setOrderDetails="setOrderDetails"
                       />
                       <div class="add" v-if="!time">Add date</div>
-                      <div class="add" else>{{ showCheckInDate }}</div>
+                      <div class="add" else>
+                        {{ showCheckInDate }}
+                      </div>
                     </div>
                     <div class="check-out" @click="openModal('date')">
                       <div class="category-stay-label">CHECK-OUT</div>
                       <div class="add" v-if="!time">Add date</div>
-                      <div class="add" else>{{ showCheckOutDate }}</div>
+                      <div class="add" else>
+                        {{ showCheckOutDate }}
+                      </div>
                     </div>
                     <div class="guests-num" @click="openModal('guests')">
                       <div class="category-stay-label">GUESTS</div>
@@ -464,6 +468,13 @@ export default {
         .then((stay) => {
           this.stay = JSON.parse(JSON.stringify(stay));
           this.pos = { lat: +this.stay.loc.lat, lng: +this.stay.loc.lng };
+          if (this.$route.query.from) {
+            this.time = [];
+            this.time[0] = this.$route.query.from;
+          }
+          if (this.$route.query.to) this.time[1] = this.$route.query.to;
+          if (this.$route.query.nog) this.numOfGuests = this.$route.query.nog;
+          this.setOrderDetails();
         });
     },
     makeOrder() {
@@ -495,7 +506,9 @@ export default {
       // console.log(this.order.totalPrice);
     },
     calcTime() {
+      console.log(this.time[0]);
       let date1 = new Date(this.time[0]);
+      console.log(date1);
       let date2 = new Date(this.time[1]);
       let timeDiffrence = date2 - date1;
       let daysDiffrence = Math.ceil(timeDiffrence / (1000 * 60 * 60 * 24));
@@ -577,12 +590,16 @@ export default {
       return false;
     },
     showCheckInDate() {
-      let time = this.time[0] ? this.time[0].toDateString() : "";
-      return time;
+      if (!this.$route.query.from) {
+        let time = this.time[0] ? this.time[0].toDateString() : "";
+        return time;
+      } else return this.time[0];
     },
     showCheckOutDate() {
-      let time = this.time[1] ? this.time[1].toDateString() : "";
-      return time;
+      if (!this.$route.query.to) {
+        let time = this.time[1] ? this.time[1].toDateString() : "";
+        return time;
+      } else return this.time[1];
     },
     reviewsToShow() {
       const { reviews } = this.stay;
