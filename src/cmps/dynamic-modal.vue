@@ -8,6 +8,12 @@
 
     <div v-if="clicked === 's-location'"  class="more-locations-modal">
       <div class="s-location-container">
+        <div @click="setLocation('London')" class="location-option-container">
+          <div class="location-btn">
+            <i class="fas fa-map-marker-alt"></i>
+          </div>
+          <span>London, UK</span>
+        </div>
         <div @click="setLocation('Tel-Aviv')" class="location-option-container">
           <div  class="location-btn">
             <i class="fas fa-map-marker-alt"></i>
@@ -26,37 +32,6 @@
           </div>
           <span>Paris, France</span>
         </div>
-        <div @click="setLocation('London')" class="location-option-container">
-          <div class="location-btn">
-            <i class="fas fa-map-marker-alt"></i>
-          </div>
-          <span>London, UK</span>
-        </div>
-        <div @click="setLocation('Bangkok')" class="location-option-container">
-          <div class="location-btn">
-            <i class="fas fa-map-marker-alt"></i>
-          </div>
-          <span>Bangkok, Thailand</span>
-        </div>
-        <div @click="setLocation('Amsterdam')" class="location-option-container">
-          <div class="location-btn">
-            <i class="fas fa-map-marker-alt"></i>
-          </div>
-          <span>Amsterdam, Netherlands</span>
-        </div>
-        <div @click="setLocation('Lisbon')" class="location-option-container">
-          <div class="location-btn">
-            <i class="fas fa-map-marker-alt"></i>
-          </div>
-          <span>Lisbon, Portugal</span>
-        </div>
-        <div @click="setLocation('Berlin')" class="location-option-container">
-          <div class="location-btn">
-            <i class="fas fa-map-marker-alt"></i>
-          </div>
-          <span>Lisbon, Portugal</span>
-        </div>
-        
       </div>
     </div>
     <div v-if="clicked === 'guests'" class="guests-modal">
