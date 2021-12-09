@@ -5,6 +5,7 @@
       'app-header-expanded': this.isTop && !this.isExplore,
       'app-header-explore': this.isExplore && !this.isTop,
     }"
+    class="full"
   >
     <section class="main-nav">
       <div class="logo">
@@ -201,7 +202,7 @@ export default {
     setCurrPage() {
       console.log(this.$route.name);
       console.log(this.$route.query.place);
-      if (this.$route.name === "home") {
+      if (this.$route.name === "homePage") {
         this.isTop = true;
         this.currPage = "home";
         this.isExplore = false;
