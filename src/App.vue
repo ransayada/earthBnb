@@ -38,6 +38,17 @@ import appFooter from '@/cmps/app-footer.vue'
 
 export default {
   name: 'app',
+  data() {
+    return {
+      isLoading: true
+    }
+  },
+  methods:{
+    setIsLoading(){
+      this.isLoading = false;
+    }
+  },
+
   components: {
     appHeader,
     appFooter

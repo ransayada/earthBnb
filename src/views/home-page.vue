@@ -117,6 +117,7 @@ export default {
     };
   },
   created() {
+    // this.$emit('isLoading');
     setTimeout(() => {
       this.topStay1 = this.$store.getters.allStays[0];
       this.topStay2 = this.$store.getters.allStays[1];
@@ -127,6 +128,7 @@ export default {
       this.nerby3 = this.$store.getters.allStays[6];
       this.nerby4 = this.$store.getters.allStays[7];
       this.isLoading = true;
+      this.$emit('isLoading');
     }, 1000);
   },
   components: {},
