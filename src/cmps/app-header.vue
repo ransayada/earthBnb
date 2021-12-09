@@ -5,7 +5,7 @@
       'app-header-expanded': this.isTop && !this.isExplore,
       'app-header-explore': this.isExplore && !this.isTop,
     }"
-    
+    class="full"
   >
     <section class="main-nav">
       <div class="logo">
@@ -15,8 +15,12 @@
         </a>
       </div>
       <div @click="expandToSearch()" v-if="!isTop" class="initial-search-bar">
-        <p class="initial">Start your search</p>
-        <!-- <p class="not-initial">{{this.place}}  {{this.from}} {{this.to}}  {{this.nog}} guests</p> -->
+        
+        <p>{{formatSearch}}</p>
+        
+        
+        <!-- <p>Start your search</p>
+        <p>{{this.place}}  {{this.from}} {{this.to}}  {{this.nog}}</p> -->
 
         <div class="search-btn">
           <button><i class="fas fa-search"></i></button>
@@ -198,7 +202,7 @@ export default {
     setCurrPage() {
       console.log(this.$route.name);
       console.log(this.$route.query.place);
-      if (this.$route.name === "home") {
+      if (this.$route.name === "homePage") {
         this.isTop = true;
         this.currPage = "home";
         this.isExplore = false;
@@ -251,6 +255,20 @@ export default {
     setGuests(nog) {
       this.guests = nog;
     },
+    formatQueryForSearch(){
+      if(this.$route.query.place==='undefined'){
+        return "Start your search";
+      }else{
+        const place = this.$route.query.place
+        const from = this.$route.query.from.split(' ');
+        const fromAfter = from[1]+' '+from[2];
+        const to = this.$route.query.to.split(' ');
+        const toAfter = to[1]+' '+to[2];
+        const guests = this.$route.query.nog
+    
+        return `${place} | ${fromAfter} ~ ${toAfter} | Guests ${guests}`
+      }
+    }
   },
   computed: {
     getCheckinDate() {
@@ -266,6 +284,13 @@ export default {
     isNavOpen() {
       return this.navOpen;
     },
+    formatSearch(){
+      if(!this.$route.query.place){
+        return "Start your search"
+      }else{
+        return this.formatQueryForSearch();
+      }
+    }
   },
   destroyed() {
     window.removeEventListener("scroll", this.handleScroll);
