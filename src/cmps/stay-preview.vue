@@ -60,7 +60,11 @@ export default {
       return sum / categoryNum;
     },
     showStayDetails() {
+      //place from to 
+      if(!this.$route.query)
       this.$router.push(`/explore/${this.stay._id}`);
+      else 
+      this.$router.push(`/explore/${this.stay._id}?place=${this.$route.query.place}&from=${this.$route.query.from}&to=${this.$route.query.to}&nog=${this.$route.query.nog}`);
     },
     likeStay(){
       this.isLiked = !this.isLiked
