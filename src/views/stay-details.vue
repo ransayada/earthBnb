@@ -401,15 +401,15 @@
           :zoom="12"
           style="width: 100%; height: 480px; margin-bottom: 80px"
         >
-          <GmapMarker :position="pos" :clickable="true"  />
+          <GmapMarker :position="pos" :clickable="true" />
         </GmapMap>
       </section>
     </div>
     <div v-else>
-    <img 
-      src="https://cdn.dribbble.com/users/44323/screenshots/1655310/loadinganimation.gif"
-    />
-  </div>
+      <img
+        src="https://cdn.dribbble.com/users/44323/screenshots/1655310/loadinganimation.gif"
+      />
+    </div>
   </div>
 </template>
 <script>
@@ -453,10 +453,8 @@ export default {
     this.order = this.$store.getters.getEmptyOrder;
     this.newReview = this.$store.getters.getEmptyReview;
   },
-  mounted(){
-   
+  mounted() {
     window.scrollTo(0, 0);
-  
   },
   methods: {
     getStayById() {
@@ -482,8 +480,11 @@ export default {
       this.order.stay.name = this.stay.name;
       this.order.guests.adults = this.numOfGuests;
       this.order.stay.price = this.stay.price;
+      this.order.imgUrls = this.stay.imgUrls;
       const order = JSON.parse(JSON.stringify(this.order));
-      this.$store.dispatch({ type: "addOrder", order });
+      this.$store.dispatch({ type: "addOrder", order }).then(() => {
+        this.$store.dispatch({ type: "loadOrders" });
+      });
       this.$notify({
         title: "Trip Reserved",
         message: "Your order has been sent to the host",

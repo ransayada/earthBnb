@@ -1,6 +1,7 @@
 <template >
   <div v-if="order" class="preview-order-imgs">
     <order-imgs :imgUrls="order.imgUrls" />
+    <h1>{{order.totalPrice}}</h1>
   </div>
 </template>
 

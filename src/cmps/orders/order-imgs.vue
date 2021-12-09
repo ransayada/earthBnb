@@ -1,5 +1,5 @@
 <template>
-  <div v-if="imgUrls" class="stay-imgs">
+  <div v-if="imgUrls" class="order-imgs">
     <img :src="`${imgUrls[idx]}`" v-for="(img, idx) in imgUrls.slice(0, 3)" :key="idx" />
   </div>
 </template>

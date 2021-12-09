@@ -1,12 +1,24 @@
-.stay-imgs {
+.user-order-list {
+}
+
+.order-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  gap: 20px ;
+  .preview-order-imgs {
+
+  }
+}
+
+.order-imgs {
   padding: 15px 0 30px;
   > *:not(:first-child) {
     display: none;
   }
   @include for-wide-layout {
     display: grid;
-    grid-template-columns: repeat(3, minmax(180px, 1fr));
-    grid-template-rows: 180px 180px;
+    grid-template-columns: repeat(3, minmax(115px, 1fr));
+    grid-template-rows: 115px 115px;
     gap: 8px;
     > *:not(:first-child) {
       display: block;

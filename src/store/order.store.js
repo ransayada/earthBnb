@@ -11,7 +11,7 @@ export const orderStore = {
             state.orders = orders
         },
         addOrder(state, { saveOrder }) {
-            state.orders.push(saveOrder)
+            state.orders.unshift(saveOrder)
         },
         updateOrder(state, { saveOrder }) {
             const idx = state.orders.findIndex(currOrder => currOrder._id === saveOrder._id)
