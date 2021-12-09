@@ -453,6 +453,11 @@ export default {
     this.order = this.$store.getters.getEmptyOrder;
     this.newReview = this.$store.getters.getEmptyReview;
   },
+  mounted(){
+   
+    window.scrollTo(0, 0);
+  
+  },
   methods: {
     getStayById() {
       console.log("params id ", this.$route.params.stayId);

@@ -81,15 +81,11 @@ export default {
         : "Find a place to stay";
     },
   },
-  // mounted(){
-  //  if (this.$route.path !== "/explore") {
-  //     this.stays = this.$store.getters.staysToShow;
-  //   } else {
-  //     this.filterBy.place = this.$route.query.place;
-  //     this.$store.commit({ type: 'setFilterBy', filterBy: this.filterBy })
-  //     this.stays = this.$store.getters.staysToShow;
-  //   }
-  // },
+  mounted(){
+   
+    window.scrollTo(0, 0);
+  
+  },
   components: {
     stayList,
     exploreFilter,

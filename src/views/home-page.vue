@@ -139,6 +139,7 @@ export default {
     this.nerby2 = this.$store.getters.allStays[5];
     this.nerby3 = this.$store.getters.allStays[6];
     this.nerby4 = this.$store.getters.allStays[7];
+    window.scrollTo(0, 0);
   },
 };
 </script>
