@@ -1,5 +1,5 @@
 // import { storageService } from './async-storage.service.js'
-import { utilService } from './util.service.js'
+// import { utilService } from './util.service.js'
 import { httpService } from './http.service'
 // const axios = require('axios');
 const KEY = 'order';
@@ -33,41 +33,41 @@ async function query() {
     // return storageService.query(KEY)
 
     return httpService.get(KEY)
-        //  return axios.get(TOY_URL).then(res => res.data)
-        // const res = await axios.get(TOY_URL)
-        // return res.data
+    //  return axios.get(TOY_URL).then(res => res.data)
+    // const res = await axios.get(TOY_URL)
+    // return res.data
 }
 
 async function getById(id) {
     // return storageService.get(KEY, id)
 
-    return httpService.get(`order/${id}`)   
-        // return axios.get(TOY_URL + id).then(res => res.data)
-        // const res = await axios.get(TOY_URL + id)
-        // return res.data
+    return httpService.get(`order/${id}`)
+    // return axios.get(TOY_URL + id).then(res => res.data)
+    // const res = await axios.get(TOY_URL + id)
+    // return res.data
 }
 
 async function remove(id) {
     // return storageService.remove(KEY, id)
 
     return httpService.delete(`order/${id}`)
-        // return axios.delete(TOY_URL + id).then(res => res.data)
-        // const res = await axios.delete(TOY_URL + id)
-        // return res.data
+    // return axios.delete(TOY_URL + id).then(res => res.data)
+    // const res = await axios.delete(TOY_URL + id)
+    // return res.data
 }
 
 async function save(order) {
     // const savedOrder = (order._id) ? storageService.put(KEY, order) : storageService.post(KEY, order)
     // return savedOrder;
 
-    if(order._id){
+    if (order._id && order._id !== "a") {
         const addedOrder = await httpService.put(`order/${order._id}`, order)
 
-        return addedOrder; 
-    }else{
-    const addedOrder = await httpService.post(`order`, order)
+        return addedOrder;
+    } else {
+        const addedOrder = await httpService.post(`order`, order)
 
-    return addedOrder;
+        return addedOrder;
     }
     // if (order._id) {
     //     console.log('i am here');
@@ -85,7 +85,7 @@ async function save(order) {
 
 function getEmptyOrder() {
     return {
-        _id: utilService.makeId(),
+        _id: "a",
         hostId: "",
         createdAt: 0,
         buyer: {
@@ -105,7 +105,7 @@ function getEmptyOrder() {
             name: "",
             price: 0
         },
-        status: "pending",
+        status: "Pending",
         imgUrls: []
     }
 

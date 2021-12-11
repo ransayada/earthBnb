@@ -109,6 +109,7 @@ export default {
 
 .dashboard-container {
   margin-top: 120px;
+  margin-bottom: 251px ;
 }
 
 .dash-nav {

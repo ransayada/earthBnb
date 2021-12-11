@@ -5,21 +5,32 @@
     </div>
     <div class="order-details-container">
       <div class="flex space-between align-center">
-        <h3>Luxurious Riverside Jungle Retreat</h3>
+        <h3 v-if="order.stay.name">{{ order.stay.name }}</h3>
+        <h3 v-else>Luxurious Riverside Jungle Retreat</h3>
         <p>
           <span>{{ order.startDate }}</span>
         </p>
       </div>
       <div class="flex space-between align-center">
-      <h4>${{ order.totalPrice }}</h4>
-      <p>
-        <span>{{ order.endDate }}</span>
-      </p>
+        <h4>${{ order.totalPrice }}</h4>
+        <p>
+          <span>{{ order.endDate }}</span>
+        </p>
       </div>
-      <h4>Wait for Approval</h4>
+      <h4>
+        Order status:
+        <span
+          :class="{
+            clR: $store.getters.getOrderStatus.status === 'Rejected',
+            clG: $store.getters.getOrderStatus.status === 'Accepted',
+            clY: $store.getters.getOrderStatus.status === 'Pending',
+          }"
+          >{{ orderStatus }}</span
+        >
+      </h4>
       <div class="order-cancel flex space-between align-center">
         <h4>Refundable in the next 3 days</h4>
-        <h3>Cancel order</h3>
+        <button @click="cancelOrder(order._id)">Cancel order</button>
       </div>
     </div>
   </div>
@@ -33,14 +44,31 @@ export default {
   date() {
     return {};
   },
-  computed: {},
+  computed: {
+    orderStatus() {
+      return this.$store.getters.getOrderStatus.status;
+    },
+  },
   components: {
     orderImgs,
   },
-  created() {
-    console.log("preview order", this.order);
+  created() {},
+  methods: {
+    cancelOrder(orderId) {
+      this.$emit("cancelOrder", orderId);
+    },
   },
 };
 </script>
 
-<style></style>
+<style>
+.clG {
+  color: green;
+}
+.clR {
+  color: red;
+}
+.clY {
+  color: purple;
+}
+</style>

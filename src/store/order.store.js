@@ -51,6 +51,12 @@ export const orderStore = {
 
                 })
         },
+        // getOrderStatus({ commit }) {
+        //     console.log(commit);
+        //     return orderService.query().then((orders) => {
+        //         orders.filter(order => order.buyer.fullname === "Ran Sayada"  )
+        //     })
+        // }
 
     },
     getters: {
@@ -64,6 +70,9 @@ export const orderStore = {
             console.log(state);
             return orderService.getEmptyOrder()
         },
+        getOrderStatus(state) {
+            return state.orders.find(order => order.buyer.fullname === "Ran Sayada" )
+        }
         // totalOutStock(state) {
         //     return state.orders.map((order => !order.inStock))
         // },
