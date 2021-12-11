@@ -60,9 +60,15 @@ async function save(order) {
     // const savedOrder = (order._id) ? storageService.put(KEY, order) : storageService.post(KEY, order)
     // return savedOrder;
 
+    if(order._id){
+        const addedOrder = await httpService.put(`order/${order._id}`, order)
+
+        return addedOrder; 
+    }else{
     const addedOrder = await httpService.post(`order`, order)
 
     return addedOrder;
+    }
     // if (order._id) {
     //     console.log('i am here');
     //     // return axios.put(TOY_URL, order).then(res => res.data)
