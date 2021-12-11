@@ -15,11 +15,7 @@
         </a>
       </div>
       <div @click="expandToSearch()" v-if="!isTop" class="initial-search-bar">
-        <p>{{ formatSearch }}</p>
-
-        <!-- <p>Start your search</p>
-        <p>{{this.place}}  {{this.from}} {{this.to}}  {{this.nog}}</p> -->
-
+        <p>{{formatSearch}}</p>
         <div class="search-btn">
           <button><i class="fas fa-search"></i></button>
         </div>
@@ -32,7 +28,7 @@
           <p>Explore</p>
         </a>
       </div>
-      <div class="explore-options">
+      <div class="explore-options hosting">
         <a href="#/host">
           <p>Become a Host</p>
         </a>
@@ -253,15 +249,15 @@ export default {
     formatQueryForSearch() {
       if (this.$route.query.place === "undefined") {
         return "Start your search";
-      } else {
-        const place = this.$route.query.place;
-        const from = this.$route.query.from.split(" ");
-        const fromAfter = from[1] + " " + from[2];
-        const to = this.$route.query.to.split(" ");
-        const toAfter = to[1] + " " + to[2];
-        const guests = this.$route.query.nog;
-
-        return `${place} | ${fromAfter} ~ ${toAfter} | Guests ${guests}`;
+      }else{
+        const place = this.$route.query.place
+        const from = this.$route.query.from.split(' ');
+        const fromAfter = from[1]+' '+from[2];
+        const to = this.$route.query.to.split(' ');
+        const toAfter = to[1]+' '+to[2];
+        const guests = this.$route.query.nog
+    
+        return `${place} | ${fromAfter} ~ ${toAfter} | ${guests} Guests`
       }
     },
   },

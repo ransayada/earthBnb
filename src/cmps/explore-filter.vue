@@ -57,7 +57,9 @@
               native-type="submit"
               class="update"
             >
+            <span class="upSpan">
               Update
+            </span>
             </el-button>
           </div>
         </el-dropdown-menu>
@@ -77,7 +79,7 @@
           <el-dropdown-item>
             <el-checkbox-group class="f-as-jsb column" v-model="filterBy.type">
               <el-checkbox label="Villa" />
-              <el-checkbox label="House" />
+              <el-checkbox label="Suite" />
               <el-checkbox label="Appartment" />
             </el-checkbox-group>
           </el-dropdown-item>
@@ -88,7 +90,9 @@
               @click="updateFilter"
               native-type="submit"
             >
+            <span class="upSpan">
               Update
+            </span>
             </el-button>
           </div>
         </el-dropdown-menu>
@@ -129,7 +133,9 @@
               @click="updateFilter"
               native-type="submit"
             >
+            <span class="upSpan">
               Update
+              </span>
             </el-button>
           </div>
         </el-dropdown-menu>
@@ -225,3 +231,11 @@ export default {
   },
 };
 </script>
+
+<style>
+.upSpan{
+  position: relative;
+  right: 5px;
+
+}
+</style>
