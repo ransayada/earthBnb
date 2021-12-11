@@ -15,13 +15,7 @@
         </a>
       </div>
       <div @click="expandToSearch()" v-if="!isTop" class="initial-search-bar">
-        
         <p>{{formatSearch}}</p>
-        
-        
-        <!-- <p>Start your search</p>
-        <p>{{this.place}}  {{this.from}} {{this.to}}  {{this.nog}}</p> -->
-
         <div class="search-btn">
           <button><i class="fas fa-search"></i></button>
         </div>
@@ -34,7 +28,7 @@
           <p>Explore</p>
         </a>
       </div>
-      <div class="explore-options">
+      <div class="explore-options hosting">
         <a href="#/host">
           <p>Become a Host</p>
         </a>
@@ -266,7 +260,7 @@ export default {
         const toAfter = to[1]+' '+to[2];
         const guests = this.$route.query.nog
     
-        return `${place} | ${fromAfter} ~ ${toAfter} | Guests ${guests}`
+        return `${place} | ${fromAfter} ~ ${toAfter} | ${guests} Guests`
       }
     }
   },

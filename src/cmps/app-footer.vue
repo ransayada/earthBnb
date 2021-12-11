@@ -2,7 +2,7 @@
   <div class="main-footer main-layout flex-centered grid">
     <div class="footer-container f-as-jsb">
       <div class="footer-rights flex">
-        <p>© 2021 earthBnb, Inc.</p>
+        <p>© 2021 EarthBnb, Inc.</p>
         <span>· </span>
         <router-link to="/login"> Login</router-link>
         <span>· </span>

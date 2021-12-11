@@ -191,12 +191,13 @@
     }
     .explore-options {
         text-align: center;
-        margin-left: 2%;
+        // margin-left: 2%;
         p {
             letter-spacing: 0.1px;
             font-size: 14px;
             color: $clr2;
             margin: 0;
+            padding: 20px;
         }
     }
     .host-options {
@@ -406,13 +407,14 @@
             }
         }
         .explore-options {
-            margin-left: 2%;
+            // margin-left: 2%;
             text-align: center;
             p {
                 letter-spacing: 0.1px;
                 font-size: 14px;
                 color: $clr2;
                 margin: 0;
+                padding: 20px;
             }
         }
         .host-options {
@@ -422,6 +424,7 @@
                 letter-spacing: 0.1px;
                 font-size: 14px;
                 color: $clr2;
+                padding: 20px;
             }
         }
         .user-options {
@@ -462,7 +465,7 @@ button {
         position: relative;
         height: 32px;
         width: 32px;
-        // margin-left: 12px;
+        margin-left: 10px;
         left: 5px;
         top: 2px;
         border-radius: 50%;
@@ -474,7 +477,7 @@ button {
     width: 16px;
     position: relative;
     top: 10px;
-    margin-left: 12px;
+    margin-left: 1px;
 }
 
 .nav {
