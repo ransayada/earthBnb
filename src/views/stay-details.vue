@@ -330,7 +330,7 @@
                     src="../assets/imgs/icons/avatar.png"
                   />
                   <div class="center">
-                    <div class="short-exmple">Guest</div>
+                    <div class="short-exmple">Ran.S</div>
                     <div class="review-date">December 2021</div>
                   </div>
                 </div>
@@ -517,7 +517,7 @@ export default {
       this.order.endDate = this.time[1];
       this.order.totalPrice = this.totalPrice;
       this.calcServiceFee(this.order.totalPrice);
-      this.order.buyer.fullname = "TEST";
+      this.order.buyer.fullname = "Ran Sayada";
       this.order.stay._id = this.stay._id;
       this.order.stay.name = this.stay.name;
       this.order.guests.adults = this.numOfGuests;
@@ -543,7 +543,6 @@ export default {
       let date2 = new Date(this.time[1]);
       let timeDiffrence = date2 - date1;
       let daysDiffrence = Math.ceil(timeDiffrence / (1000 * 60 * 60 * 24));
-      console.log("date", daysDiffrence);
       return daysDiffrence;
     },
     calcPrice(Days) {
@@ -605,7 +604,6 @@ export default {
       return sum / categoryNum;
     },
     goToOrder() {
-      console.log('gggggg');
       window.moveBy(250, 250)
     }
   },
@@ -630,7 +628,6 @@ export default {
     },
     showCheckInDate() {
       if (!this.$route.query.from && this.$route.query.from !== "undefined") {
-        console.log("hdfgdfgdfgdf", this.time[0]);
         let time = this.time[0] ? this.time[0] : "";
         return time;
       } else return this.time[0];

@@ -7,8 +7,8 @@
         <div class="short-exmple" v-if="review.user.fullName">
           {{ review.user.fullName }}
         </div>
-        <div class="short-exmple" v-else>Guest</div>
-        <div class="review-date">November 2020</div>
+        <div class="short-exmple" v-else>Ran.S</div>
+        <div class="review-date">December 2021</div>
       </div>
     </div>
     <div class="review-text">{{ review.txt }}</div>

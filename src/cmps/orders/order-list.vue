@@ -2,7 +2,7 @@
   <div>
     <ul class="order-list">
       <li v-for="order in orders" :key="order._id" class="order-preview">
-        <order-preview :order="order" />
+        <order-preview @cancelOrder="cancelOrder"  :order="order" />
       </li>
     </ul>
   </div>
@@ -16,13 +16,12 @@ export default {
     orders: Array,
   },
   methods: {
-    // remove(orderId) {
-    //   this.$emit("remove", orderId);
-    // },
-  
+    cancelOrder(orderId) {
+      this.$emit("cancelOrder", orderId);
+    },
   },
-  created () {
-      console.log(this.orders);
+  created() {
+    console.log(this.orders);
   },
   components: {
     orderPreview,
