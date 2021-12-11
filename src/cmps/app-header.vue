@@ -42,7 +42,7 @@
           />
           <img
             class="avatar"
-            src="https://res.cloudinary.com/sprint4rad/image/upload/v1638615860/profilepics/profilePics_faozet.jpg"
+            src="https://randomuser.me/api/portraits/men/81.jpg"
             alt="avatar"
           />
         </button>

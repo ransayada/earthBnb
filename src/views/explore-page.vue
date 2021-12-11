@@ -9,7 +9,7 @@
   </div>
    <div v-else>
     <img 
-      src="https://cdn.dribbble.com/users/44323/screenshots/1655310/loadinganimation.gif"
+      src="https://res.cloudinary.com/sprint4rad/image/upload/v1639236553/loadingGif/final_61b4c3a22db5c600b5006a13_980177_whr3zw.gif"
     />
   </div>
 </template>
