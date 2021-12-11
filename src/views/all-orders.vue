@@ -1,7 +1,7 @@
 <template>
   <div class="user-order-page" v-if="orders.length">
     <section class="user-order-list">
-      <h1>This is an orders page</h1>
+      <h1>Your Trips</h1>
       <order-list :orders="orders"></order-list>
     </section>
   </div>

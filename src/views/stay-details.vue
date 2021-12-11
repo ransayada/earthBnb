@@ -1,5 +1,26 @@
 <template>
   <div class="stay-details">
+    <div class="details-reserve-header flex space-between align-center" :style="determinePos">
+      <div class="details-nav flex" >
+        <span>Photos</span>
+        <span>Amenities</span>
+        <span>Reviews</span>
+        <span>Location</span>
+      </div>
+      <div class="reserve-stay-mini flex align-center">
+        <div class="reserve-mini-info flex">
+          <h3>
+            <span>$ {{ stay.price }} </span>
+            / night
+          </h3>
+          <h4>
+            <i class="fas fa-star review-star"></i> {{ stayRating }}
+            ({{ stay.reviews.length }} Reviews)
+          </h4>
+        </div>
+        <gradientBtn @click="goToOrder" :text="'Reserve'" />
+      </div>
+    </div>
     <div v-if="stay" class="details-container">
       <h1 class="stay-name">{{ stay.name }}</h1>
       <div class="stay-share-container flex space-between">
@@ -450,12 +471,14 @@ export default {
       value2: null,
       colors: ["#99A9BF", "#fc111b", "#ff385c"],
       newReview: null,
+      scrollBar: 0,
     };
   },
   created() {
     this.getStayById();
     this.order = this.$store.getters.getEmptyOrder;
     this.newReview = this.$store.getters.getEmptyReview;
+    window.addEventListener("scroll", this.handlingScroll);
   },
   mounted() {
     window.scrollTo(0, 0);
@@ -480,6 +503,10 @@ export default {
             this.setOrderDetails();
           }
         });
+    },
+    handlingScroll() {
+      let scrollBarPos = window.top.scrollY;
+      this.scrollBar = scrollBarPos;
     },
     makeOrder() {
       console.log("making order");
@@ -577,6 +604,10 @@ export default {
       }
       return sum / categoryNum;
     },
+    goToOrder() {
+      console.log('gggggg');
+      window.moveBy(250, 250)
+    }
   },
   computed: {
     reviewSum() {
@@ -616,7 +647,15 @@ export default {
 
       return reviews.slice(0, 6);
     },
-
+    determinePos() {
+      if (this.scrollBar >= 1620) {
+        return {
+          display: "",
+        };
+      } else {
+        return { display: "none" };
+      }
+    },
     stayRating() {
       const reviews = this.stay.reviews;
       if (reviews.length) {

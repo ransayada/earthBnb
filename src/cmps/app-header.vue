@@ -15,10 +15,8 @@
         </a>
       </div>
       <div @click="expandToSearch()" v-if="!isTop" class="initial-search-bar">
-        
-        <p>{{formatSearch}}</p>
-        
-        
+        <p>{{ formatSearch }}</p>
+
         <!-- <p>Start your search</p>
         <p>{{this.place}}  {{this.from}} {{this.to}}  {{this.nog}}</p> -->
 
@@ -40,7 +38,7 @@
         </a>
       </div>
       <template>
-        <button class="flex pointer" @click="toggleNav">
+        <button class="ham-btn flex pointer" @click="toggleNav">
           <img
             class="hamburger"
             src="../assets/imgs/icons/hamburger.png"
@@ -54,13 +52,10 @@
         </button>
         <ul class="nav clear-list" v-if="isNavOpen">
           <li>
-            <span>Login</span>
+            <router-link to="/orders">Orders</router-link>
           </li>
-          <li>
-            <span>Signup</span>
-          </li>
-          <li><span>Explore</span></li>
-          <li><span>Dashboard</span></li>
+          <li><router-link to="/explore">Explore</router-link></li>
+          <li><router-link to="/dashboard/123">Dashboard</router-link></li>
         </ul>
       </template>
       <div v-if="isTop" class="secondary-search-bar">
@@ -255,20 +250,20 @@ export default {
     setGuests(nog) {
       this.guests = nog;
     },
-    formatQueryForSearch(){
-      if(this.$route.query.place==='undefined'){
+    formatQueryForSearch() {
+      if (this.$route.query.place === "undefined") {
         return "Start your search";
-      }else{
-        const place = this.$route.query.place
-        const from = this.$route.query.from.split(' ');
-        const fromAfter = from[1]+' '+from[2];
-        const to = this.$route.query.to.split(' ');
-        const toAfter = to[1]+' '+to[2];
-        const guests = this.$route.query.nog
-    
-        return `${place} | ${fromAfter} ~ ${toAfter} | Guests ${guests}`
+      } else {
+        const place = this.$route.query.place;
+        const from = this.$route.query.from.split(" ");
+        const fromAfter = from[1] + " " + from[2];
+        const to = this.$route.query.to.split(" ");
+        const toAfter = to[1] + " " + to[2];
+        const guests = this.$route.query.nog;
+
+        return `${place} | ${fromAfter} ~ ${toAfter} | Guests ${guests}`;
       }
-    }
+    },
   },
   computed: {
     getCheckinDate() {
@@ -284,13 +279,13 @@ export default {
     isNavOpen() {
       return this.navOpen;
     },
-    formatSearch(){
-      if(!this.$route.query.place){
-        return "Start your search"
-      }else{
+    formatSearch() {
+      if (!this.$route.query.place) {
+        return "Start your search";
+      } else {
         return this.formatQueryForSearch();
       }
-    }
+    },
   },
   destroyed() {
     window.removeEventListener("scroll", this.handleScroll);

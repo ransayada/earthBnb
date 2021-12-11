@@ -1,5 +1,9 @@
 .details-container {
   margin-top: 150px;
+
+  .stay-share-container {
+    margin-bottom: -16px;
+  }
   .stay-name {
     text-align: left;
     margin-bottom: 0;
@@ -96,7 +100,6 @@
         }
 
         .order-from-total {
-
           h5 {
             text-align: center;
           }
@@ -471,6 +474,7 @@
     border: none;
     cursor: pointer;
     font-family: cereal-medium;
+    width: 114px;
   }
 }
 
@@ -484,6 +488,64 @@
 }
 
 .vue-map-container {
+}
+
+.details-reserve-header {
+  position: fixed;
+  background: #ffffff;
+  width: 100%;
+  margin: 0;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  padding: 15px;
+  box-shadow: 0 5px 7px 0 rgba(0,0,0,.05);
+
+
+  .gradient-btn {
+    width: 180px !important; 
+    height: 48px;
+    border-radius: 10px;
+    outline: none;
+    color: white;
+    font-size: 16px;
+    font-family: cereal-Medium;
+    border: none;
+    cursor: pointer;
+  }
+  
+}
+
+.details-nav {
+  gap: 30px;
+  margin-inline-start: 100px ;
+ 
+}
+
+.reserve-stay-mini {
+  margin-inline-end: 100px;
+  gap: 1rem;
+
+}
+
+.reserve-mini-info {
+  flex-direction: column;
+  align-items: flex-start;
+  span, h4,h3  {
+    margin: 0;
+  }
+  span {
+    font-size: 18px;
+    font-family: cereal-bold;
+  }
+  h3 {
+    font-size: 14px;
+    font-family: cereal-light;
+  }
+  h4 {
+    font-size: 12px;
+    line-height: 16px;
+  }
 }
 // .el-input {
 //   .el-input__inner {

@@ -6,12 +6,29 @@
   grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
   gap: 20px ;
   .preview-order-imgs {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    border-radius: 13px;
+    box-shadow: 0 3px 12px 0 rgb(0 0 0 / 14%);
 
+    h3,h4,span,p {
+      margin : 0;
+      font-family: cereal-light;
+    }
+    h3 {
+      font-family: cereal-bold;
+    }
+    .order-cancel {
+      h4 {
+        text-decoration: underline;
+      }
+    }    
   }
 }
 
 .order-imgs {
-  padding: 15px 0 30px;
   > *:not(:first-child) {
     display: none;
   }
@@ -42,4 +59,8 @@
   :nth-child(3) {
     border-bottom-right-radius: 13px;
   }
+}
+
+.order-details-container {
+  padding: 10px;
 }
