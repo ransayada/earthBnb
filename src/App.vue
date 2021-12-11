@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <main class="main-layout">
-    <appHeader></appHeader>
+    <appHeader v-if="!isLoading" ></appHeader>
     <router-view :key="$route.fullPath"/>
     <app-footer></app-footer>
     </main>
@@ -35,6 +35,7 @@
 // @ is an alias to /src
 import appHeader from '@/cmps/app-header.vue'
 import appFooter from '@/cmps/app-footer.vue'
+import { eventBusService } from "./services/event-bus.service.js";
 
 export default {
   name: 'app',
@@ -43,9 +44,13 @@ export default {
       isLoading: true
     }
   },
+  mounted(){
+    eventBusService.$on('setIsLoading',this.setIsLoading)
+  },
   methods:{
     setIsLoading(){
-      this.isLoading = false;
+      console.log('hello');
+      this.isLoading = !this.isLoading;
     }
   },
 

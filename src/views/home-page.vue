@@ -100,7 +100,7 @@
 
 <script>
 // @ is an alias to /src
-
+import {eventBusService} from '../services/event-bus.service.js'
 export default {
   name: "Home",
   data() {
@@ -118,6 +118,7 @@ export default {
   },
   created() {
     // this.$emit('isLoading');
+    eventBusService.$emit('setIsLoading')
     setTimeout(() => {
       this.topStay1 = this.$store.getters.allStays[0];
       this.topStay2 = this.$store.getters.allStays[1];
@@ -128,7 +129,7 @@ export default {
       this.nerby3 = this.$store.getters.allStays[6];
       this.nerby4 = this.$store.getters.allStays[7];
       this.isLoading = true;
-      this.$emit('isLoading');
+      eventBusService.$emit('setIsLoading')
     }, 1000);
   },
   components: {},

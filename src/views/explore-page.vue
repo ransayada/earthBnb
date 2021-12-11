@@ -17,6 +17,7 @@
 <script>
 import stayList from "../cmps/stay-list.vue";
 import exploreFilter from "../cmps/explore-filter.vue";
+import {eventBusService} from '../services/event-bus.service.js'
 export default {
   data() {
     return {
@@ -43,8 +44,10 @@ export default {
       this.$store.commit({ type: "setFilterBy", filterBy: this.filterBy });
       this.stays = this.$store.getters.staysToShow;
     }
+    eventBusService.$emit('setIsLoading')
     setTimeout(()=>{
       this.isLoading = true;
+      eventBusService.$emit('setIsLoading')
     },500)
   },
   methods: {
