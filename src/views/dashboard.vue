@@ -26,7 +26,7 @@
         </div>
         <div class="dash-header-content">
           <h3>Monthly earnings</h3>
-          <div class="header-sub-content"><span>$ 10,505</span></div>
+          <div class="header-sub-content"><span>$ {{monthEarnings}}</span></div>
         </div>
         <div class="dash-header-content">
           <h3>Orders</h3>
@@ -35,7 +35,7 @@
       </div>
 
       <div class="dash-info">
-        <order-list v-if="isOrders" />
+        <order-list @addEarnings="addEarnings" v-if="isOrders" />
         <stat-chart v-if="isStats" class="chart" />
         <rates-chart v-if="isRates" class="chart" />
         <my-stays v-if="isStays"/>
@@ -57,7 +57,8 @@ export default {
             isOrders: true,
             isStays:false,
             isStats:false,
-            isRates:false
+            isRates:false,
+            earnings:'10,505'
         }
     },
   components: {
@@ -66,7 +67,15 @@ export default {
     ratesChart,
     myStays
   },
+  computed:{
+    monthEarnings(){
+      return this.earnings;
+    }
+  },
   methods: {
+    addEarnings(){
+      this.earnings = '12,121'
+    },
     showSect(section) {
       switch (section) {
         case 'orders':

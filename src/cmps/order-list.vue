@@ -48,8 +48,8 @@ export default {
           fullName: "Dom Daryl",
           img: "https://randomuser.me/api/portraits/men/98.jpg",
           guestsNum: 1,
-          checkInDate: "4/04/2022",
-          checkOutDate: "9/04/2022",
+          checkInDate: "04/04/2022",
+          checkOutDate: "09/04/2022",
           status:'pending'
         },
         {
@@ -101,6 +101,7 @@ export default {
             let orderToUpdate = this.$store.getters.ordersToShow.find(currOrder => currOrder.buyer.fullname === order.fullName)
            orderToUpdate.status = 'Accepted'
            this.$store.dispatch('updateOrder',{order:orderToUpdate})
+           this.$emit('addEarnings');
         }
 
       }
