@@ -8,26 +8,27 @@ import '@/assets/main.scss'
 import locale from 'element-ui/lib/locale/lang/en'
 import '@fortawesome/fontawesome-free/css/all.css';
 import '@fortawesome/fontawesome-free/js/all.js';
-import * as VueGoogleMaps from 'vue2-google-maps'; 
+import * as VueGoogleMaps from 'vue2-google-maps';
 
 Vue.use(element, { locale })
 Vue.config.productionTip = false
 
 Vue.use(VueGoogleMaps, {
-  load: {
-    key: 'AIzaSyCXvZqRU_DCYIFXrUgXmAar8vH_PiQY9BU',
-    libraries: 'places', // This is required if you use the Autocomplete plugin
-  },
+    load: {
+        // key: 'AIzaSyCXvZqRU_DCYIFXrUgXmAar8vH_PiQY9BU',
+        key: 'AIzaSyCsfDoCF0hauYXIqGlnI7bjvyK8o9eou3s', // sprint 4 email api key
+        libraries: 'places', // This is required if you use the Autocomplete plugin
+    },
 })
 
 new Vue({
-  created() {
-    this.$store.dispatch({ type: 'loadStays' })
-    // this.$store.dispatch({ type: 'loadUser' })
-    this.$store.dispatch({ type: 'loadOrders' })
+    created() {
+        this.$store.dispatch({ type: 'loadStays' })
+            // this.$store.dispatch({ type: 'loadUser' })
+        this.$store.dispatch({ type: 'loadOrders' })
 
-  },
-  router,
-  store,
-  render: h => h(App)
+    },
+    router,
+    store,
+    render: h => h(App)
 }).$mount('#app')
