@@ -8,19 +8,19 @@
       <p class="head">Explore top destinations</p>
     </section>
     <section class="gallery rs-gallery-header">
-      <a class="gallery-link rs-gallery" :href='`#/explore?place=tel-aviv`'>
+      <a class="gallery-link rs-gallery" :href='`#/explore?place=tel-aviv&from=undefined&to=undefined&nog=undefined`'>
         <img class="gallery-image-ran" src="https://res.cloudinary.com/sprint4rad/image/upload/v1638788260/pop-destination/ta2_lapkv3.jpg" alt="Tel Aviv">
         <h4 class="flex">Tel-Aviv</h4>
       </a>
-      <a class="gallery-link  rs-gallery" :href='`#/explore?place=new-york`'>
+      <a class="gallery-link  rs-gallery" :href='`#/explore?place=new-york&from=undefined&to=undefined&nog=undefined`'>
         <img class="gallery-image-ran" src="https://res.cloudinary.com/sprint4rad/image/upload/v1638788261/pop-destination/ny3_laxvb5.jpg" alt="New York">
         <h4 class="flex">New-York</h4>
       </a>
-      <a class="gallery-link  rs-gallery" :href='`#/explore?place=paris`'>
+      <a class="gallery-link  rs-gallery" :href='`#/explore?place=paris&from=undefined&to=undefined&nog=undefined`'>
         <img class="gallery-image-ran" src="https://res.cloudinary.com/sprint4rad/image/upload/v1638788259/pop-destination/pari1_ncwnwg.jpg" alt="Paris">
         <h4 class="flex">Paris</h4>
       </a>
-      <a class="gallery-link  rs-gallery" :href='`#/explore?place=london`'>
+      <a class="gallery-link  rs-gallery" :href='`#/explore?place=london&from=undefined&to=undefined&nog=undefined`'>
         <img class="gallery-image-ran" src="https://res.cloudinary.com/sprint4rad/image/upload/v1638788262/pop-destination/lon3_awg8bc.jpg" alt="London">
         <h4 class="flex">London</h4>
       </a>
@@ -131,6 +131,7 @@ export default {
       this.isLoading = true;
       eventBusService.$emit('setIsLoading')
     }, 1000);
+    window.scrollTo(0, 0);
   },
   components: {},
   mounted() {

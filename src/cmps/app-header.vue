@@ -251,8 +251,12 @@ export default {
       this.guests = nog;
     },
     formatQueryForSearch() {
-      if (this.$route.query.place === "undefined") {
+      
+      if (this.$route.query.place === "undefined" ) {
         return "Start your search";
+      }
+      else if (this.$route.query.to === "undefined" ) {
+        return this.$route.query.place.charAt(0).toUpperCase() + this.$route.query.place.slice(1);
       }else{
         const place = this.$route.query.place
         const from = this.$route.query.from.split(' ');
