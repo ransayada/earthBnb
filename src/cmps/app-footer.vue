@@ -4,11 +4,11 @@
       <div class="footer-rights flex">
         <p>© 2021 EarthBnb, Inc.</p>
         <span>· </span>
-        <router-link to="/login"> Login</router-link>
+        <router-link to="/uc"> Login</router-link>
         <span>· </span>
-        <router-link to="/about"> About</router-link>
+        <router-link to="/uc"> About</router-link>
         <span>· </span>
-        <router-link to="/"> Become a host</router-link>
+        <router-link to="/uc"> Become a host</router-link>
       </div>
       <div class="flex">
       <div class="footer-lang flex">

@@ -27,6 +27,8 @@ p.head {
         text-align: left;
         font-size: 20px;
         // padding: 1px;
+        font-family: cereal-medium;
+        line-height: 1.5;
     }
 }
 
@@ -56,7 +58,7 @@ p.head {
     background-size: cover;
     position: relative;
     margin-top: 116px;
-    margin-bottom: 20px;
+    // margin-bottom: 20px;
     border-radius: 10px;
     font-size: 45px;
     // font-weight: bold;

@@ -5,50 +5,46 @@
     box-shadow: rgba(117, 117, 117, 0.12) 0px 6px 16px;
     border-radius: 10px;
     margin-bottom: 20px;
-
     @include for-normal-layout {
-      height: 200px;
+        height: 200px;
     }
-
     .booking-info {
-      position: relative;
-      border-collapse: collapse;
-
-      th {
-        background-color: rgb(238 238 238);
-        padding: 5px;
-        height: 40px;
-        font-size: 0.9rem;
-        position: sticky;
-        top: 0;
-
-        @include for-normal-layout {
-          font-size: 1rem;
+        position: relative;
+        border-collapse: collapse;
+        th {
+            background-color: rgb(238 238 238);
+            padding: 5px;
+            height: 40px;
+            font-size: 0.9rem;
+            position: sticky;
+            top: 0;
+            @include for-normal-layout {
+                font-size: 1rem;
+            }
         }
-      }
-
-      td {
-        border-top: 1px solid lightgray;
-        padding: 0 5px;
-        height: 48px;
-        text-align: center;
-       
-        .guest-user {
-          display: flex;
-          align-items: center;
+        td {
+            border-top: 1px solid lightgray;
+            padding: 0 5px;
+            height: 48px;
+            text-align: center;
+            margin-right: 5px;
+            .guest-user {
+                display: flex;
+                align-items: center;
+                span {
+                    display: block;
+                }
+            }
+            img {
+                border-radius: 50%;
+                height: 32px;
+                width: 32px;
+                margin-inline-end: 10px;
+            }
+            &.contact {
+                align-items: center;
+                justify-content: space-around;
+            }
         }
-
-        img {
-          border-radius: 50%;
-          height: 32px;
-          width: 32px;
-          margin-inline-end: 10px;
-        }
-
-        &.contact {
-          align-items: center;
-          justify-content: space-around;
-        }
-      }
     }
 }

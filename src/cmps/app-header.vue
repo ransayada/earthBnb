@@ -29,12 +29,12 @@
         </a>
       </div>
       <div class="explore-options hosting">
-        <a href="#/host">
+        <a href="#/uc">
           <p>Become a Host</p>
         </a>
       </div>
       <template>
-        <button class="ham-btn flex pointer" @click="toggleNav">
+        <button class="ham-btn flex pointer" @click.stop="toggleNav">
           <img
             class="hamburger"
             src="../assets/imgs/icons/hamburger.png"
@@ -47,9 +47,7 @@
           />
         </button>
         <ul class="nav clear-list" v-if="isNavOpen">
-          <li>
-            <router-link to="/orders">Orders</router-link>
-          </li>
+          <li><router-link to="/orders">Orders</router-link></li>
           <li><router-link to="/explore">Explore</router-link></li>
           <li><router-link to="/dashboard/123">Dashboard</router-link></li>
         </ul>
@@ -135,6 +133,12 @@ export default {
   created() {
     eventBus.$on("selectedLocation", this.setLocation);
     eventBus.$on("setGuests", this.setGuests);
+    window.addEventListener("click", () =>{
+      if(this.navOpen){
+        this.navOpen = false;      
+        }
+    });
+    
     this.setCurrPage();
     window.addEventListener("scroll", this.handleScroll);
     if (this.$route.path !== "/explore") {

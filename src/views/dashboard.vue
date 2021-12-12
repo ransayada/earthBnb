@@ -18,18 +18,18 @@
     <div class="dash-info-container">
       <div class="dash-info-header">
         <div class="dash-header-content">
-          <h3>Total Rate</h3>
+          <h3>Monthly Total Rate</h3>
           <div class="header-sub-content">
             <span> <i class="fas fa-star"></i> 4.2 </span>
-            <p>2% ⬆</p>
+            <p>2% <span class="clG">⬆</span></p>
           </div>
         </div>
         <div class="dash-header-content">
           <h3>Monthly earnings</h3>
-          <div class="header-sub-content"><span>$ {{monthEarnings}}</span></div>
+          <div class="header-sub-content"><p class="bold">$ {{monthEarnings}}</p></div>
         </div>
         <div class="dash-header-content">
-          <h3>Orders</h3>
+          <h3>Current Open Orders</h3>
           <div class="header-sub-content"><span> 6 </span></div>
         </div>
       </div>
@@ -169,12 +169,15 @@ export default {
   display: flex;
   justify-content: space-between;
   min-width: 10.5rem;
+  text-align: start;
+  font-weight: bold;
 }
 
-.header-sub-content,
-h3 {
+
+/* h3 {
   text-align: start;
-}
+  font-weight: bold;
+} */
 
 .dash-header-content {
   border-radius: 13px;
@@ -183,7 +186,9 @@ h3 {
 }
 
 .dash-info{
-    display: flex;
+  display: flex;
     justify-content: center;
 }
+
+
 </style>

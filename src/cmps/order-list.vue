@@ -11,7 +11,8 @@
       <tr v-for="order in orders" :key="order._id">
         <td>
           <div class="guest-user">
-            <img :src="order.img" />{{ order.fullName }}
+            <img :src="order.img" />
+            <span>{{ order.fullName }}</span>
           </div>
         </td>
         <td>{{ order.guestsNum }}</td>
@@ -45,7 +46,7 @@ export default {
         },
         {
           _id: 2,
-          fullName: "Dom Daryl",
+          fullName: "Dom Dairyl",
           img: "https://randomuser.me/api/portraits/men/98.jpg",
           guestsNum: 1,
           checkInDate: "04/04/2022",
@@ -54,7 +55,7 @@ export default {
         },
         {
           _id: 3,
-          fullName: "Timy Tarik",
+          fullName: "Timy Tariko",
           img: "https://randomuser.me/api/portraits/men/60.jpg",
           guestsNum: 2,
           checkInDate: "15/05/2022",
@@ -63,7 +64,7 @@ export default {
         },
         {
           _id: 4,
-          fullName: "Beer Bon",
+          fullName: "Beer Bonvo",
           img: "https://randomuser.me/api/portraits/men/83.jpg",
           guestsNum: 5,
           checkInDate: "16/06/2022",
@@ -72,7 +73,7 @@ export default {
         },
         {
           _id: 5,
-          fullName: "Dian Dop",
+          fullName: "Dian Duplic",
           img: "https://randomuser.me/api/portraits/men/84.jpg",
           guestsNum: 6,
           checkInDate: "27/06/2022",

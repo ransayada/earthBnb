@@ -88,7 +88,7 @@
 
     <section class="hero-image-but">
         <p class="">Questions about hosting?</p>
-        <a class="bah" href="#/becomeahost"><h1>Become a host</h1> </a>
+        <a class="bah" href="#/uc"><h1>Become a host</h1> </a>
     </section>
   </div>
   <div v-else>

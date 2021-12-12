@@ -7,18 +7,15 @@ import stayDetails from '@/views/stay-details.vue';
 import userDetails from '@/views/user-details.vue';
 import allOrders from '@/views/all-orders.vue';
 import dashboard from '@/views/dashboard.vue';
+import underConstruction from '@/views/underConstruction.vue';
 
 
 Vue.use(VueRouter)
 
 const routes = [{
-        path: '/about',
-        name: 'About',
-        // route level code-splitting
-        // this generates a separate chunk (about.[hash].js) for this route
-        // which is lazy-loaded when the route is visited.
-        component: () =>
-            import ( /* webpackChunkName: "about" */ '../views/About.vue')
+        path: '/uc',
+        name: 'Uc',
+        component: underConstruction,
     },
     {
         path: '/',
@@ -59,7 +56,7 @@ const routes = [{
         component: allOrders,
     },
     {
-        path:'/dashboard/:userId',
+        path: '/dashboard/:userId',
         name: 'dashboard',
         component: dashboard
     }
