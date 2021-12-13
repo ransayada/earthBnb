@@ -15,7 +15,7 @@
         </a>
       </div>
       <div @click="expandToSearch()" v-if="!isTop" class="initial-search-bar">
-        <p>{{formatSearch}}</p>
+        <p>{{ formatSearch }}</p>
         <div class="search-btn">
           <button><i class="fas fa-search"></i></button>
         </div>
@@ -133,12 +133,12 @@ export default {
   created() {
     eventBus.$on("selectedLocation", this.setLocation);
     eventBus.$on("setGuests", this.setGuests);
-    window.addEventListener("click", () =>{
-      if(this.navOpen){
-        this.navOpen = false;      
-        }
+    window.addEventListener("click", () => {
+      if (this.navOpen) {
+        this.navOpen = false;
+      }
     });
-    
+
     this.setCurrPage();
     window.addEventListener("scroll", this.handleScroll);
     if (this.$route.path !== "/explore") {
@@ -174,7 +174,10 @@ export default {
         this.checkoutDate = "Add dates";
         this.guests = "Guests";
       }
-      window.location.href = `#/explore?place=${place}&from=${from}&to=${to}&nog=${guests}`;
+      // window.location.href = `#/explore?place=${place}&from=${from}&to=${to}&nog=${guests}`;
+      this.$router.push(
+        `/explore?place=${place}&from=${from}&to=${to}&nog=${guests}`
+      );
     },
     toHome() {
       this.$router.push("/");
@@ -251,21 +254,26 @@ export default {
       this.guests = nog;
     },
     formatQueryForSearch() {
-      
-      if (this.$route.query.place === "undefined" ) {
+      if (this.$route.query.place === "undefined") {
         return "Start your search";
-      }
-      else if (this.$route.query.to === "undefined" ) {
-        return this.$route.query.place.charAt(0).toUpperCase() + this.$route.query.place.slice(1);
-      }else{
-        const place = this.$route.query.place
-        const from = this.$route.query.from.split(' ');
-        const fromAfter = from[1]+' '+from[2];
-        const to = this.$route.query.to.split(' ');
-        const toAfter = to[1]+' '+to[2];
-        const guests = this.$route.query.nog
-    
-        return `${place} | ${fromAfter} ~ ${toAfter} | ${guests} Guests`
+      } else if (this.$route.query.to === "undefined") {
+        return (
+          this.$route.query.place.charAt(0).toUpperCase() +
+          this.$route.query.place.slice(1)
+        );
+      } else {
+        // const place = this.$route.query.place
+        // const from = this.$route.query.from.split(' ');
+        // const fromAfter = from[1]+' '+from[2];
+        // const to = this.$route.query.to.split(' ');
+        // const toAfter = to[1]+' '+to[2];
+        // const guests = this.$route.query.nog
+
+        // return `${place} | ${fromAfter} ~ ${toAfter} | ${guests} Guests`
+        const { from, to, place, nog } = this.$route.query;
+        const fromAfter = from.split(" ")[1] + from.split(" ")[2];
+        const toAfter = to.split(" ")[1] + to.split(" ")[2];
+        return `${place} | ${fromAfter} ~ ${toAfter} | ${nog} Guests`;
       }
     },
   },
