@@ -28,3 +28,12 @@ export default {
   },
 };
 </script>
+
+
+<style>
+
+.order-list:last-child{
+  margin-bottom: 400px;
+}
+
+</style>
