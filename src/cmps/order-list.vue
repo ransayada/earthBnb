@@ -82,7 +82,7 @@ export default {
         },
         {
           _id: 6,
-          fullName: "Baker Sadr",
+          fullName: "Bake Sadrim",
           img: "https://randomuser.me/api/portraits/men/17.jpg",
           guestsNum: 4,
           checkInDate: "01/07/2022",
@@ -103,6 +103,7 @@ export default {
            orderToUpdate.status = 'Accepted'
            this.$store.dispatch('updateOrder',{order:orderToUpdate})
            this.$emit('addEarnings');
+           this.$emit('addOrder');
         }
 
       }
@@ -120,6 +121,10 @@ export default {
 </script>
 
 <style>
+
+.booking-table{
+  height: 100% !important;
+}
 .guest-user {
   justify-content: center;
 }

@@ -29,13 +29,14 @@
           <div class="header-sub-content"><p class="bold">$ {{monthEarnings}}</p></div>
         </div>
         <div class="dash-header-content">
-          <h3>Current Open Orders</h3>
-          <div class="header-sub-content"><span> 6 </span></div>
+          <h3>Monthly Orders</h3>
+          <div class="header-sub-content"><span>Current Open:</span><p> {{monthlyOrders}} <i class="fas fa-house-user"></i></p></div>
+          
         </div>
       </div>
 
       <div class="dash-info">
-        <order-list @addEarnings="addEarnings" v-if="isOrders" />
+        <order-list @addEarnings="addEarnings" @addOrder="addOrder" v-if="isOrders" />
         <stat-chart v-if="isStats" class="chart" />
         <rates-chart v-if="isRates" class="chart" />
         <my-stays v-if="isStays"/>
@@ -58,7 +59,8 @@ export default {
             isStays:false,
             isStats:false,
             isRates:false,
-            earnings:'10,505'
+            earnings:'10,505',
+            ordersNum:'6'
         }
     },
   components: {
@@ -70,11 +72,17 @@ export default {
   computed:{
     monthEarnings(){
       return this.earnings;
+    },
+    monthlyOrders(){
+      return this.ordersNum;
     }
   },
   methods: {
     addEarnings(){
       this.earnings = '12,121'
+    },
+    addOrder(){
+      this.ordersNum = '5'
     },
     showSect(section) {
       switch (section) {
@@ -188,6 +196,10 @@ export default {
 .dash-info{
   display: flex;
     justify-content: center;
+}
+
+.bold{
+  font-weight: bold;
 }
 
 
