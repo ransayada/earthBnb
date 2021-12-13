@@ -1,0 +1,3018 @@
+/* 1 */
+{
+    "_id" : ObjectId("61af384533e9fb6b20be78b1"),
+    "name" : "The Paradise in the city centre of Amsterdam",
+    "price" : 565,
+    "imgUrls" : [ 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638611221/Demo1/3/3_r6v76p.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638611221/Demo1/3/1_qjwwg0.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638611220/Demo1/3/2_jycnz6.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638611220/Demo1/3/5_meyscu.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638611219/Demo1/3/4_dnxk1z.jpg"
+    ],
+    "summary" : "Entire rental unit hosted by Paradise",
+    "createdAt" : 1638729175628.0,
+    "reviews" : [ 
+        {
+            "txt" : "Amazing location and perfect studio for an Amsterdam stay. Excellent hosts, excellent back garden!",
+            "categories" : {
+                "cleanliness" : 4.5,
+                "accuracy" : 4.5,
+                "communication" : 5,
+                "location" : 4.5,
+                "checkIn" : 4,
+                "value" : 4
+            },
+            "createdAt" : 1638729175628.0,
+            "user" : {
+                "fullName" : "Jane James"
+            }
+        }, 
+        {
+            "txt" : "Perfect little apartment. Loved the patio outside, and how close to everything it was. I very much appreciated Job and Judith working with us on fulfilling our needs while we traveled abroad for the first time!! Made the experience super easy and enjoyable. Will be coming back and staying here in the future for sure.",
+            "categories" : {
+                "cleanliness" : 4,
+                "accuracy" : 4,
+                "communication" : 5,
+                "location" : 4,
+                "checkIn" : 4,
+                "value" : 4
+            },
+            "createdAt" : 1638729175628.0,
+            "user" : {
+                "fullName" : "Sarah James"
+            }
+        }, 
+        {
+            "txt" : "Fantastic location convenient to everything. The tub was fantastic after several days of walking and biking and the rear garden area was great to have.",
+            "categories" : {
+                "cleanliness" : 4.5,
+                "accuracy" : 4.5,
+                "communication" : 5,
+                "location" : 4.5,
+                "checkIn" : 4.5,
+                "value" : 5
+            },
+            "createdAt" : 1638729175628.0,
+            "user" : {
+                "fullName" : "Kayle Dar"
+            }
+        }, 
+        {
+            "txt" : "I highly recommend this place. The location is perfect and there is the best pizza place La Peril within 5 minutes!!",
+            "categories" : {
+                "cleanliness" : 4.5,
+                "accuracy" : 4.5,
+                "communication" : 5,
+                "location" : 4.5,
+                "checkIn" : 4.5,
+                "value" : 4.5
+            },
+            "createdAt" : 1638729175628.0,
+            "user" : {
+                "fullName" : "Pollie Knock"
+            }
+        }
+    ],
+    "propertyType" : "Suite",
+    "capacity" : 4,
+    "amenities" : [ 
+        "Wifi", 
+        "Kitchen", 
+        "Smoking allowed", 
+        "Pets allowed", 
+        "Cooking basics", 
+        "Air conditioning"
+    ],
+    "host" : {},
+    "loc" : {
+        "country" : "Netherlands",
+        "city" : "Amsterdam",
+        "countryCode" : "NL",
+        "address" : "Amsterdam, Netherlands",
+        "lat" : 52.37021,
+        "lng" : 4.89516
+    }
+}
+
+/* 2 */
+{
+    "_id" : ObjectId("61af384533e9fb6b20be78b2"),
+    "name" : "NOMADS by Suite.030 . Designer Apartment for 6",
+    "price" : 623,
+    "imgUrls" : [ 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638611233/Demo1/4/1_z8lkmc.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638611233/Demo1/4/4_n1iwad.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638611233/Demo1/4/5_g3adha.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638611233/Demo1/4/5_g3adha.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638611232/Demo1/4/3_tqvwts.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638611232/Demo1/4/2_jtjvt6.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638611232/Demo1/4/6_m0zvru.jpg"
+    ],
+    "summary" : "Entire serviced apartment hosted by Team Suite030",
+    "createdAt" : 1638729175631.0,
+    "reviews" : [ 
+        {
+            "txt" : "A fantastic studio in a central location that facilitated our exploration of Berlin. Alan and Guenther were extremely quick to respond when we had any questions and were always very nice. The apartment was clean, organized, and most importantly for us, had a very comfortable bed! Highly recommended for your trip to Berlin.",
+            "categories" : {
+                "cleanliness" : 5,
+                "accuracy" : 4.5,
+                "communication" : 5,
+                "location" : 4.5,
+                "checkIn" : 4,
+                "value" : 4.5
+            },
+            "createdAt" : 1638729175631.0,
+            "user" : {
+                "fullName" : "Damian Oile"
+            }
+        }, 
+        {
+            "txt" : "Alan and Gunther’s is exactly as described. It is in the middle of the hippest, busiest part of the city, and yet mostly quiet as a tomb. It is clean, comfortable and was to navigate the whole city from.",
+            "categories" : {
+                "cleanliness" : 5,
+                "accuracy" : 5,
+                "communication" : 5,
+                "location" : 5,
+                "checkIn" : 4.5,
+                "value" : 4
+            },
+            "createdAt" : 1638729175631.0,
+            "user" : {
+                "fullName" : "Derbie Donald"
+            }
+        }, 
+        {
+            "txt" : "Would definitely stay here again! The check in process was really easy and the apartment was very clean. The apartment had nice touches like flowers when we arrived, a good assortment of cooking supplies, and the location was great to easily get around Berlin.",
+            "categories" : {
+                "cleanliness" : 4.5,
+                "accuracy" : 4.5,
+                "communication" : 5,
+                "location" : 4.5,
+                "checkIn" : 4.5,
+                "value" : 4.5
+            },
+            "createdAt" : 1638729175631.0,
+            "user" : {
+                "fullName" : "Trump Jay"
+            }
+        }, 
+        {
+            "txt" : "Very clean, nice and well-designed place. Host is super nice and considerate. Definitely recommend.",
+            "categories" : {
+                "cleanliness" : 4.5,
+                "accuracy" : 4.5,
+                "communication" : 5,
+                "location" : 4.5,
+                "checkIn" : 4.5,
+                "value" : 5
+            },
+            "createdAt" : 1638729175631.0,
+            "user" : {
+                "fullName" : "Under taker"
+            }
+        }
+    ],
+    "propertyType" : "Appartment",
+    "capacity" : 6,
+    "amenities" : [ 
+        "Wifi", 
+        "Kitchen", 
+        "Smoking allowed", 
+        "Pets allowed", 
+        "Cooking basics", 
+        "Air conditioning"
+    ],
+    "host" : {},
+    "loc" : {
+        "country" : "Germany",
+        "city" : "Berlin",
+        "countryCode" : "GR",
+        "address" : "Berlin, Germany",
+        "lat" : 52.52,
+        "lng" : 13.40495
+    }
+}
+
+/* 3 */
+{
+    "_id" : ObjectId("61af384533e9fb6b20be78b3"),
+    "name" : "Fabulous Leicester Sq 1BR - Netflix & Nespresso",
+    "price" : 539,
+    "imgUrls" : [ 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638442439/sprint4_staysPics/london/2/7364ee14-86f0-49d9-b5b7-b2dde82763a9_xas4pg.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638442439/sprint4_staysPics/london/2/ecf5f700-fcb9-4434-a67f-8ac43011d1fc_tb23sa.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638442439/sprint4_staysPics/london/2/152195fd-186b-47d3-8651-057961b4588d_ykj2lz.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638442439/sprint4_staysPics/london/2/4b586f0f-d88d-40ba-8b31-41eb582a1ca0_vd2brw.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638442439/sprint4_staysPics/london/2/03ce77fb-a646-4fec-a865-fc7297322d87_gdj9gq.jpg"
+    ],
+    "summary" : "Fabulous Leicester Sq 1BR - Netflix & Nespresso",
+    "createdAt" : 1638729175632.0,
+    "reviews" : [ 
+        {
+            "txt" : "Awesome place, had fun, much recommended",
+            "categories" : {
+                "cleanliness" : 4.2,
+                "accuracy" : 4.1,
+                "communication" : 4.6,
+                "location" : 4.0,
+                "checkIn" : 4.2,
+                "value" : 4.3
+            },
+            "user" : {
+                "fullName" : "Koko Parker"
+            },
+            "createdAt" : NumberLong(1638729175525)
+        }, 
+        {
+            "txt" : "Awesome place, had fun, much recommended",
+            "categories" : {
+                "cleanliness" : 4.2,
+                "accuracy" : 4.1,
+                "communication" : 4.6,
+                "location" : 4.0,
+                "checkIn" : 4.2,
+                "value" : 4.3
+            },
+            "user" : {
+                "fullName" : "Dandin Popeye"
+            },
+            "createdAt" : NumberLong(1638729175525)
+        }, 
+        {
+            "txt" : "Awesome place, had fun, much recommended",
+            "categories" : {
+                "cleanliness" : 4.2,
+                "accuracy" : 4.1,
+                "communication" : 4.6,
+                "location" : 4.0,
+                "checkIn" : 4.2,
+                "value" : 4.3
+            },
+            "user" : {
+                "fullName" : "Rey Olive"
+            },
+            "createdAt" : NumberLong(1638729175525)
+        }
+    ],
+    "propertyType" : "Appartment",
+    "capacity" : 5,
+    "amenities" : [ 
+        "Wifi", 
+        "Kitchen", 
+        "Pets allowed"
+    ],
+    "host" : {},
+    "loc" : {
+        "country" : "GB",
+        "city" : "London",
+        "countryCode" : "UK",
+        "address" : "London,United Kingdom",
+        "lat" : 51.50735,
+        "lng" : -0.12775
+    }
+}
+
+/* 4 */
+{
+    "_id" : ObjectId("61af384533e9fb6b20be78b4"),
+    "name" : "sunny 4 bedrooms penthouse in Manhattan",
+    "price" : 560,
+    "imgUrls" : [ 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638702972/Demo1/5/93a0cf79-d0f5-423e-a700-162712efe56d_zull5r.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638702972/Demo1/5/55ad0eea-bd3b-47ea-a4f1-d221679091d0_rjwgbt.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638702972/Demo1/5/9eacbef5-475c-4518-a9c2-8c1eb54bbc79_jp9upe.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638702972/Demo1/5/6dcc274d-0984-4eb6-a9c3-1e7da684cf1d_opqsgk.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638702972/Demo1/5/8d1b4104-262c-4dc1-a035-f44ae7bd9919_yetzym.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638702972/Demo1/5/08fa42a5-a8ea-4abd-aa03-407b10ba5831_ehv4fx.jpg"
+    ],
+    "summary" : "Entire rental unit hosted by Martina",
+    "createdAt" : 1638729175631.0,
+    "reviews" : [ 
+        {
+            "txt" : "This unit is awesome and the Beekman Tower is awesome. Hector, at the front desk, was welcoming, engaging, and helpful. Perfectly located in a quiet part of Manhattan, but near some lively eating establishments on 2nd Ave. Million dollar view of East River",
+            "categories" : {
+                "cleanliness" : 4.5,
+                "accuracy" : 5,
+                "communication" : 4,
+                "location" : 4.5,
+                "checkIn" : 4.5,
+                "value" : 4.5
+            },
+            "createdAt" : 1638729175631.0,
+            "user" : {
+                "fullName" : "Kakashi Tanaka"
+            }
+        }, 
+        {
+            "txt" : "The place was in a great area, spacious, and clean. Check-in was incredibly easy. Also was in a quite area of the city which was ideal.",
+            "categories" : {
+                "cleanliness" : 4,
+                "accuracy" : 5,
+                "communication" : 4,
+                "location" : 4.5,
+                "checkIn" : 4.5,
+                "value" : 5
+            },
+            "createdAt" : 1638729175631.0,
+            "user" : {
+                "fullName" : "Otto Ock"
+            }
+        }, 
+        {
+            "txt" : "Had a great stay here with my husband and two sons. We would definitely stay here again! The apartment was clean, check in was easy, and we loved the location.",
+            "categories" : {
+                "cleanliness" : 4,
+                "accuracy" : 5,
+                "communication" : 5,
+                "location" : 4,
+                "checkIn" : 4.5,
+                "value" : 5
+            },
+            "createdAt" : 1638729175631.0,
+            "user" : {
+                "fullName" : "Zein Zidane"
+            }
+        }, 
+        {
+            "txt" : "We have always stayed on the west side of Midtown but loved the quieter location of the Beekman on the east side. There are of course lots of great restaurants in walking distance since it is Manhattan but it was great having a full kitchen for breakfast and to eat take out or delivery on real plates with real silverware! The Ophelia restaurant and bar on the top floor is not to be missed as the views are spectacular!",
+            "categories" : {
+                "cleanliness" : 5,
+                "accuracy" : 5,
+                "communication" : 5,
+                "location" : 5,
+                "checkIn" : 5,
+                "value" : 5
+            },
+            "createdAt" : 1638729175631.0,
+            "user" : {
+                "fullName" : "Abigale Orez"
+            }
+        }
+    ],
+    "propertyType" : "Penthouse",
+    "capacity" : 9,
+    "amenities" : [ 
+        "Wifi", 
+        "Kitchen", 
+        "Smoking allowed", 
+        "Pets allowed", 
+        "Cooking basics", 
+        "Air conditioning"
+    ],
+    "host" : {},
+    "loc" : {
+        "country" : "United States",
+        "city" : "New York",
+        "countryCode" : "US",
+        "address" : "New York, United States",
+        "lat" : 40.71277,
+        "lng" : -74.00597
+    }
+}
+
+/* 5 */
+{
+    "_id" : ObjectId("61af384533e9fb6b20be78b5"),
+    "name" : "Professionally Serviced Spacious One Bed Apartment",
+    "price" : 394,
+    "imgUrls" : [ 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638442452/sprint4_staysPics/london/3/d1bf5ef8-3b3d-467e-b63c-28d8716eb07a_ielwud.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638442451/sprint4_staysPics/london/3/c3ecee07-0dd4-4fec-8901-c37a9696cbda_r86qmt.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638442451/sprint4_staysPics/london/3/b315a687-f76c-4491-ab02-c8876f9de709_mkenu7.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638442451/sprint4_staysPics/london/3/9d8f4a4c-20f4-4858-9fc0-87271d984498_lgbkr1.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638442451/sprint4_staysPics/london/3/a248927e-26ce-4a23-abb0-231a5a08892d_zivzhy.jpg"
+    ],
+    "summary" : "The Rosebery aparthotel is a beautifully restored Victorian red brick building with 58 luxurious suites, with Farringdon and Chancery Lane tube stations only a five minute walk away. The Rosebery’s suites are designed and furnished with fully fitted kitchens, beautiful bathrooms and sumptuous beds; coupled with our personalised and flexible service, we establish a level of comfort, convenience and attention to detail that is the hallmark of our family-run serviced apartments.",
+    "createdAt" : 1638729175632.0,
+    "reviews" : [ 
+        {
+            "txt" : " yooo this place is DOPE !!!!",
+            "categories" : {
+                "cleanliness" : 5,
+                "accuracy" : 4.5,
+                "communication" : 5,
+                "location" : 4.5,
+                "checkIn" : 4,
+                "value" : 4.5
+            },
+            "createdAt" : 1638729175631.0,
+            "user" : {
+                "fullName" : "Eliza Thompson"
+            }
+        }, 
+        {
+            "txt" : "Coooool PLACEEEEE!!!!",
+            "categories" : {
+                "cleanliness" : 5,
+                "accuracy" : 2.5,
+                "communication" : 5,
+                "location" : 4.5,
+                "checkIn" : 4.8,
+                "value" : 4.5
+            },
+            "createdAt" : 1638729175001.0,
+            "user" : {
+                "fullName" : "James Bond"
+            }
+        }, 
+        {
+            "txt" : "It Was Awesome Like my Turing Machine!!!",
+            "categories" : {
+                "cleanliness" : 5,
+                "accuracy" : 2.5,
+                "communication" : 5,
+                "location" : 4.5,
+                "checkIn" : 4.8,
+                "value" : 4.5
+            },
+            "createdAt" : 1638729175001.0,
+            "user" : {
+                "fullName" : "Alan Turing"
+            }
+        }, 
+        {
+            "txt" : "It Felt like i was a queen in a Palace!",
+            "categories" : {
+                "cleanliness" : 5,
+                "accuracy" : 2.5,
+                "communication" : 5,
+                "location" : 4.5,
+                "checkIn" : 4.8,
+                "value" : 4.5
+            },
+            "createdAt" : 1638729175001.0,
+            "user" : {
+                "fullName" : "Queen Victoria"
+            }
+        }, 
+        {
+            "txt" : "Close to the House of Commons... their Tea is Tasty...",
+            "categories" : {
+                "cleanliness" : 5,
+                "accuracy" : 2.5,
+                "communication" : 5,
+                "location" : 4.5,
+                "checkIn" : 4.8,
+                "value" : 4.5
+            },
+            "createdAt" : 1638729175001.0,
+            "user" : {
+                "fullName" : "Boris Johnson"
+            }
+        }
+    ],
+    "propertyType" : "Appartment",
+    "capacity" : 5,
+    "amenities" : [ 
+        "Wifi", 
+        "Pets allowed"
+    ],
+    "host" : {},
+    "loc" : {
+        "country" : "GB",
+        "city" : "London",
+        "countryCode" : "UK",
+        "address" : "London,United Kingdom",
+        "lat" : 51.50735,
+        "lng" : -0.12775
+    }
+}
+
+/* 6 */
+{
+    "_id" : ObjectId("61af384633e9fb6b20be78b6"),
+    "name" : "5 Star Manhattan Luxury St. Regis Hotel King Suite",
+    "price" : 892,
+    "imgUrls" : [ 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638702984/Demo1/6/36b04fa5-b742-4318-a1b8-4a20912b36df_haloic.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638702984/Demo1/6/3207c804-da42-43ed-9fdb-48878861de81_xlderw.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638702984/Demo1/6/2f3f5a76-8e1a-46a3-af34-0071e16f409b_ijciy0.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638702984/Demo1/6/36b04fa5-b742-4318-a1b8-4a20912b36df_haloic.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638702984/Demo1/6/54aa37d1-3a5e-4d51-b98e-dbcd71ac9e7c_ephyex.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638702984/Demo1/6/17ca57fb-6761-4eb7-be0a-25f651866781_cc7iks.jpg"
+    ],
+    "summary" : "Entire serviced apartment hosted by Alyssa And Eric",
+    "createdAt" : 1638729175631.0,
+    "reviews" : [ 
+        {
+            "txt" : "Trip was unbelievable. The St Regis is not only iconic, but also lives up to its 5-Star reputation. Butler service is awesome ( take advantage of the coffee/tea service and also the complimentary dry-cleaning service). Bottom-line: we would and will do it again.",
+            "categories" : {
+                "cleanliness" : 4.5,
+                "accuracy" : 4,
+                "communication" : 5,
+                "location" : 5,
+                "checkIn" : 4.5,
+                "value" : 4.5
+            },
+            "createdAt" : 1638729175631.0,
+            "user" : {
+                "fullName" : "Hosam Asfor"
+            }
+        }, 
+        {
+            "txt" : "100% The best hosting! Everything was amazing! Thank you so much for our incredible holidays!",
+            "categories" : {
+                "cleanliness" : 5,
+                "accuracy" : 5,
+                "communication" : 5,
+                "location" : 5,
+                "checkIn" : 5,
+                "value" : 5
+            },
+            "createdAt" : 1638729175631.0,
+            "user" : {}
+        }, 
+        {
+            "txt" : "It’s the original St Regis — all you would expect. Pricey but it is actually a great value given location, size and amenities.",
+            "categories" : {
+                "cleanliness" : 4.5,
+                "accuracy" : 4.5,
+                "communication" : 5,
+                "location" : 5,
+                "checkIn" : 5,
+                "value" : 4
+            },
+            "createdAt" : 1638729175631.0,
+            "user" : {
+                "fullName" : "Harry Pottah"
+            }
+        }, 
+        {
+            "txt" : "Quintessential luxury, amazing service! Great location",
+            "categories" : {
+                "cleanliness" : 5,
+                "accuracy" : 5,
+                "communication" : 5,
+                "location" : 5,
+                "checkIn" : 5,
+                "value" : 5
+            },
+            "createdAt" : 1638729175631.0,
+            "user" : {
+                "fullName" : "Hulk Smash"
+            }
+        }
+    ],
+    "propertyType" : "Suite",
+    "capacity" : 4,
+    "amenities" : [ 
+        "Wifi", 
+        "Kitchen", 
+        "Smoking allowed", 
+        "Pets allowed", 
+        "Cooking basics", 
+        "Air conditioning"
+    ],
+    "host" : {},
+    "loc" : {
+        "country" : "United States",
+        "city" : "New York",
+        "countryCode" : "US",
+        "address" : "New York, United States",
+        "lat" : 40.71277,
+        "lng" : -74.00597
+    }
+}
+
+/* 7 */
+{
+    "_id" : ObjectId("61af384633e9fb6b20be78b7"),
+    "name" : "Modern Private King Room Near Central Park",
+    "price" : 619,
+    "imgUrls" : [ 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638702995/Demo1/7/288ce2ac-07fe-412e-a668-354d75d32a05_hue6v8.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638702995/Demo1/7/c3ccc175-6f3f-4527-b88a-a59ef69c5344_x2jm8o.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638702995/Demo1/7/0feedc58-760a-4f2a-9cc0-f05b96243ec9_p8nnwo.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638702995/Demo1/7/2455bdfd-c3d7-4244-9402-ad9dc00772d9_cjjwym.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638702994/Demo1/7/a124fc8f-aa1d-4249-b1ef-9366d7411301_huyb87.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638702994/Demo1/7/17575233-6761-40ad-805a-f2f9c277ed84_zbdw1c.jpg"
+    ],
+    "summary" : "Room in boutique hotel hosted by WestHouse",
+    "createdAt" : 1638729175631.0,
+    "reviews" : [ 
+        {
+            "txt" : "Very clean. Great location. Friendly staff. Great amenities- coffee, snacks, “indulgence hours”, breakfast. Top notch. Would definitely come back and recommended to anyone",
+            "categories" : {
+                "cleanliness" : 4.5,
+                "accuracy" : 4,
+                "communication" : 5,
+                "location" : 4.5,
+                "checkIn" : 4.5,
+                "value" : 4
+            },
+            "createdAt" : 1638729175631.0,
+            "user" : {
+                "fullName" : "Zack Aerosmith"
+            }
+        }, 
+        {
+            "txt" : "My experience at the Westhouse hotel was great.. in general the location is perfect and closer to everything according what you really need and what you want to do.",
+            "categories" : {
+                "cleanliness" : 4.5,
+                "accuracy" : 4.5,
+                "communication" : 5,
+                "location" : 4.5,
+                "checkIn" : 4.5,
+                "value" : 4.5
+            },
+            "createdAt" : 1638729175631.0,
+            "user" : {
+                "fullName" : "Janice Ozborne"
+            }
+        }, 
+        {
+            "txt" : "Great spot to stay! Very clean and accommodating. Close to Time Square and Central Park.",
+            "categories" : {
+                "cleanliness" : 5,
+                "accuracy" : 4.5,
+                "communication" : 5,
+                "location" : 4.5,
+                "checkIn" : 4,
+                "value" : 5
+            },
+            "createdAt" : 1638729175631.0,
+            "user" : {
+                "fullName" : "Candy Crush"
+            }
+        }, 
+        {
+            "txt" : "100% The best hosting! Everything was amazing! Thank you so much for our incredible holidays!",
+            "categories" : {
+                "cleanliness" : 5,
+                "accuracy" : 5,
+                "communication" : 5,
+                "location" : 5,
+                "checkIn" : 5,
+                "value" : 5
+            },
+            "createdAt" : 1638729175631.0,
+            "user" : {
+                "fullName" : "Chuck Jones"
+            }
+        }
+    ],
+    "propertyType" : "Room",
+    "capacity" : 2,
+    "amenities" : [ 
+        "Wifi", 
+        "Kitchen", 
+        "Smoking allowed", 
+        "Pets allowed", 
+        "Cooking basics", 
+        "Air conditioning"
+    ],
+    "host" : {},
+    "loc" : {
+        "country" : "United States",
+        "city" : "New York",
+        "countryCode" : "US",
+        "address" : "New York, United States",
+        "lat" : 40.71277,
+        "lng" : -74.00597
+    }
+}
+
+/* 8 */
+{
+    "_id" : ObjectId("61af384633e9fb6b20be78b8"),
+    "name" : "Rooftop Penthouse in Victoria station",
+    "price" : 1131,
+    "imgUrls" : [ 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638442462/sprint4_staysPics/london/4/32526163-246b-40af-8c37-b37f9f77fe69_hf3tpw.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638442462/sprint4_staysPics/london/4/315e3df5-b422-47ce-98b1-3df086a500b0_xhf59i.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638442462/sprint4_staysPics/london/4/78e1fd41-2fca-4195-a733-ee354a696a38_aqgjog.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638442462/sprint4_staysPics/london/4/54ab4000-87c7-42d4-808e-3e5132832c35_douyjh.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638442462/sprint4_staysPics/london/4/6f2b60b1-b093-473e-8991-2bb9834e5e99_ffkvdt.jpg"
+    ],
+    "summary" : "160sqm Penthouse in central London (In front of Victoria station). 80sqm panoramic rooftop terrace with BBQ, High speed fibre broadband, AV system in every room, Two master bedrooms, Two master bathrooms, Two walk-in closets, And many more",
+    "createdAt" : 1638729175632.0,
+    "reviews" : [ 
+        {
+            "txt" : "The Best in London , had an awesome experience, the owner is cool!",
+            "categories" : {
+                "cleanliness" : 5,
+                "accuracy" : 4.5,
+                "communication" : 5,
+                "location" : 4.5,
+                "checkIn" : 4,
+                "value" : 4.5
+            },
+            "createdAt" : 1638729161631.0,
+            "user" : {
+                "fullName" : "Mo Salah"
+            }
+        }
+    ],
+    "propertyType" : "Appartment",
+    "capacity" : 5,
+    "amenities" : [ 
+        "Wifi", 
+        "Air conditioning", 
+        "Kitchen"
+    ],
+    "host" : {},
+    "loc" : {
+        "country" : "GB",
+        "city" : "London",
+        "countryCode" : "UK",
+        "address" : "London,United Kingdom",
+        "lat" : 51.50735,
+        "lng" : -0.12775
+    }
+}
+
+/* 9 */
+{
+    "_id" : ObjectId("61af384633e9fb6b20be78b9"),
+    "name" : "Chill Oxford Street 2BR - Netflix & Natural Light",
+    "price" : 1061,
+    "imgUrls" : [ 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638442475/sprint4_staysPics/london/5/ad90375a-6769-4121-a6ed-058271185506_fxbahy.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638442475/sprint4_staysPics/london/5/a6aa6501-7af1-4326-bc24-d989303ef925_gg9tvc.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638442475/sprint4_staysPics/london/5/8355db61-632c-4ec7-8538-d025a20ef5ab_y6qait.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638442475/sprint4_staysPics/london/5/4071eeef-613e-4f91-a21f-fe911c353d39_nedgqx.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638442475/sprint4_staysPics/london/5/2f7038a0-47a5-4e35-a61a-35d3d403cbb6_slqtdl.jpg"
+    ],
+    "summary" : "The expansive apartment has two bedrooms with huge beds (super king and king) and ensuite bathrooms, ultra-fast WIFI, smart TVs, Netflix, Nespresso and all the comforts you would expect in a home away from home.",
+    "createdAt" : 1638729175632.0,
+    "reviews" : [ 
+        {
+            "txt" : "A fantastic studio in a central location that facilitated our exploration of Berlin. Alan and Guenther were extremely quick to respond when we had any questions and were always very nice. The apartment was clean, organized, and most importantly for us, had a very comfortable bed! Highly recommended for your trip to Berlin.",
+            "categories" : {
+                "cleanliness" : 5,
+                "accuracy" : 4.5,
+                "communication" : 5,
+                "location" : 4.5,
+                "checkIn" : 4,
+                "value" : 4.5
+            },
+            "createdAt" : 1638729175631.0,
+            "user" : {
+                "fullName" : "Musa Moses"
+            }
+        }, 
+        {
+            "txt" : "Go there! nuff said...",
+            "categories" : {
+                "cleanliness" : 4.5,
+                "accuracy" : 4.5,
+                "communication" : 3.1,
+                "location" : 4.5,
+                "checkIn" : 4.2,
+                "value" : 4.5
+            },
+            "createdAt" : 1638729175631.0,
+            "user" : {}
+        }, 
+        {
+            "txt" : "A fantastic studio in a central location that facilitated our exploration of Berlin. Alan and Guenther were extremely quick to respond when we had any questions and were always very nice. The apartment was clean, organized, and most importantly for us, had a very comfortable bed! Highly recommended for your trip to London.",
+            "categories" : {
+                "cleanliness" : 5,
+                "accuracy" : 4.5,
+                "communication" : 1,
+                "location" : 4.5,
+                "checkIn" : 4,
+                "value" : 4.5
+            },
+            "createdAt" : 1638729175631.0,
+            "user" : {
+                "fullName" : "Moshe Jerome"
+            }
+        }
+    ],
+    "propertyType" : "Appartment",
+    "capacity" : 5,
+    "amenities" : [ 
+        "Smoking allowed", 
+        "Wifi"
+    ],
+    "host" : {},
+    "loc" : {
+        "country" : "GB",
+        "city" : "London",
+        "countryCode" : "UK",
+        "address" : "London,United Kingdom",
+        "lat" : 51.50735,
+        "lng" : -0.12775
+    }
+}
+
+/* 10 */
+{
+    "_id" : ObjectId("61af384633e9fb6b20be78ba"),
+    "name" : "Stunning 2 Bed Duplex Flat in Central London",
+    "price" : 619,
+    "imgUrls" : [ 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638442490/sprint4_staysPics/london/6/dfbad59b-2731-4108-a093-8eead4fd5c51_e1jyfy.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638442489/sprint4_staysPics/london/6/47aca4ba-ba49-42fe-b000-9450a03db1c1_pf4voz.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638442489/sprint4_staysPics/london/6/4fde6f0b-e302-41a6-b790-7a45bd592f5d_e45x0u.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638442489/sprint4_staysPics/london/6/c09d6497-2d11-411f-aaf4-5c2e0c910bae_ktyuiq.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638442489/sprint4_staysPics/london/6/4e54feb3-817c-4cab-b1f7-543544b6e901_fll88y.jpg"
+    ],
+    "summary" : "A beautiful, tranquil flat given its central location, having the benefit of the large square with its beautifully maintained formal shared garden.",
+    "createdAt" : 1638729175632.0,
+    "reviews" : [ 
+        {
+            "txt" : "Home Sweet Home",
+            "categories" : {
+                "cleanliness" : 4,
+                "accuracy" : 4.5,
+                "communication" : 5,
+                "location" : 4.5,
+                "checkIn" : 4,
+                "value" : 4.5
+            },
+            "createdAt" : 1638729175631.0,
+            "user" : {
+                "fullName" : "Jeff Chan"
+            }
+        }
+    ],
+    "propertyType" : "Appartment",
+    "capacity" : 5,
+    "amenities" : [ 
+        "Wifi", 
+        "Kitchen"
+    ],
+    "host" : {},
+    "loc" : {
+        "country" : "GB",
+        "city" : "London",
+        "countryCode" : "UK",
+        "address" : "London,United Kingdom",
+        "lat" : 51.50735,
+        "lng" : -0.12775
+    }
+}
+
+/* 11 */
+{
+    "_id" : ObjectId("61af384633e9fb6b20be78bb"),
+    "name" : "Stunning 4BD Duplex Apartment in Earls Court",
+    "price" : 653,
+    "imgUrls" : [ 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638703010/Demo1/8/fa53dab5-3501-48e0-b616-c388d19f8a0c_ogczdi.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638703010/Demo1/8/d7754804-1e58-4f63-9bfb-56a53ef12191_dadb8l.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638703010/Demo1/8/feb5cf99-a72f-4d6e-a637-bee794b814ac_hs7vjy.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638703010/Demo1/8/45f1510c-5fe9-4f83-bf02-d6f6c4858d5b_zkotua.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638703010/Demo1/8/d504a33b-c7d8-42e6-8f72-69fe4089f192_dfkzaj.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638703010/Demo1/8/ce91907d-da9e-4f7c-9ff6-ad19cea8ef57_lbh7ii.jpg"
+    ],
+    "summary" : "Entire condominium (condo) hosted by Charlie",
+    "createdAt" : 1638729175631.0,
+    "reviews" : [ 
+        {
+            "txt" : "This property exceeded our expectations! With four children, hotels are always a challenge with so few multiple room suites. The four bedrooms and spacious living area gave everyone plenty of room to relax. The location cant be beat, with Earls Court station just steps away.",
+            "categories" : {
+                "cleanliness" : 4,
+                "accuracy" : 5,
+                "communication" : 5,
+                "location" : 4.5,
+                "checkIn" : 4.5,
+                "value" : 4.5
+            },
+            "createdAt" : 1638729175631.0,
+            "user" : {
+                "fullName" : "Danny Elfman"
+            }
+        }, 
+        {
+            "txt" : "A really lovely flat in the most ideal location. Getting around London is very easy as you’re just a 4 minute walk from the tube station, but you’re tucked away enough to avoid the noise pollution from the busy streets nearby. The place was sparkling clean, very modern and had the comfiest beds we’ve slept on in an AirBnB!",
+            "categories" : {
+                "cleanliness" : 5,
+                "accuracy" : 4.5,
+                "communication" : 5,
+                "location" : 4.5,
+                "checkIn" : 5,
+                "value" : 5
+            },
+            "createdAt" : 1638729175631.0,
+            "user" : {
+                "fullName" : "Christofer Joe"
+            }
+        }, 
+        {
+            "txt" : "Great place, clean, and great location. Quick responses and would stay the place again.",
+            "categories" : {
+                "cleanliness" : 4.9,
+                "accuracy" : 4.8,
+                "communication" : 5,
+                "location" : 4.7,
+                "checkIn" : 4.6,
+                "value" : 4.9
+            },
+            "createdAt" : 1638729175631.0,
+            "user" : {
+                "fullName" : "Sare amestav"
+            }
+        }, 
+        {
+            "txt" : "Very clean and beautifully designed spaces. Highly recommended!",
+            "categories" : {
+                "cleanliness" : 5,
+                "accuracy" : 5,
+                "communication" : 5,
+                "location" : 5,
+                "checkIn" : 5,
+                "value" : 5
+            },
+            "createdAt" : 1638729175631.0,
+            "user" : {
+                "fullName" : "Jane Thwip"
+            }
+        }
+    ],
+    "propertyType" : "Appartment",
+    "capacity" : 5,
+    "amenities" : [ 
+        "Wifi", 
+        "Kitchen", 
+        "Smoking allowed", 
+        "Pets allowed", 
+        "Cooking basics", 
+        "Air conditioning"
+    ],
+    "host" : {},
+    "loc" : {
+        "country" : "United Kingdom",
+        "city" : "London",
+        "countryCode" : "UK",
+        "address" : "London, United Kingdom",
+        "lat" : 51.50735,
+        "lng" : -0.12775
+    }
+}
+
+/* 12 */
+{
+    "_id" : ObjectId("61af384633e9fb6b20be78bc"),
+    "name" : "Knightsbridge Luxury 4 Bedroom En Suite Apartment",
+    "price" : 1209,
+    "imgUrls" : [ 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638703048/Demo1/9/eac2dd7b-5805-4c48-887f-ed48cee0cc1d_p3hdql.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638703048/Demo1/9/c8cfdd64-35c8-4d97-874b-193d76057e1f_ilstcp.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638703048/Demo1/9/c079487a-d79d-4943-8eae-3add6dec8c58_oxwejh.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638703048/Demo1/9/a2c9fb68-20ac-439d-899a-cb43060bc7dc_smoted.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638703048/Demo1/9/f34f3bec-a140-4415-a830-fc466e4adcca_ns2u32.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638703048/Demo1/9/b27e5926-5faf-44e2-955a-11a332feec6e_mhat5n.jpg"
+    ],
+    "summary" : "Entire condominium (condo) hosted by Rob",
+    "createdAt" : 1638729175631.0,
+    "reviews" : [ 
+        {
+            "txt" : "stunning and vibrant four-bedroom fully furnished suite that offers private Hyde Park Views. Located in the heart of Knightsbridge, designed with only the comfort of guests in mind, the flat offers convenience, luxury and relaxation. Fully air-conditioned with heat & cool, all four bedrooms are en suite with spacious bathrooms. Secure portered block with concierge available 24 hours in the building. This is without doubt one of the most sought after location in the world.",
+            "categories" : {
+                "cleanliness" : 4,
+                "accuracy" : 4.5,
+                "communication" : 5,
+                "location" : 4.5,
+                "checkIn" : 4.5,
+                "value" : 5
+            },
+            "createdAt" : 1638729175631.0,
+            "user" : {
+                "fullName" : "Nancy Ajram"
+            }
+        }, 
+        {
+            "txt" : "Amazing and beautiful apartment",
+            "categories" : {
+                "cleanliness" : 4,
+                "accuracy" : 4,
+                "communication" : 5,
+                "location" : 4,
+                "checkIn" : 4,
+                "value" : 4
+            },
+            "createdAt" : 1638729175631.0,
+            "user" : {
+                "fullName" : "Alex haley"
+            }
+        }, 
+        {
+            "txt" : "Had a wonderful stay. Cristina was very responsible and helpful, from arranging maid service to dry-cleaning during our stay. Fantastic location overlooking Hyde Park near Harrods, and very spacious. Would stay here again.",
+            "categories" : {
+                "cleanliness" : 4.5,
+                "accuracy" : 4.5,
+                "communication" : 5,
+                "location" : 4.5,
+                "checkIn" : 4.5,
+                "value" : 4.5
+            },
+            "createdAt" : 1638729175631.0,
+            "user" : {}
+        }, 
+        {
+            "txt" : "Great stay. Would definitely recommend!",
+            "categories" : {
+                "cleanliness" : 4.5,
+                "accuracy" : 4.5,
+                "communication" : 5,
+                "location" : 4.5,
+                "checkIn" : 4.5,
+                "value" : 4.5
+            },
+            "createdAt" : 1638729175631.0,
+            "user" : {
+                "fullName" : "Kunta Kinte"
+            }
+        }
+    ],
+    "propertyType" : "Suite",
+    "capacity" : 5,
+    "amenities" : [ 
+        "Wifi", 
+        "Kitchen", 
+        "Smoking allowed", 
+        "Pets allowed", 
+        "Cooking basics", 
+        "Air conditioning"
+    ],
+    "host" : {},
+    "loc" : {
+        "country" : "United Kingdom",
+        "city" : "London",
+        "countryCode" : "UK",
+        "address" : "London, United Kingdom",
+        "lat" : 51.50735,
+        "lng" : -0.12775
+    }
+}
+
+/* 13 */
+{
+    "_id" : ObjectId("61af384633e9fb6b20be78bd"),
+    "name" : "Sonder  The Arts Council  Two-Bedroom Apartment near House of Lords",
+    "price" : 789,
+    "imgUrls" : [ 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638703064/Demo1/10/e48fa526-2541-4c5c-ac84-b1dab7fa92ff_hmnkgn.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638703064/Demo1/10/e03da6b9-6229-4693-9ac8-d7ffd08cf2db_q0baow.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638703064/Demo1/10/97ac4f59-5142-4c33-8e43-987b7004938d_tdhszw.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638703064/Demo1/10/c74ce79e-3fd2-41cd-940d-ec0a7c45bc76_f7adbx.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638703064/Demo1/10/6602849e-4be1-46e7-9318-b2b7e3b689af_byssln.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638703063/Demo1/10/876c97ac-b054-4b3e-a627-95f883e2743a_aswrjl.jpg"
+    ],
+    "summary" : "Entire rental unit hosted by Sonder (London)",
+    "createdAt" : 1638729175631.0,
+    "reviews" : [ 
+        {
+            "txt" : "The accommodation is stunning, well located, with all the amenities you need during your stay. Cant recommend enough.",
+            "categories" : {
+                "cleanliness" : 5,
+                "accuracy" : 5,
+                "communication" : 5,
+                "location" : 5,
+                "checkIn" : 5,
+                "value" : 5
+            },
+            "createdAt" : 1638729175631.0,
+            "user" : {
+                "fullName" : "Chicken George"
+            }
+        }, 
+        {
+            "txt" : "Very cool apartment and high quality. My mother in law was in love with the decoration.",
+            "categories" : {
+                "cleanliness" : 5,
+                "accuracy" : 5,
+                "communication" : 5,
+                "location" : 5,
+                "checkIn" : 5,
+                "value" : 5
+            },
+            "createdAt" : 1638729175631.0,
+            "user" : {
+                "fullName" : "Tim Jerry"
+            }
+        }, 
+        {
+            "txt" : "Fantastic apartment in a great part of London. Highly recommended!",
+            "categories" : {
+                "cleanliness" : 5,
+                "accuracy" : 5,
+                "communication" : 5,
+                "location" : 4,
+                "checkIn" : 4,
+                "value" : 4.5
+            },
+            "createdAt" : 1638729175631.0,
+            "user" : {
+                "fullName" : "Bader Badir"
+            }
+        }, 
+        {
+            "txt" : "This Airbnb was outstanding. The location was very central and made it easy to walk or take public transportation to see local attractions. The style and decor were very modern and the place was very clean. The amenities were great (full kitchen, washer dryer). Definitely would come back next time.",
+            "categories" : {
+                "cleanliness" : 5,
+                "accuracy" : 5,
+                "communication" : 5,
+                "location" : 5,
+                "checkIn" : 5,
+                "value" : 5
+            },
+            "createdAt" : 1638729175631.0,
+            "user" : {
+                "fullName" : "Cristiano Ronaldo"
+            }
+        }
+    ],
+    "propertyType" : "Appartment",
+    "capacity" : 5,
+    "amenities" : [ 
+        "Wifi", 
+        "Kitchen", 
+        "Smoking allowed", 
+        "Pets allowed", 
+        "Cooking basics", 
+        "Air conditioning"
+    ],
+    "host" : {},
+    "loc" : {
+        "country" : "United Kingdom",
+        "city" : "London",
+        "countryCode" : "UK",
+        "address" : "London, United Kingdom",
+        "lat" : 51.50735,
+        "lng" : -0.12775
+    }
+}
+
+/* 14 */
+{
+    "_id" : ObjectId("61af384633e9fb6b20be78be"),
+    "name" : "inFront of the Beach house",
+    "price" : 635,
+    "imgUrls" : [ 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638442037/sprint4_staysPics/telAviv/1/80593570-df24-400c-aec8-c7c64099f650_ytdt0f.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638442037/sprint4_staysPics/telAviv/1/e6f04176-316b-40cb-97cf-b236d13cca3a_ueggfx.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638442037/sprint4_staysPics/telAviv/1/46116d12-da7a-4473-9ad8-2f020643ab2d_z8bbsx.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638442037/sprint4_staysPics/telAviv/1/ed89a868-e41f-4c6e-9d48-646f86b56438_qwy9qd.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638442037/sprint4_staysPics/telAviv/1/ed89a868-e41f-4c6e-9d48-646f86b56438_qwy9qd.jpg"
+    ],
+    "summary" : "New Building front the Beach next the Royal Beach Hotel. Apartment freshly decorated with 2 bedrooms and 2 bathrooms. There is a fantastic sea view. The Kitchen is full equipped. There is a Lobby with a security 24/7. You will get a private parking. Good TV and WIFI. AC works perfectly. Washing machine & dryer.",
+    "createdAt" : 1638729175632.0,
+    "reviews" : [ 
+        {
+            "txt" : "A fantastic studio in a central location that facilitated our exploration of Berlin. Alan and Guenther were extremely quick to respond when we had any questions and were always very nice. The apartment was clean, organized, and most importantly for us, had a very comfortable bed! Highly recommended for your trip to Tel-Aviv.",
+            "categories" : {
+                "cleanliness" : 5,
+                "accuracy" : 4.5,
+                "communication" : 5,
+                "location" : 4.5,
+                "checkIn" : 4,
+                "value" : 4.5
+            },
+            "createdAt" : 1638729175631.0,
+            "user" : {
+                "fullName" : "Bruce Stark"
+            }
+        }
+    ],
+    "propertyType" : "Appartment",
+    "capacity" : 5,
+    "amenities" : [ 
+        "Wifi", 
+        "Pets allowed"
+    ],
+    "host" : {},
+    "loc" : {
+        "country" : "Israel",
+        "city" : "Tel-Aviv",
+        "lat" : 32.0853,
+        "lng" : 34.78176
+    }
+}
+
+/* 15 */
+{
+    "_id" : ObjectId("61af384633e9fb6b20be78bf"),
+    "name" : "Luxurious Apartment With Panoramic Sea View",
+    "price" : 306,
+    "imgUrls" : [ 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638442056/sprint4_staysPics/telAviv/2/44d0f05e-9886-4383-9e12-7167bcf2542f_emlxlw.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638442056/sprint4_staysPics/telAviv/2/ccc5a053-627e-45d9-86b6-a6bdd0e33a62_zhwvzs.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638442056/sprint4_staysPics/telAviv/2/b3b5b625-9c79-4bae-9077-cacc58232cf0_tz2ufx.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638442056/sprint4_staysPics/telAviv/2/6219d54c-37d1-4631-a2d5-09beff762a91_hniey9.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638442056/sprint4_staysPics/telAviv/2/733d0983-abec-45ba-9aeb-eba9bf86d952_yiytkd.jpg"
+    ],
+    "summary" : "My place is close to family-friendly activities, nightlife, and the city center. You’ll love my place because of the ambiance, the neighborhood, and the light. My place is good for couples and families (with kids).",
+    "createdAt" : 1638729175632.0,
+    "reviews" : [ 
+        {
+            "txt" : "Tel-aviv ya habibi tel-aviv!",
+            "categories" : {
+                "cleanliness" : 5,
+                "accuracy" : 4.5,
+                "communication" : 4.1,
+                "location" : 4.5,
+                "checkIn" : 4,
+                "value" : 4.5
+            },
+            "createdAt" : 1638729175631.0,
+            "user" : {
+                "fullName" : "Lucy Gorem"
+            }
+        }
+    ],
+    "propertyType" : "Appartment",
+    "capacity" : 5,
+    "amenities" : [ 
+        "Smoking allowed", 
+        "Kitchen", 
+        "Wifi"
+    ],
+    "host" : {},
+    "loc" : {
+        "country" : "Israel",
+        "city" : "Tel-Aviv",
+        "lat" : 32.0853,
+        "lng" : 34.78176
+    }
+}
+
+/* 16 */
+{
+    "_id" : ObjectId("61af384633e9fb6b20be78c0"),
+    "name" : "Stunning sea view penthouse with infinity pool",
+    "price" : 559,
+    "imgUrls" : [ 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638442076/sprint4_staysPics/telAviv/3/56bfa190-b7ea-434d-89b5-78c739319f6c_lzvjfu.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638442076/sprint4_staysPics/telAviv/3/2cf0dd01-cb8e-4257-b0e1-3a20b2651e56_yfalqa.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638442076/sprint4_staysPics/telAviv/3/b8b6e7a2-71d4-4711-b28c-c18845433e5f_rggzpm.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638442076/sprint4_staysPics/telAviv/3/8d92d04f-57bc-42b1-89e3-934fc93e905a_pkt1n9.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638442076/sprint4_staysPics/telAviv/3/c0b31923-dbf2-4b6c-8d27-62ea307fdcd6_ja6x0i.jpg"
+    ],
+    "summary" : "Luxury Beach front Triplex with stunning sea view in Prime location!!! Two minutes walking to the beach..! Fully equipped, 3 Master Bedrooms, Two Terrace, Accommodate up to 10 guests and is divided in 3 levels, Which have breathtaking uninterrupted views to the sea and the beach. Two Parking space and privet elevator.",
+    "createdAt" : 1638729175632.0,
+    "reviews" : [ 
+        {
+            "txt" : "Awesome place, good view , cool weather!",
+            "categories" : {
+                "cleanliness" : 5,
+                "accuracy" : 4.5,
+                "communication" : 5,
+                "location" : 4.5,
+                "checkIn" : 4,
+                "value" : 3
+            },
+            "createdAt" : 1638729175631.0,
+            "user" : {
+                "fullName" : "Jean Gocc"
+            }
+        }
+    ],
+    "propertyType" : "apartment",
+    "capacity" : 5,
+    "amenities" : [ 
+        "Wifi"
+    ],
+    "host" : {},
+    "loc" : {
+        "country" : "Israel",
+        "city" : "Tel-Aviv",
+        "lat" : 32.0853,
+        "lng" : 34.78176
+    }
+}
+
+/* 17 */
+{
+    "_id" : ObjectId("61af384633e9fb6b20be78c1"),
+    "name" : "Dizengoff luxury Boutique Apartment",
+    "price" : 300,
+    "imgUrls" : [ 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638442100/sprint4_staysPics/telAviv/4/8c2cedec-1d3c-4e4d-af8b-e124050e21fe_gr5qjd.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638442099/sprint4_staysPics/telAviv/4/1d6d3f99-a137-4897-a365-198f6bc0439e_loecy1.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638442099/sprint4_staysPics/telAviv/4/ee3b9432-5c3c-4a9c-a966-3330b0ffc572_hisyhu.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638442099/sprint4_staysPics/telAviv/4/e1a86dcf-2432-4d59-af23-2475bf4e521b_dusdvi.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638442099/sprint4_staysPics/telAviv/4/e1a86dcf-2432-4d59-af23-2475bf4e521b_dusdvi.jpg"
+    ],
+    "summary" : "Boutique Apartment in the center of TEL AVIV, Israels liveliest city. The apartment is located in a secure building in the quiet \"Old North\" neighborhood.",
+    "createdAt" : 1638729175632.0,
+    "reviews" : [ 
+        {
+            "txt" : "A fantastic studio in a central Location.",
+            "categories" : {
+                "cleanliness" : 5,
+                "accuracy" : 4.5,
+                "communication" : 5,
+                "location" : 4.5,
+                "checkIn" : 4,
+                "value" : 4.5
+            },
+            "createdAt" : 1638729175631.0,
+            "user" : {
+                "fullName" : "Habib Holand"
+            }
+        }
+    ],
+    "propertyType" : "Villa",
+    "capacity" : 5,
+    "amenities" : [ 
+        "Smoking allowed", 
+        "Wifi"
+    ],
+    "host" : {},
+    "loc" : {
+        "country" : "Israel",
+        "city" : "Tel-Aviv",
+        "lat" : 32.0853,
+        "lng" : 34.78176
+    }
+}
+
+/* 18 */
+{
+    "_id" : ObjectId("61af38ce33e9fb6b20be78c2"),
+    "name" : "House of Grey - Luxury Pool villa",
+    "price" : 490,
+    "imgUrls" : [ 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638611196/Demo1/1/4_pwjrtl.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638611195/Demo1/1/2_vv2wqn.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638611195/Demo1/1/8_kd7vqz.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638611196/Demo1/1/7_agmyfv.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638611196/Demo1/1/3_nvickq.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638611196/Demo1/1/6_ybwvcs.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638611196/Demo1/1/1_a55tgj.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638611195/Demo1/1/5_gk0j3m.jpg"
+    ],
+    "summary" : "Entire residential home hosted by Benz",
+    "createdAt" : 1638729175628.0,
+    "reviews" : [ 
+        {
+            "txt" : "We had a perfect stay. The location is close to the skytrain and the host was very polite and helpful. In hindsight we would have liked to stay for some more days. The only thing that we didn’t like was that the AC was quite loud.",
+            "categories" : {
+                "cleanliness" : 4.5,
+                "accuracy" : 4.5,
+                "communication" : 5,
+                "location" : 4.5,
+                "checkIn" : 4.5,
+                "value" : 4.5
+            },
+            "createdAt" : 1638729175628.0,
+            "user" : {
+                "fullName" : "Evan Saro"
+            }
+        }, 
+        {
+            "txt" : "Happy with my time at the place. The host is an absolute pleasure to communicate with. The walk from BTS to condo feels longer than it looks on the map and is poorly light. There is a pretty nice character restaurant right next to the building, which is nice. Good value for money!",
+            "categories" : {
+                "cleanliness" : 4,
+                "accuracy" : 4,
+                "communication" : 5,
+                "location" : 4,
+                "checkIn" : 4,
+                "value" : 5
+            },
+            "createdAt" : 1638729175628.0,
+            "user" : {
+                "fullName" : "Nolan Noam"
+            }
+        }, 
+        {
+            "txt" : "Great location, clean cozy room. The host was responsive and I truly enjoyed staying at this place.",
+            "categories" : {
+                "cleanliness" : 4.5,
+                "accuracy" : 4.5,
+                "communication" : 5,
+                "location" : 4.5,
+                "checkIn" : 4.5,
+                "value" : 5
+            },
+            "createdAt" : 1638729175628.0,
+            "user" : {
+                "fullName" : "Gon Freecs"
+            }
+        }, 
+        {
+            "txt" : "Host was very fast with responses and accommodating with questions.",
+            "categories" : {
+                "cleanliness" : 4.5,
+                "accuracy" : 4.5,
+                "communication" : 5,
+                "location" : 4.5,
+                "checkIn" : 4,
+                "value" : 4.5
+            },
+            "createdAt" : 1638729175628.0,
+            "user" : {
+                "fullName" : "Kilua Zoldick"
+            }
+        }
+    ],
+    "propertyType" : "Villa",
+    "capacity" : 7,
+    "amenities" : [ 
+        "Wifi", 
+        "Kitchen", 
+        "Smoking allowed", 
+        "Pets allowed", 
+        "Cooking basics", 
+        "Air conditioning"
+    ],
+    "host" : {},
+    "loc" : {
+        "country" : "Thailand",
+        "city" : "Bangkok",
+        "countryCode" : "TH",
+        "address" : "Bangkok, Thailand",
+        "lat" : 13.75396,
+        "lng" : 100.50224
+    }
+}
+
+/* 19 */
+{
+    "_id" : ObjectId("61af38ce33e9fb6b20be78c3"),
+    "name" : "The Paradise in the city centre of Amsterdam",
+    "price" : 565,
+    "imgUrls" : [ 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638611221/Demo1/3/3_r6v76p.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638611221/Demo1/3/1_qjwwg0.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638611220/Demo1/3/2_jycnz6.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638611220/Demo1/3/5_meyscu.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638611219/Demo1/3/4_dnxk1z.jpg"
+    ],
+    "summary" : "Entire rental unit hosted by Paradise",
+    "createdAt" : 1638729175628.0,
+    "reviews" : [ 
+        {
+            "txt" : "Amazing location and perfect studio for an Amsterdam stay. Excellent hosts, excellent back garden!",
+            "categories" : {
+                "cleanliness" : 4.5,
+                "accuracy" : 4.5,
+                "communication" : 5,
+                "location" : 4.5,
+                "checkIn" : 4,
+                "value" : 4
+            },
+            "createdAt" : 1638729175628.0,
+            "user" : {
+                "fullName" : "Monkey D Luffy"
+            }
+        }, 
+        {
+            "txt" : "Perfect little apartment. Loved the patio outside, and how close to everything it was. I very much appreciated Job and Judith working with us on fulfilling our needs while we traveled abroad for the first time!! Made the experience super easy and enjoyable. Will be coming back and staying here in the future for sure.",
+            "categories" : {
+                "cleanliness" : 4,
+                "accuracy" : 4,
+                "communication" : 5,
+                "location" : 4,
+                "checkIn" : 4,
+                "value" : 4
+            },
+            "createdAt" : 1638729175628.0,
+            "user" : {
+                "fullName" : "Ori Tesla"
+            }
+        }, 
+        {
+            "txt" : "Fantastic location convenient to everything. The tub was fantastic after several days of walking and biking and the rear garden area was great to have.",
+            "categories" : {
+                "cleanliness" : 4.5,
+                "accuracy" : 4.5,
+                "communication" : 5,
+                "location" : 4.5,
+                "checkIn" : 4.5,
+                "value" : 5
+            },
+            "createdAt" : 1638729175628.0,
+            "user" : {
+                "fullName" : "Abo Libda"
+            }
+        }, 
+        {
+            "txt" : "I highly recommend this place. The location is perfect and there is the best pizza place La Peril within 5 minutes!!",
+            "categories" : {
+                "cleanliness" : 4.5,
+                "accuracy" : 4.5,
+                "communication" : 5,
+                "location" : 4.5,
+                "checkIn" : 4.5,
+                "value" : 4.5
+            },
+            "createdAt" : 1638729175628.0,
+            "user" : {
+                "fullName" : "Frank Sinatra"
+            }
+        }
+    ],
+    "propertyType" : "Suite",
+    "capacity" : 4,
+    "amenities" : [ 
+        "Wifi", 
+        "Kitchen", 
+        "Smoking allowed", 
+        "Pets allowed", 
+        "Cooking basics", 
+        "Air conditioning"
+    ],
+    "host" : {},
+    "loc" : {
+        "country" : "Netherlands",
+        "city" : "Amsterdam",
+        "countryCode" : "NL",
+        "address" : "Amsterdam, Netherlands",
+        "lat" : 52.37021,
+        "lng" : 4.89516
+    }
+}
+
+/* 20 */
+{
+    "_id" : ObjectId("61af38ce33e9fb6b20be78c4"),
+    "name" : "Designer Studio in the Heart of Times Square",
+    "price" : 1009,
+    "imgUrls" : [ 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638611207/Demo1/2/1_dmtnnv.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638611207/Demo1/2/7_xthejo.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638611207/Demo1/2/3_f1rqik.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638611207/Demo1/2/2_nidr0z.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638611206/Demo1/2/5_pztoqa.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638611206/Demo1/2/4_imjyzm.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638611206/Demo1/2/6_icm0pm.jpg"
+    ],
+    "summary" : "Room in hotel hosted by The Knickerbocker",
+    "createdAt" : 1638729175628.0,
+    "reviews" : [ 
+        {
+            "txt" : "Michael’s studio is greatly located in the city. Walking to distance to everything! The studio had great amenities and all your basic needs will be met. It doesn’t have a microwave but there are ton of places to grab something to eat nearby.",
+            "categories" : {
+                "cleanliness" : 4.5,
+                "accuracy" : 4.5,
+                "communication" : 5,
+                "location" : 4.5,
+                "checkIn" : 4.5,
+                "value" : 5
+            },
+            "createdAt" : 1638729175628.0,
+            "user" : {
+                "fullName" : "Babe Ruth"
+            }
+        }, 
+        {
+            "txt" : "Easy check in, great location, super close to central park and times square! Well equipped with everything you could want for a cozy getaway. Highly recommended! Would love to stay again.",
+            "categories" : {
+                "cleanliness" : 4,
+                "accuracy" : 4,
+                "communication" : 5,
+                "location" : 4,
+                "checkIn" : 4.5,
+                "value" : 4
+            },
+            "createdAt" : 1638729175628.0,
+            "user" : {
+                "fullName" : "Kudo Shinchi"
+            }
+        }, 
+        {
+            "txt" : "An excellent location (Near the harbor, good restaurants, and Times Square). Micheal’s place is just as advertised. We were thankful for the cleanliness of the apartment as well as the neighborhood. We felt safe at all times. Just a heads up if you are over 60 and don’t do well on narrow stairs or step ups inside apartment. If not an issue, then you can’t beat it!",
+            "categories" : {
+                "cleanliness" : 5,
+                "accuracy" : 5,
+                "communication" : 5,
+                "location" : 5,
+                "checkIn" : 5,
+                "value" : 5
+            },
+            "createdAt" : 1638729175628.0,
+            "user" : {
+                "fullName" : "Yamir Or"
+            }
+        }, 
+        {
+            "txt" : "Great location, easily walkable to cafes, bar, restaurants. Metro and bus right around the corner. Quiet street, and friendly host.",
+            "categories" : {
+                "cleanliness" : 4.5,
+                "accuracy" : 4.5,
+                "communication" : 5,
+                "location" : 5,
+                "checkIn" : 4.5,
+                "value" : 4
+            },
+            "createdAt" : 1638729175628.0,
+            "user" : {
+                "fullName" : "Salem Soraya"
+            }
+        }
+    ],
+    "propertyType" : "Appartment",
+    "capacity" : 5,
+    "amenities" : [ 
+        "Wifi", 
+        "Kitchen", 
+        "Smoking allowed", 
+        "Pets allowed", 
+        "Cooking basics", 
+        "Air conditioning"
+    ],
+    "host" : {},
+    "loc" : {
+        "country" : "United States",
+        "city" : "New York",
+        "countryCode" : "US",
+        "address" : "New York, United States",
+        "lat" : 40.71277,
+        "lng" : -74.00597
+    }
+}
+
+/* 21 */
+{
+    "_id" : ObjectId("61af38ce33e9fb6b20be78c5"),
+    "name" : "NOMADS by Suite.030 . Designer Apartment for 6",
+    "price" : 623,
+    "imgUrls" : [ 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638611233/Demo1/4/1_z8lkmc.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638611233/Demo1/4/4_n1iwad.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638611233/Demo1/4/5_g3adha.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638611233/Demo1/4/5_g3adha.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638611232/Demo1/4/3_tqvwts.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638611232/Demo1/4/2_jtjvt6.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638611232/Demo1/4/6_m0zvru.jpg"
+    ],
+    "summary" : "Entire serviced apartment hosted by Team Suite030",
+    "createdAt" : 1638729175631.0,
+    "reviews" : [ 
+        {
+            "txt" : "A fantastic studio in a central location that facilitated our exploration of Berlin. Alan and Guenther were extremely quick to respond when we had any questions and were always very nice. The apartment was clean, organized, and most importantly for us, had a very comfortable bed! Highly recommended for your trip to Berlin.",
+            "categories" : {
+                "cleanliness" : 5,
+                "accuracy" : 4.5,
+                "communication" : 5,
+                "location" : 4.5,
+                "checkIn" : 4,
+                "value" : 4.5
+            },
+            "createdAt" : 1638729175631.0,
+            "user" : {
+                "fullName" : "Moriece Gal"
+            }
+        }, 
+        {
+            "txt" : "Alan and Gunther’s is exactly as described. It is in the middle of the hippest, busiest part of the city, and yet mostly quiet as a tomb. It is clean, comfortable and was to navigate the whole city from.",
+            "categories" : {
+                "cleanliness" : 5,
+                "accuracy" : 5,
+                "communication" : 5,
+                "location" : 5,
+                "checkIn" : 4.5,
+                "value" : 4
+            },
+            "createdAt" : 1638729175631.0,
+            "user" : {
+                "fullName" : "Aya Ester"
+            }
+        }, 
+        {
+            "txt" : "Would definitely stay here again! The check in process was really easy and the apartment was very clean. The apartment had nice touches like flowers when we arrived, a good assortment of cooking supplies, and the location was great to easily get around Berlin.",
+            "categories" : {
+                "cleanliness" : 4.5,
+                "accuracy" : 4.5,
+                "communication" : 5,
+                "location" : 4.5,
+                "checkIn" : 4.5,
+                "value" : 4.5
+            },
+            "createdAt" : 1638729175631.0,
+            "user" : {
+                "fullName" : "John Walker"
+            }
+        }, 
+        {
+            "txt" : "Very clean, nice and well-designed place. Host is super nice and considerate. Definitely recommend.",
+            "categories" : {
+                "cleanliness" : 4.5,
+                "accuracy" : 4.5,
+                "communication" : 5,
+                "location" : 4.5,
+                "checkIn" : 4.5,
+                "value" : 5
+            },
+            "createdAt" : 1638729175631.0,
+            "user" : {
+                "fullName" : "Eid Saeed"
+            }
+        }
+    ],
+    "propertyType" : "Appartment",
+    "capacity" : 6,
+    "amenities" : [ 
+        "Wifi", 
+        "Kitchen", 
+        "Smoking allowed", 
+        "Pets allowed", 
+        "Cooking basics", 
+        "Air conditioning"
+    ],
+    "host" : {},
+    "loc" : {
+        "country" : "Germany",
+        "city" : "Berlin",
+        "countryCode" : "GR",
+        "address" : "Berlin, Germany",
+        "lat" : 52.52,
+        "lng" : 13.40495
+    }
+}
+
+/* 22 */
+{
+    "_id" : ObjectId("61af38ce33e9fb6b20be78c6"),
+    "name" : "sunny 4 bedrooms penthouse in Manhattan",
+    "price" : 560,
+    "imgUrls" : [ 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638702972/Demo1/5/93a0cf79-d0f5-423e-a700-162712efe56d_zull5r.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638702972/Demo1/5/55ad0eea-bd3b-47ea-a4f1-d221679091d0_rjwgbt.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638702972/Demo1/5/9eacbef5-475c-4518-a9c2-8c1eb54bbc79_jp9upe.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638702972/Demo1/5/6dcc274d-0984-4eb6-a9c3-1e7da684cf1d_opqsgk.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638702972/Demo1/5/8d1b4104-262c-4dc1-a035-f44ae7bd9919_yetzym.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638702972/Demo1/5/08fa42a5-a8ea-4abd-aa03-407b10ba5831_ehv4fx.jpg"
+    ],
+    "summary" : "Entire rental unit hosted by Martina",
+    "createdAt" : 1638729175631.0,
+    "reviews" : [ 
+        {
+            "txt" : "This unit is awesome and the Beekman Tower is awesome. Hector, at the front desk, was welcoming, engaging, and helpful. Perfectly located in a quiet part of Manhattan, but near some lively eating establishments on 2nd Ave. Million dollar view of East River",
+            "categories" : {
+                "cleanliness" : 4.5,
+                "accuracy" : 5,
+                "communication" : 4,
+                "location" : 4.5,
+                "checkIn" : 4.5,
+                "value" : 4.5
+            },
+            "createdAt" : 1638729175631.0,
+            "user" : {}
+        }, 
+        {
+            "txt" : "The place was in a great area, spacious, and clean. Check-in was incredibly easy. Also was in a quite area of the city which was ideal.",
+            "categories" : {
+                "cleanliness" : 4,
+                "accuracy" : 5,
+                "communication" : 4,
+                "location" : 4.5,
+                "checkIn" : 4.5,
+                "value" : 5
+            },
+            "createdAt" : 1638729175631.0,
+            "user" : {}
+        }, 
+        {
+            "txt" : "Had a great stay here with my husband and two sons. We would definitely stay here again! The apartment was clean, check in was easy, and we loved the location.",
+            "categories" : {
+                "cleanliness" : 4,
+                "accuracy" : 5,
+                "communication" : 5,
+                "location" : 4,
+                "checkIn" : 4.5,
+                "value" : 5
+            },
+            "createdAt" : 1638729175631.0,
+            "user" : {}
+        }, 
+        {
+            "txt" : "We have always stayed on the west side of Midtown but loved the quieter location of the Beekman on the east side. There are of course lots of great restaurants in walking distance since it is Manhattan but it was great having a full kitchen for breakfast and to eat take out or delivery on real plates with real silverware! The Ophelia restaurant and bar on the top floor is not to be missed as the views are spectacular!",
+            "categories" : {
+                "cleanliness" : 5,
+                "accuracy" : 5,
+                "communication" : 5,
+                "location" : 5,
+                "checkIn" : 5,
+                "value" : 5
+            },
+            "createdAt" : 1638729175631.0,
+            "user" : {}
+        }
+    ],
+    "propertyType" : "Penthouse",
+    "capacity" : 9,
+    "amenities" : [ 
+        "Wifi", 
+        "Kitchen", 
+        "Smoking allowed", 
+        "Pets allowed", 
+        "Cooking basics", 
+        "Air conditioning"
+    ],
+    "host" : {},
+    "loc" : {
+        "country" : "United States",
+        "city" : "New York",
+        "countryCode" : "US",
+        "address" : "New York, United States",
+        "lat" : 40.71277,
+        "lng" : -74.00597
+    }
+}
+
+/* 23 */
+{
+    "_id" : ObjectId("61af38ce33e9fb6b20be78c7"),
+    "name" : "5 Star Manhattan Luxury St. Regis Hotel King Suite",
+    "price" : 892,
+    "imgUrls" : [ 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638702984/Demo1/6/3207c804-da42-43ed-9fdb-48878861de81_xlderw.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638702984/Demo1/6/2f3f5a76-8e1a-46a3-af34-0071e16f409b_ijciy0.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638702984/Demo1/6/36b04fa5-b742-4318-a1b8-4a20912b36df_haloic.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638702984/Demo1/6/36b04fa5-b742-4318-a1b8-4a20912b36df_haloic.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638702984/Demo1/6/54aa37d1-3a5e-4d51-b98e-dbcd71ac9e7c_ephyex.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638702984/Demo1/6/17ca57fb-6761-4eb7-be0a-25f651866781_cc7iks.jpg"
+    ],
+    "summary" : "Entire serviced apartment hosted by Alyssa And Eric",
+    "createdAt" : 1638729175631.0,
+    "reviews" : [ 
+        {
+            "txt" : "Trip was unbelievable. The St Regis is not only iconic, but also lives up to its 5-Star reputation. Butler service is awesome ( take advantage of the coffee/tea service and also the complimentary dry-cleaning service). Bottom-line: we would and will do it again.",
+            "categories" : {
+                "cleanliness" : 4.5,
+                "accuracy" : 4,
+                "communication" : 5,
+                "location" : 5,
+                "checkIn" : 4.5,
+                "value" : 4.5
+            },
+            "createdAt" : 1638729175631.0,
+            "user" : {
+                "fullName" : "Ramadan Kareem"
+            }
+        }, 
+        {
+            "txt" : "100% The best hosting! Everything was amazing! Thank you so much for our incredible holidays!",
+            "categories" : {
+                "cleanliness" : 5,
+                "accuracy" : 5,
+                "communication" : 5,
+                "location" : 5,
+                "checkIn" : 5,
+                "value" : 5
+            },
+            "createdAt" : 1638729175631.0,
+            "user" : {
+                "fullName" : "Amr Diab"
+            }
+        }, 
+        {
+            "txt" : "It’s the original St Regis — all you would expect. Pricey but it is actually a great value given location, size and amenities.",
+            "categories" : {
+                "cleanliness" : 4.5,
+                "accuracy" : 4.5,
+                "communication" : 5,
+                "location" : 5,
+                "checkIn" : 5,
+                "value" : 4
+            },
+            "createdAt" : 1638729175631.0,
+            "user" : {
+                "fullName" : "Abraha Ashram"
+            }
+        }, 
+        {
+            "txt" : "Quintessential luxury, amazing service! Great location",
+            "categories" : {
+                "cleanliness" : 5,
+                "accuracy" : 5,
+                "communication" : 5,
+                "location" : 5,
+                "checkIn" : 5,
+                "value" : 5
+            },
+            "createdAt" : 1638729175631.0,
+            "user" : {
+                "fullName" : "Kurt Connors"
+            }
+        }
+    ],
+    "propertyType" : "Suite",
+    "capacity" : 4,
+    "amenities" : [ 
+        "Wifi", 
+        "Kitchen", 
+        "Smoking allowed", 
+        "Pets allowed", 
+        "Cooking basics", 
+        "Air conditioning"
+    ],
+    "host" : {},
+    "loc" : {
+        "country" : "United States",
+        "city" : "New York",
+        "countryCode" : "US",
+        "address" : "New York, United States",
+        "lat" : 40.71277,
+        "lng" : -74.00597
+    }
+}
+
+/* 24 */
+{
+    "_id" : ObjectId("61af38ce33e9fb6b20be78c8"),
+    "name" : "Modern Private King Room Near Central Park",
+    "price" : 619,
+    "imgUrls" : [ 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638702995/Demo1/7/288ce2ac-07fe-412e-a668-354d75d32a05_hue6v8.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638702995/Demo1/7/c3ccc175-6f3f-4527-b88a-a59ef69c5344_x2jm8o.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638702995/Demo1/7/0feedc58-760a-4f2a-9cc0-f05b96243ec9_p8nnwo.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638702995/Demo1/7/2455bdfd-c3d7-4244-9402-ad9dc00772d9_cjjwym.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638702994/Demo1/7/a124fc8f-aa1d-4249-b1ef-9366d7411301_huyb87.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638702994/Demo1/7/17575233-6761-40ad-805a-f2f9c277ed84_zbdw1c.jpg"
+    ],
+    "summary" : "Room in boutique hotel hosted by WestHouse",
+    "createdAt" : 1638729175631.0,
+    "reviews" : [ 
+        {
+            "txt" : "Very clean. Great location. Friendly staff. Great amenities- coffee, snacks, “indulgence hours”, breakfast. Top notch. Would definitely come back and recommended to anyone",
+            "categories" : {
+                "cleanliness" : 4.5,
+                "accuracy" : 4,
+                "communication" : 5,
+                "location" : 4.5,
+                "checkIn" : 4.5,
+                "value" : 4
+            },
+            "createdAt" : 1638729175631.0,
+            "user" : {
+                "fullName" : "Sam Ramey"
+            }
+        }, 
+        {
+            "txt" : "My experience at the Westhouse hotel was great.. in general the location is perfect and closer to everything according what you really need and what you want to do.",
+            "categories" : {
+                "cleanliness" : 4.5,
+                "accuracy" : 4.5,
+                "communication" : 5,
+                "location" : 4.5,
+                "checkIn" : 4.5,
+                "value" : 4.5
+            },
+            "createdAt" : 1638729175631.0,
+            "user" : {
+                "fullName" : "Oka Ortiga"
+            }
+        }, 
+        {
+            "txt" : "Great spot to stay! Very clean and accommodating. Close to Time Square and Central Park.",
+            "categories" : {
+                "cleanliness" : 5,
+                "accuracy" : 4.5,
+                "communication" : 5,
+                "location" : 4.5,
+                "checkIn" : 4,
+                "value" : 5
+            },
+            "createdAt" : 1638729175631.0,
+            "user" : {
+                "fullName" : "Adel Imam"
+            }
+        }, 
+        {
+            "txt" : "100% The best hosting! Everything was amazing! Thank you so much for our incredible holidays!",
+            "categories" : {
+                "cleanliness" : 5,
+                "accuracy" : 5,
+                "communication" : 5,
+                "location" : 5,
+                "checkIn" : 5,
+                "value" : 5
+            },
+            "createdAt" : 1638729175631.0,
+            "user" : {
+                "fullName" : "Bob Bane"
+            }
+        }
+    ],
+    "propertyType" : "Room",
+    "capacity" : 2,
+    "amenities" : [ 
+        "Wifi", 
+        "Kitchen", 
+        "Smoking allowed", 
+        "Pets allowed", 
+        "Cooking basics", 
+        "Air conditioning"
+    ],
+    "host" : {},
+    "loc" : {
+        "country" : "United States",
+        "city" : "New York",
+        "countryCode" : "US",
+        "address" : "New York, United States",
+        "lat" : 40.71277,
+        "lng" : -74.00597
+    }
+}
+
+/* 25 */
+{
+    "_id" : ObjectId("61af38ce33e9fb6b20be78c9"),
+    "name" : "Stunning 4BD Duplex Apartment in Earls Court",
+    "price" : 489,
+    "imgUrls" : [ 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638703010/Demo1/8/feb5cf99-a72f-4d6e-a637-bee794b814ac_hs7vjy.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638703010/Demo1/8/fa53dab5-3501-48e0-b616-c388d19f8a0c_ogczdi.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638703010/Demo1/8/d7754804-1e58-4f63-9bfb-56a53ef12191_dadb8l.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638703010/Demo1/8/45f1510c-5fe9-4f83-bf02-d6f6c4858d5b_zkotua.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638703010/Demo1/8/d504a33b-c7d8-42e6-8f72-69fe4089f192_dfkzaj.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638703010/Demo1/8/ce91907d-da9e-4f7c-9ff6-ad19cea8ef57_lbh7ii.jpg"
+    ],
+    "summary" : "A Cool Place To stay, You will enjoy",
+    "createdAt" : 1638729175631.0,
+    "reviews" : [ 
+        {
+            "txt" : "This property exceeded our expectations! With four children, hotels are always a challenge with so few multiple room suites. The four bedrooms and spacious living area gave everyone plenty of room to relax. The location cant be beat, with Earls Court station just steps away.",
+            "categories" : {
+                "cleanliness" : 4,
+                "accuracy" : 5,
+                "communication" : 5,
+                "location" : 4.5,
+                "checkIn" : 4.5,
+                "value" : 4.5
+            },
+            "createdAt" : 1638729175631.0,
+            "user" : {
+                "fullName" : "Sakalance Aoome"
+            }
+        }, 
+        {
+            "txt" : "This property exceeded our expectations! With four children, hotels are always a challenge with so few multiple room suites. The four bedrooms and spacious living area gave everyone plenty of room to relax. The location cant be beat, with Earls Court station just steps away.",
+            "categories" : {
+                "cleanliness" : 4,
+                "accuracy" : 5,
+                "communication" : 5,
+                "location" : 4.5,
+                "checkIn" : 4.5,
+                "value" : 4.5
+            },
+            "createdAt" : 1638729175631.0,
+            "user" : {
+                "fullName" : "Ragnar Lothbroke"
+            }
+        }, 
+        {
+            "txt" : "A really lovely flat in the most ideal location. Getting around London is very easy as you’re just a 4 minute walk from the tube station, but you’re tucked away enough to avoid the noise pollution from the busy streets nearby. The place was sparkling clean, very modern and had the comfiest beds we’ve slept on in an AirBnB!",
+            "categories" : {
+                "cleanliness" : 5,
+                "accuracy" : 4.5,
+                "communication" : 5,
+                "location" : 4.5,
+                "checkIn" : 5,
+                "value" : 5
+            },
+            "createdAt" : 1638729175631.0,
+            "user" : {
+                "fullName" : "Tara Stork"
+            }
+        }, 
+        {
+            "txt" : "Great place, clean, and great location. Quick responses and would stay the place again.",
+            "categories" : {
+                "cleanliness" : 4.9,
+                "accuracy" : 4.8,
+                "communication" : 5,
+                "location" : 4.7,
+                "checkIn" : 4.6,
+                "value" : 4.9
+            },
+            "createdAt" : 1638729175631.0,
+            "user" : {
+                "fullName" : "Amanda kissnhugg"
+            }
+        }, 
+        {
+            "txt" : "Very clean and beautifully designed spaces. Highly recommended!",
+            "categories" : {
+                "cleanliness" : 5,
+                "accuracy" : 5,
+                "communication" : 5,
+                "location" : 5,
+                "checkIn" : 5,
+                "value" : 5
+            },
+            "createdAt" : 1638729175631.0,
+            "user" : {
+                "fullName" : "Tom Hale"
+            }
+        }
+    ],
+    "propertyType" : "Appartment",
+    "capacity" : 5,
+    "amenities" : [ 
+        "Wifi", 
+        "Kitchen", 
+        "Smoking allowed", 
+        "Pets allowed", 
+        "Cooking basics", 
+        "Air conditioning"
+    ],
+    "host" : {},
+    "loc" : {
+        "country" : "United Kingdom",
+        "city" : "London",
+        "countryCode" : "UK",
+        "address" : "London, United Kingdom",
+        "lat" : 51.50735,
+        "lng" : -0.12775
+    }
+}
+
+/* 26 */
+{
+    "_id" : ObjectId("61af38ce33e9fb6b20be78ca"),
+    "name" : "Knightsbridge Luxury 4 Bedroom En Suite Apartment",
+    "price" : 1209,
+    "imgUrls" : [ 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638703048/Demo1/9/c079487a-d79d-4943-8eae-3add6dec8c58_oxwejh.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638703048/Demo1/9/eac2dd7b-5805-4c48-887f-ed48cee0cc1d_p3hdql.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638703048/Demo1/9/c8cfdd64-35c8-4d97-874b-193d76057e1f_ilstcp.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638703048/Demo1/9/a2c9fb68-20ac-439d-899a-cb43060bc7dc_smoted.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638703048/Demo1/9/f34f3bec-a140-4415-a830-fc466e4adcca_ns2u32.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638703048/Demo1/9/b27e5926-5faf-44e2-955a-11a332feec6e_mhat5n.jpg"
+    ],
+    "summary" : "Entire condominium (condo) hosted by Rob",
+    "createdAt" : 1638729175631.0,
+    "reviews" : [ 
+        {
+            "txt" : "stunning and vibrant four-bedroom fully furnished suite that offers private Hyde Park Views. Located in the heart of Knightsbridge, designed with only the comfort of guests in mind, the flat offers convenience, luxury and relaxation. Fully air-conditioned with heat & cool, all four bedrooms are en suite with spacious bathrooms. Secure portered block with concierge available 24 hours in the building. This is without doubt one of the most sought after location in the world.",
+            "categories" : {
+                "cleanliness" : 4,
+                "accuracy" : 4.5,
+                "communication" : 5,
+                "location" : 4.5,
+                "checkIn" : 4.5,
+                "value" : 5
+            },
+            "createdAt" : 1638729175631.0,
+            "user" : {
+                "fullName" : "Hiro Nakamura"
+            }
+        }, 
+        {
+            "txt" : "Amazing and beautiful apartment",
+            "categories" : {
+                "cleanliness" : 4,
+                "accuracy" : 4,
+                "communication" : 5,
+                "location" : 4,
+                "checkIn" : 4,
+                "value" : 4
+            },
+            "createdAt" : 1638729175631.0,
+            "user" : {
+                "fullName" : "Shanon heinz"
+            }
+        }, 
+        {
+            "txt" : "Had a wonderful stay. Cristina was very responsible and helpful, from arranging maid service to dry-cleaning during our stay. Fantastic location overlooking Hyde Park near Harrods, and very spacious. Would stay here again.",
+            "categories" : {
+                "cleanliness" : 4.5,
+                "accuracy" : 4.5,
+                "communication" : 5,
+                "location" : 4.5,
+                "checkIn" : 4.5,
+                "value" : 4.5
+            },
+            "createdAt" : 1638729175631.0,
+            "user" : {
+                "fullName" : "Deborah amer"
+            }
+        }, 
+        {
+            "txt" : "Great stay. Would definitely recommend!",
+            "categories" : {
+                "cleanliness" : 4.5,
+                "accuracy" : 4.5,
+                "communication" : 5,
+                "location" : 4.5,
+                "checkIn" : 4.5,
+                "value" : 4.5
+            },
+            "createdAt" : 1638729175631.0,
+            "user" : {
+                "fullName" : "Jamie Fox"
+            }
+        }
+    ],
+    "propertyType" : "Suite",
+    "capacity" : 5,
+    "amenities" : [ 
+        "Wifi", 
+        "Kitchen", 
+        "Smoking allowed", 
+        "Pets allowed", 
+        "Cooking basics", 
+        "Air conditioning"
+    ],
+    "host" : {},
+    "loc" : {
+        "country" : "United Kingdom",
+        "city" : "London",
+        "countryCode" : "UK",
+        "address" : "London, United Kingdom",
+        "lat" : 51.50735,
+        "lng" : -0.12775
+    }
+}
+
+/* 27 */
+{
+    "_id" : ObjectId("61af38ce33e9fb6b20be78cb"),
+    "name" : "Sonder  The Arts Council  Two-Bedroom Apartment near House of Lords",
+    "price" : 789,
+    "imgUrls" : [ 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638703064/Demo1/10/97ac4f59-5142-4c33-8e43-987b7004938d_tdhszw.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638703064/Demo1/10/e48fa526-2541-4c5c-ac84-b1dab7fa92ff_hmnkgn.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638703064/Demo1/10/e03da6b9-6229-4693-9ac8-d7ffd08cf2db_q0baow.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638703064/Demo1/10/c74ce79e-3fd2-41cd-940d-ec0a7c45bc76_f7adbx.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638703064/Demo1/10/6602849e-4be1-46e7-9318-b2b7e3b689af_byssln.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638703063/Demo1/10/876c97ac-b054-4b3e-a627-95f883e2743a_aswrjl.jpg"
+    ],
+    "summary" : "Entire rental unit hosted by Sonder (London)",
+    "createdAt" : 1638729175631.0,
+    "reviews" : [ 
+        {
+            "txt" : "The accommodation is stunning, well located, with all the amenities you need during your stay. Cant recommend enough.",
+            "categories" : {
+                "cleanliness" : 5,
+                "accuracy" : 5,
+                "communication" : 5,
+                "location" : 5,
+                "checkIn" : 5,
+                "value" : 5
+            },
+            "createdAt" : 1638729175631.0,
+            "user" : {
+                "fullName" : "Ostaz Sam"
+            }
+        }, 
+        {
+            "txt" : "Very cool apartment and high quality. My mother in law was in love with the decoration.",
+            "categories" : {
+                "cleanliness" : 5,
+                "accuracy" : 5,
+                "communication" : 5,
+                "location" : 5,
+                "checkIn" : 5,
+                "value" : 5
+            },
+            "createdAt" : 1638729175631.0,
+            "user" : {
+                "fullName" : "Trafi Law"
+            }
+        }, 
+        {
+            "txt" : "Fantastic apartment in a great part of London. Highly recommended!",
+            "categories" : {
+                "cleanliness" : 5,
+                "accuracy" : 5,
+                "communication" : 5,
+                "location" : 4,
+                "checkIn" : 4,
+                "value" : 4.5
+            },
+            "createdAt" : 1638729175631.0,
+            "user" : {
+                "fullName" : "Walt Disney"
+            }
+        }, 
+        {
+            "txt" : "This Airbnb was outstanding. The location was very central and made it easy to walk or take public transportation to see local attractions. The style and decor were very modern and the place was very clean. The amenities were great (full kitchen, washer dryer). Definitely would come back next time.",
+            "categories" : {
+                "cleanliness" : 5,
+                "accuracy" : 5,
+                "communication" : 5,
+                "location" : 5,
+                "checkIn" : 5,
+                "value" : 5
+            },
+            "createdAt" : 1638729175631.0,
+            "user" : {
+                "fullName" : "Banner Botal"
+            }
+        }
+    ],
+    "propertyType" : "Appartment",
+    "capacity" : 5,
+    "amenities" : [ 
+        "Wifi", 
+        "Kitchen", 
+        "Smoking allowed", 
+        "Pets allowed", 
+        "Cooking basics", 
+        "Air conditioning"
+    ],
+    "host" : {},
+    "loc" : {
+        "country" : "United Kingdom",
+        "city" : "London",
+        "countryCode" : "UK",
+        "address" : "London, United Kingdom",
+        "lat" : 51.50735,
+        "lng" : -0.12775
+    }
+}
+
+/* 28 */
+{
+    "_id" : ObjectId("61af38ce33e9fb6b20be78cc"),
+    "name" : "inFront of the Beach house",
+    "price" : 635,
+    "imgUrls" : [ 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638442037/sprint4_staysPics/telAviv/1/46116d12-da7a-4473-9ad8-2f020643ab2d_z8bbsx.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638442037/sprint4_staysPics/telAviv/1/80593570-df24-400c-aec8-c7c64099f650_ytdt0f.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638442037/sprint4_staysPics/telAviv/1/e6f04176-316b-40cb-97cf-b236d13cca3a_ueggfx.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638442037/sprint4_staysPics/telAviv/1/ed89a868-e41f-4c6e-9d48-646f86b56438_qwy9qd.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638442037/sprint4_staysPics/telAviv/1/ed89a868-e41f-4c6e-9d48-646f86b56438_qwy9qd.jpg"
+    ],
+    "summary" : "New Building front the Beach next the Royal Beach Hotel. Apartment freshly decorated with 2 bedrooms and 2 bathrooms. There is a fantastic sea view. The Kitchen is full equipped. There is a Lobby with a security 24/7. You will get a private parking. Good TV and WIFI. AC works perfectly. Washing machine & dryer.",
+    "createdAt" : 1638729175632.0,
+    "reviews" : [ 
+        {
+            "txt" : "Cool mi casa, amico good had good",
+            "categories" : {
+                "cleanliness" : 5,
+                "accuracy" : 4.5,
+                "communication" : 5,
+                "location" : 4.5,
+                "checkIn" : 4,
+                "value" : 4.5
+            },
+            "createdAt" : 1638729175631.0,
+            "user" : {
+                "fullName" : "Amitab Batchan"
+            }
+        }
+    ],
+    "propertyType" : "Appartment",
+    "capacity" : 5,
+    "amenities" : [ 
+        "Kitchen"
+    ],
+    "host" : {},
+    "loc" : {
+        "country" : "Israel",
+        "city" : "Tel-Aviv",
+        "lat" : 32.0853,
+        "lng" : 34.78176
+    }
+}
+
+/* 29 */
+{
+    "_id" : ObjectId("61af38cf33e9fb6b20be78cd"),
+    "name" : "Luxurious Apartment With Panoramic Sea View",
+    "price" : 306,
+    "imgUrls" : [ 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638442056/sprint4_staysPics/telAviv/2/ccc5a053-627e-45d9-86b6-a6bdd0e33a62_zhwvzs.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638442056/sprint4_staysPics/telAviv/2/44d0f05e-9886-4383-9e12-7167bcf2542f_emlxlw.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638442056/sprint4_staysPics/telAviv/2/b3b5b625-9c79-4bae-9077-cacc58232cf0_tz2ufx.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638442056/sprint4_staysPics/telAviv/2/6219d54c-37d1-4631-a2d5-09beff762a91_hniey9.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638442056/sprint4_staysPics/telAviv/2/733d0983-abec-45ba-9aeb-eba9bf86d952_yiytkd.jpg"
+    ],
+    "summary" : "My place is close to family-friendly activities, nightlife, and the city center. You’ll love my place because of the ambiance, the neighborhood, and the light. My place is good for couples and families (with kids).",
+    "createdAt" : 1638729175632.0,
+    "reviews" : [ 
+        {
+            "txt" : "aye yay good",
+            "categories" : {
+                "cleanliness" : 5,
+                "accuracy" : 4.5,
+                "communication" : 5,
+                "location" : 4.5,
+                "checkIn" : 4,
+                "value" : 4.5
+            },
+            "createdAt" : 1638729175631.0,
+            "user" : {
+                "fullName" : "Indie Johne"
+            }
+        }
+    ],
+    "propertyType" : "Appartment",
+    "capacity" : 5,
+    "amenities" : [ 
+        "Wifi"
+    ],
+    "host" : {},
+    "loc" : {
+        "country" : "Israel",
+        "city" : "Tel-Aviv",
+        "lat" : 32.0853,
+        "lng" : 34.78176
+    }
+}
+
+/* 30 */
+{
+    "_id" : ObjectId("61af38cf33e9fb6b20be78ce"),
+    "name" : "Stunning sea view penthouse with infinity pool",
+    "price" : 559,
+    "imgUrls" : [ 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638442076/sprint4_staysPics/telAviv/3/b8b6e7a2-71d4-4711-b28c-c18845433e5f_rggzpm.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638442076/sprint4_staysPics/telAviv/3/2cf0dd01-cb8e-4257-b0e1-3a20b2651e56_yfalqa.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638442076/sprint4_staysPics/telAviv/3/56bfa190-b7ea-434d-89b5-78c739319f6c_lzvjfu.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638442076/sprint4_staysPics/telAviv/3/8d92d04f-57bc-42b1-89e3-934fc93e905a_pkt1n9.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638442076/sprint4_staysPics/telAviv/3/c0b31923-dbf2-4b6c-8d27-62ea307fdcd6_ja6x0i.jpg"
+    ],
+    "summary" : "Luxury Beach front Triplex with stunning sea view in Prime location!!! Two minutes walking to the beach..! Fully equipped, 3 Master Bedrooms, Two Terrace, Accommodate up to 10 guests and is divided in 3 levels, Which have breathtaking uninterrupted views to the sea and the beach. Two Parking space and privet elevator.",
+    "createdAt" : 1638729175632.0,
+    "reviews" : [],
+    "propertyType" : "Appartment",
+    "capacity" : 5,
+    "amenities" : [],
+    "host" : {},
+    "loc" : {
+        "country" : "Israel",
+        "city" : "Tel-Aviv",
+        "lat" : 32.0853,
+        "lng" : 34.78176
+    }
+}
+
+/* 31 */
+{
+    "_id" : ObjectId("61af38cf33e9fb6b20be78cf"),
+    "name" : "Dizengoff luxury Boutique Apartment",
+    "price" : 300,
+    "imgUrls" : [ 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638442100/sprint4_staysPics/telAviv/4/8c2cedec-1d3c-4e4d-af8b-e124050e21fe_gr5qjd.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638442099/sprint4_staysPics/telAviv/4/1d6d3f99-a137-4897-a365-198f6bc0439e_loecy1.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638442099/sprint4_staysPics/telAviv/4/ee3b9432-5c3c-4a9c-a966-3330b0ffc572_hisyhu.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638442099/sprint4_staysPics/telAviv/4/e1a86dcf-2432-4d59-af23-2475bf4e521b_dusdvi.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638442099/sprint4_staysPics/telAviv/4/e1a86dcf-2432-4d59-af23-2475bf4e521b_dusdvi.jpg"
+    ],
+    "summary" : "Boutique Apartment in the center of TEL AVIV, Israels liveliest city. The apartment is located in a secure building in the quiet \"Old North\" neighborhood.",
+    "createdAt" : 1638729175632.0,
+    "reviews" : [],
+    "propertyType" : "Appartment",
+    "capacity" : 5,
+    "amenities" : [],
+    "host" : {},
+    "loc" : {
+        "country" : "Israel",
+        "city" : "Tel-Aviv",
+        "lat" : 32.0853,
+        "lng" : 34.78176
+    }
+}
+
+/* 32 */
+{
+    "_id" : ObjectId("61af38cf33e9fb6b20be78d0"),
+    "name" : "AMAZING LUXURY 4 BEDROOM APT SEE VIEW",
+    "price" : 600,
+    "imgUrls" : [ 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638442128/sprint4_staysPics/telAviv/5/e537e5ed-127f-4235-bd38-abb9823eec8d_pgdatd.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638442128/sprint4_staysPics/telAviv/5/ca4b15ba-e18f-4fd5-a8e7-aec263169c5d_us1xvb.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638442127/sprint4_staysPics/telAviv/5/259da9e8-b56e-4d08-a7f8-d482fb1ab0e6_kruwcf.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638442127/sprint4_staysPics/telAviv/5/23ad89bd-ced8-42ce-8fb7-1d5d5ae29910_texowx.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638442127/sprint4_staysPics/telAviv/5/f8c77d90-bfda-49be-9d4d-bac59719c33b_hr5e9l.jpg"
+    ],
+    "summary" : "Enjoy spectacular cityscapes from the private sun balcony of this sixteenth floor luxury tower right in the heart of Tel Aviv’s best and oldest neighborhood, Neve Tsedek. This stunning 4 bedroom, 2 bathroom apartment offers guests ideal location and sumptuous decor. As it sleeps up to 8 guests comfortably, it’s ideal for families or groups of friends seeking refined lodging in the heart of the city. It’s the perfect place to unwind after a long day of sightseeing in Tel Aviv.",
+    "createdAt" : 1638729175632.0,
+    "reviews" : [],
+    "propertyType" : "Appartment",
+    "capacity" : 5,
+    "amenities" : [],
+    "host" : {},
+    "loc" : {
+        "country" : "Israel",
+        "city" : "Tel-Aviv",
+        "lat" : 32.0853,
+        "lng" : 34.78176
+    }
+}
+
+/* 33 */
+{
+    "_id" : ObjectId("61af38cf33e9fb6b20be78d1"),
+    "name" : "Beachfront Penthouse One Hundred Sqm In Old Jaffa",
+    "price" : 667,
+    "imgUrls" : [ 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638442144/sprint4_staysPics/telAviv/6/fc6d6109-9a8a-4e36-b9fb-7354841675fc_vkwdc2.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638442144/sprint4_staysPics/telAviv/6/f58a2ea0-5e5f-40c6-ba70-f1d29d3ed470_adrdtj.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638442144/sprint4_staysPics/telAviv/6/f2e92f27-8396-481c-8b86-7d64312baf50_q1cxgd.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638442144/sprint4_staysPics/telAviv/6/561ee0ac-8b5f-4895-9315-6cb15fbd47f2_kcccjb.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638442144/sprint4_staysPics/telAviv/6/472a477d-ea6c-4eaf-8b91-d438d5c60b6e_xjqxrr.jpg"
+    ],
+    "summary" : "Listen to waves crashing to shore while sunbathing on the terrace, then return in the evening for a sunset BBQ. This fully modernized space within 19th-century stone walls is decorated with local ceramic tiles and a fresh blue-and-white color scheme.",
+    "createdAt" : 1638729175632.0,
+    "reviews" : [],
+    "propertyType" : "Appartment",
+    "capacity" : 5,
+    "amenities" : [],
+    "host" : {},
+    "loc" : {
+        "country" : "Israel",
+        "city" : "Tel-Aviv",
+        "lat" : 32.0853,
+        "lng" : 34.78176
+    }
+}
+
+/* 34 */
+{
+    "_id" : ObjectId("61af38cf33e9fb6b20be78d2"),
+    "name" : "central safe and quiet marsh/goblins",
+    "price" : 408,
+    "imgUrls" : [ 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638442198/sprint4_staysPics/paris/1/9388dafa-65dc-47ec-b0ed-d42c5ba8f01b_od2zap.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638442197/sprint4_staysPics/paris/1/21e3e4ff-a465-404b-97c3-57afcfeaacb8_bokjcj.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638442197/sprint4_staysPics/paris/1/a1b49537-3558-4b93-9add-2ffb0204d3ea_swrlmj.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638442197/sprint4_staysPics/paris/1/394c6726-0b5e-4b98-bcbe-ceaf93de0fd2_sxjejb.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638442197/sprint4_staysPics/paris/1/79d5bdb0-9dd5-4d7e-a056-24815d1141d1_rtcolt.jpg"
+    ],
+    "summary" : "My place is close to Le Marais and Musée National Picasso. You all love my place because of the comfort, the kitchen, the high ceilings, the location and the view. My place is good for couples, solo, and business travellers.",
+    "createdAt" : 1638729175632.0,
+    "reviews" : [],
+    "propertyType" : "Appartment",
+    "capacity" : 5,
+    "amenities" : [],
+    "host" : {},
+    "loc" : {
+        "country" : "France",
+        "city" : "Paris"
+    }
+}
+
+/* 35 */
+{
+    "_id" : ObjectId("61af38cf33e9fb6b20be78d3"),
+    "name" : "Sky penthouse near Eiffel tower",
+    "price" : 227,
+    "imgUrls" : [ 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638442216/sprint4_staysPics/paris/2/fc761a5d-dc5c-4ba4-a445-a6ad28a48a3e_xzpoak.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638442216/sprint4_staysPics/paris/2/37c0e266-e4ec-46a3-9e29-02ef2da76b44_x8nibg.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638442215/sprint4_staysPics/paris/2/3d51f920-00cd-435a-b37a-10195c3806bb_eg6xc5.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638442215/sprint4_staysPics/paris/2/e343f435-4f57-47ee-89cd-110dcea29234_nrknpp.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638442215/sprint4_staysPics/paris/2/8208700e-b729-438d-b4fc-265b3f95ac12_ue2yxj.jpg"
+    ],
+    "summary" : "Beautiful modern and fully renovated apartment of 35m2. It is located on the top floor with a terrace of 16m2 and a spectacular view of the Eiffel Tower. The private room has an independent entrance.",
+    "createdAt" : 1638729175632.0,
+    "reviews" : [],
+    "propertyType" : "Appartment",
+    "capacity" : 5,
+    "amenities" : [],
+    "host" : {},
+    "loc" : {
+        "country" : "France",
+        "city" : "Paris"
+    }
+}
+
+/* 36 */
+{
+    "_id" : ObjectId("61af38cf33e9fb6b20be78d4"),
+    "name" : "Prestige of Louvre and Tuileries",
+    "price" : 302,
+    "imgUrls" : [ 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638442231/sprint4_staysPics/paris/3/46d38496-3ecd-43d8-9e0b-312967c73837_d6futb.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638442231/sprint4_staysPics/paris/3/71fb7902-56be-4ed2-9826-53d6dec1d044_odajke.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638442231/sprint4_staysPics/paris/3/5ea6313f-5048-4366-bc2a-a70beeecba7b_epmahn.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638442231/sprint4_staysPics/paris/3/2df33c42-29ed-418f-a494-dbbc2b39ca02_y355wv.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638442231/sprint4_staysPics/paris/3/0b2eb6f4-85b9-41df-b247-7f859e7ae747_cwji3d.jpg"
+    ],
+    "summary" : "Luxurious and light-filled apartment on the 6th floor on Rue de Rivoli, air-conditioned, Wi-Fi. 3 balconies with exceptional views of the Tuileries and Rivoli. Sleeps 4.",
+    "createdAt" : 1638729175632.0,
+    "reviews" : [],
+    "propertyType" : "Appartment",
+    "capacity" : 5,
+    "amenities" : [],
+    "host" : {},
+    "loc" : {
+        "country" : "France",
+        "city" : "Paris"
+    }
+}
+
+/* 37 */
+{
+    "_id" : ObjectId("61af38cf33e9fb6b20be78d5"),
+    "name" : "LOFT SAINT-HONORÉ ",
+    "price" : 452,
+    "imgUrls" : [ 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638442242/sprint4_staysPics/paris/4/1640b246-77b5-4e06-956b-fc425cfd2df5_mrs35q.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638442242/sprint4_staysPics/paris/4/b85ae89c-308d-46e6-abe4-bcdd4c59620e_tnpz9h.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638442242/sprint4_staysPics/paris/4/b4e79b4f-fec6-4e91-8cdb-797c0adf7a8a_kn9ido.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638442242/sprint4_staysPics/paris/4/468451a8-cf21-47cc-b224-640acdb9176a_dpun5s.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638442242/sprint4_staysPics/paris/4/012bd591-7b6a-4bb4-a744-ce8381d920c3_faith9.jpg"
+    ],
+    "summary" : "Exceptional atypical loft of 75m2, with 2 bedrooms, a shower room. This spacious and modern loft has a 10m2 terrace with a small garden. Located in the heart of Paris on rue Saint-Honoré. You will be surrounded by chic boutiques such as Chanel, Christian Dior and Louis Vuitton (at the bottom of the building). You can also find the largest squares of Paris nearbly such as Concorde (6 mins walk), Madeleine (6 mins walk) Vendôme (4 mins walk) and as Place or the Louvre (13 mins walk).",
+    "createdAt" : 1638729175632.0,
+    "reviews" : [],
+    "propertyType" : "Appartment",
+    "capacity" : 5,
+    "amenities" : [],
+    "host" : {},
+    "loc" : {
+        "country" : "France",
+        "city" : "Paris"
+    }
+}
+
+/* 38 */
+{
+    "_id" : ObjectId("61af38cf33e9fb6b20be78d6"),
+    "name" : "My House - Louvre - 2-room apartment - Deluxe",
+    "price" : 415,
+    "imgUrls" : [ 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638442256/sprint4_staysPics/paris/5/fb099f7f-107c-41fc-84ee-c325af6d95e5_fhtdli.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638442256/sprint4_staysPics/paris/5/8f5d1324-bed1-448e-8e99-3e558179b634_q29ypo.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638442255/sprint4_staysPics/paris/5/a857b912-128f-4ca5-9b9b-19111cbd8eca_m35mzx.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638442255/sprint4_staysPics/paris/5/4159b247-461d-4653-8a6e-6f9225b4d4f9_wicqa8.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638442255/sprint4_staysPics/paris/5/30c5f6ab-2f41-4474-b1ee-13c5b84d47fb_d77xeu.jpg"
+    ],
+    "summary" : "Renovated in the spirit of the 50s of the food shops of the old Halles of Paris, with a touch of 70s pop-joyous, this 2 room apartment will offer you the perfect mix of modern comfort and vintage atmosphere: the kitchen takes the codes of formica and integrates all the desired equipment, the living room composed of references of the current design expertly mixed will ensure you conviviality and relaxation, the dining area will allow you to make a gourmet or studious break or both!",
+    "createdAt" : 1638729175632.0,
+    "reviews" : [],
+    "propertyType" : "Appartment",
+    "capacity" : 5,
+    "amenities" : [],
+    "host" : {},
+    "loc" : {
+        "country" : "France",
+        "city" : "Paris"
+    }
+}
+
+/* 39 */
+{
+    "_id" : ObjectId("61af38cf33e9fb6b20be78d7"),
+    "name" : "Unique apartment on the banks of the Seine",
+    "price" : 295,
+    "imgUrls" : [ 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638442270/sprint4_staysPics/paris/6/e4f84e1e-c4c3-490a-85c8-7e5a138dcb6f_bh6poj.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638442270/sprint4_staysPics/paris/6/36684e85-50a4-46e0-b13b-a1324d746533_mg9ynz.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638442269/sprint4_staysPics/paris/6/906ef496-26c0-44cc-80dc-f793476e31e6_jxz2n2.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638442269/sprint4_staysPics/paris/6/3e53b559-8898-42a7-94a4-0ba70f0d6e70_evy7ea.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638442269/sprint4_staysPics/paris/6/2b31152d-6448-4d02-adfd-bd285346404a_fw0gaa.jpg"
+    ],
+    "summary" : "Welcome to my refurbished apartment in front of Notre Dame. Located on the banks of the Seine, it is ideal for exploring the city of light. The apartment will seduce you with its design and typical Parisian decoration.",
+    "createdAt" : 1638729175632.0,
+    "reviews" : [],
+    "propertyType" : "Appartment",
+    "capacity" : 5,
+    "amenities" : [],
+    "host" : {},
+    "loc" : {
+        "country" : "France",
+        "city" : "Paris"
+    }
+}
+
+/* 40 */
+{
+    "_id" : ObjectId("61af38cf33e9fb6b20be78d8"),
+    "name" : "The Penthouse/Bryant Park",
+    "price" : 550,
+    "imgUrls" : [ 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638442313/sprint4_staysPics/newYork/1/fe97a4db-e382-45b0-9348-a7a3685c5e38_ny5zeq.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638442313/sprint4_staysPics/newYork/1/fd1c0e19-c25f-43fb-9bb9-2df68b544800_kijzgp.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638442312/sprint4_staysPics/newYork/1/f3efb163-45a5-4c3e-9726-e8a573961dd1_pwhdir.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638442312/sprint4_staysPics/newYork/1/e18cb6a6-3939-464f-bf0c-e7446c816930_j95l8y.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638442312/sprint4_staysPics/newYork/1/4dbd9ba6-17ef-40da-b780-ed0bcc260ca4_sqdsrr.jpg"
+    ],
+    "summary" : "This private penthouse is a slice of heaven! You all be surrounded by luxurious 16-foot ceiling and stunning staircases. The bedroom has comfortable queen sized bed designed for better sleep, with a walk-in shower for two and jacuzzi tub. The living room has a large open space crafted with elegant furniture and flat screen smart TV. The kitchen is equipped with all necessary appliances, it has a dining table that fits up to 6 people and an extra half bath for your guests.",
+    "createdAt" : 1638729175632.0,
+    "reviews" : [],
+    "propertyType" : "Appartment",
+    "capacity" : 5,
+    "amenities" : [],
+    "host" : {},
+    "loc" : {
+        "country" : "US",
+        "city" : "New-York"
+    }
+}
+
+/* 41 */
+{
+    "_id" : ObjectId("61af38cf33e9fb6b20be78d9"),
+    "name" : "Brownstone Studio off Central Park!",
+    "price" : 245,
+    "imgUrls" : [ 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638442326/sprint4_staysPics/newYork/2/3c2e2656_original_fglfyc.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638442325/sprint4_staysPics/newYork/2/f1c5856e_original_bw03fv.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638442325/sprint4_staysPics/newYork/2/c604e1c1_original_jzqpbx.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638442325/sprint4_staysPics/newYork/2/76a7a1ca_original_sfwrqu.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638442325/sprint4_staysPics/newYork/2/7d46e1b1_original_ghjiku.jpg"
+    ],
+    "summary" : "Special ‘By The Month’ Pricing Includes ALL!!! Right next to Central Park. June 2021 Please send message to inquire about availability and rate!",
+    "createdAt" : 1638729175632.0,
+    "reviews" : [],
+    "propertyType" : "Appartment",
+    "capacity" : 5,
+    "amenities" : [],
+    "host" : {},
+    "loc" : {
+        "country" : "US",
+        "city" : "New-York"
+    }
+}
+
+/* 42 */
+{
+    "_id" : ObjectId("61af38d033e9fb6b20be78da"),
+    "name" : "Hudson Yards Penthouse 2bedroom Penthouse!",
+    "price" : 1299,
+    "imgUrls" : [ 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638442336/sprint4_staysPics/newYork/3/fb1e4a3a-b366-469f-9ede-102f411b6111_cqbibx.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638442336/sprint4_staysPics/newYork/3/555455a0-4db8-44cb-9e86-629b76943c11_mmqswx.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638442336/sprint4_staysPics/newYork/3/5c8940bc-9c25-4e33-88ef-e4fb68c80aba_y6bppj.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638442336/sprint4_staysPics/newYork/3/2a5789c6-efc9-4710-af26-fc8f88a2f8ff_cjquuk.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638442336/sprint4_staysPics/newYork/3/0ed5c082-14ba-4b3d-9957-b70cb1805a63_h225fy.jpg"
+    ],
+    "summary" : "Entire condominium (condo) hosted by New York",
+    "createdAt" : 1638729175632.0,
+    "reviews" : [],
+    "propertyType" : "Appartment",
+    "capacity" : 5,
+    "amenities" : [],
+    "host" : {},
+    "loc" : {
+        "country" : "US",
+        "city" : "New-York"
+    }
+}
+
+/* 43 */
+{
+    "_id" : ObjectId("61af38d033e9fb6b20be78db"),
+    "name" : "Manhattan Executive Suite",
+    "price" : 999,
+    "imgUrls" : [ 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638442347/sprint4_staysPics/newYork/4/fe5e82bc-5e3c-4d18-ae0c-99df5bffd5e5_pvhyg7.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638442347/sprint4_staysPics/newYork/4/f1c671b1-b8f2-4e95-a2e9-a61fd115532c_serfix.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638442347/sprint4_staysPics/newYork/4/d69092ff-a73c-49d9-a4a3-957401f5029c_gjb3hp.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638442347/sprint4_staysPics/newYork/4/69e48b97-3720-46e5-a8f3-e753f75d1cc7_zcv8c5.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638442347/sprint4_staysPics/newYork/4/1bda0f82-ebd7-46db-a1ef-4c0a428d7959_ggkmxt.jpg"
+    ],
+    "summary" : "This exotic Manhattan condo boasts glowing views of the New York skyline. Top-to-bottom daring colors with a taste equivalent to black caviar, and a wide-angle shot of the Empire State Building and H&M Skyscraper, where you can watch the New Years Ball Drop from the comfort of the living room and guest bedroom.",
+    "createdAt" : 1638729175632.0,
+    "reviews" : [],
+    "propertyType" : "Suite",
+    "capacity" : 5,
+    "amenities" : [],
+    "host" : {},
+    "loc" : {
+        "country" : "US",
+        "city" : "New-York"
+    }
+}
+
+/* 44 */
+{
+    "_id" : ObjectId("61af38d033e9fb6b20be78dc"),
+    "name" : "Stylish Large SPARKLING Gramercy Loft!",
+    "price" : 300,
+    "imgUrls" : [ 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638442368/sprint4_staysPics/newYork/5/178504b9-9177-43dc-812e-25b775a9d91a_omvm0f.png", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638442366/sprint4_staysPics/newYork/5/59b42a86-c3a0-43e8-93ae-722d3d47af0b_zokyiq.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638442366/sprint4_staysPics/newYork/5/f6e83369-4e29-4b51-bdb9-15eaefa63d67_fqhyft.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638442366/sprint4_staysPics/newYork/5/d79beb16-65de-4b4e-a8c2-4f2f2e3e89e7_xg6vfr.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638442365/sprint4_staysPics/newYork/5/285758b1-e91e-4502-9bad-ba165f13ca65_kerhet.jpg"
+    ],
+    "summary" : "Clean and stylish light-filled 1BR loft apartment in a small historic building, complete with a sweet little resident cat (^_^). High ceilings, mellow vibe, great for WFH. Prime location, near Flatiron and Madison Park. Featured in The Plum Guide & The Guardian.",
+    "createdAt" : 1638729175632.0,
+    "reviews" : [],
+    "propertyType" : "Suite",
+    "capacity" : 5,
+    "amenities" : [],
+    "host" : {},
+    "loc" : {
+        "country" : "US",
+        "city" : "New-York"
+    }
+}
+
+/* 45 */
+{
+    "_id" : ObjectId("61af38d033e9fb6b20be78df"),
+    "name" : "Fabulous Leicester Sq 1BR - Netflix & Nespresso",
+    "price" : 539,
+    "imgUrls" : [ 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638442439/sprint4_staysPics/london/2/ecf5f700-fcb9-4434-a67f-8ac43011d1fc_tb23sa.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638442439/sprint4_staysPics/london/2/152195fd-186b-47d3-8651-057961b4588d_ykj2lz.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638442439/sprint4_staysPics/london/2/7364ee14-86f0-49d9-b5b7-b2dde82763a9_xas4pg.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638442439/sprint4_staysPics/london/2/4b586f0f-d88d-40ba-8b31-41eb582a1ca0_vd2brw.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638442439/sprint4_staysPics/london/2/03ce77fb-a646-4fec-a865-fc7297322d87_gdj9gq.jpg"
+    ],
+    "summary" : "Fabulous Leicester Sq 1BR - Netflix & Nespresso",
+    "createdAt" : 1638729175632.0,
+    "reviews" : [ 
+        {
+            "txt" : "aye yay good",
+            "categories" : {
+                "cleanliness" : 5,
+                "accuracy" : 4.5,
+                "communication" : 5,
+                "location" : 4.5,
+                "checkIn" : 4,
+                "value" : 4.5
+            },
+            "createdAt" : 1638729175631.0,
+            "user" : {
+                "fullName" : "Dodo James"
+            }
+        }
+    ],
+    "propertyType" : "Appartment",
+    "capacity" : 5,
+    "amenities" : [ 
+        "Pets allowed"
+    ],
+    "host" : {},
+    "loc" : {
+        "country" : "GB",
+        "city" : "London",
+        "countryCode" : "UK",
+        "address" : "London,United Kingdom",
+        "lat" : 51.50735,
+        "lng" : -0.12775
+    }
+}
+
+/* 46 */
+{
+    "_id" : ObjectId("61af38d033e9fb6b20be78e0"),
+    "name" : "Professionally Serviced Spacious One Bed Apartment",
+    "price" : 394,
+    "imgUrls" : [ 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638442452/sprint4_staysPics/london/3/d1bf5ef8-3b3d-467e-b63c-28d8716eb07a_ielwud.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638442451/sprint4_staysPics/london/3/c3ecee07-0dd4-4fec-8901-c37a9696cbda_r86qmt.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638442451/sprint4_staysPics/london/3/b315a687-f76c-4491-ab02-c8876f9de709_mkenu7.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638442451/sprint4_staysPics/london/3/9d8f4a4c-20f4-4858-9fc0-87271d984498_lgbkr1.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638442451/sprint4_staysPics/london/3/a248927e-26ce-4a23-abb0-231a5a08892d_zivzhy.jpg"
+    ],
+    "summary" : "The Rosebery aparthotel is a beautifully restored Victorian red brick building with 58 luxurious suites, with Farringdon and Chancery Lane tube stations only a five minute walk away. The Rosebery’s suites are designed and furnished with fully fitted kitchens, beautiful bathrooms and sumptuous beds; coupled with our personalised and flexible service, we establish a level of comfort, convenience and attention to detail that is the hallmark of our family-run serviced apartments.",
+    "createdAt" : 1638729175632.0,
+    "reviews" : [ 
+        {
+            "txt" : "awesome",
+            "categories" : {
+                "cleanliness" : 5,
+                "accuracy" : 4.5,
+                "communication" : 5,
+                "location" : 4.5,
+                "checkIn" : 4,
+                "value" : 4.5
+            },
+            "createdAt" : 1638729175601.0,
+            "user" : {
+                "fullName" : "Abe Simpson"
+            }
+        }
+    ],
+    "propertyType" : "apartment",
+    "capacity" : 5,
+    "amenities" : [ 
+        "Wifi"
+    ],
+    "host" : {},
+    "loc" : {
+        "country" : "GB",
+        "city" : "London",
+        "countryCode" : "UK",
+        "address" : "London,United Kingdom",
+        "lat" : 51.50735,
+        "lng" : -0.12775
+    }
+}
+
+/* 47 */
+{
+    "_id" : ObjectId("61af384632e9fb6b50be78be"),
+    "name" : "inFront of the Beach house",
+    "price" : 635,
+    "imgUrls" : [ 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638442037/sprint4_staysPics/telAviv/1/ed89a868-e41f-4c6e-9d48-646f86b56438_qwy9qd.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638442037/sprint4_staysPics/telAviv/1/80593570-df24-400c-aec8-c7c64099f650_ytdt0f.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638442037/sprint4_staysPics/telAviv/1/e6f04176-316b-40cb-97cf-b236d13cca3a_ueggfx.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638442037/sprint4_staysPics/telAviv/1/46116d12-da7a-4473-9ad8-2f020643ab2d_z8bbsx.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638442037/sprint4_staysPics/telAviv/1/ed89a868-e41f-4c6e-9d48-646f86b56438_qwy9qd.jpg"
+    ],
+    "summary" : "New Building front the Beach next the Royal Beach Hotel. Apartment freshly decorated with 2 bedrooms and 2 bathrooms.",
+    "createdAt" : 163872917032.0,
+    "reviews" : [ 
+        {
+            "txt" : "A fantastic studio in a central location that facilitated our exploration of Berlin. Alan and Guenther were extremely quick to respond when we had any questions and were always very nice. The apartment was clean, organized, and most importantly for us, had a very comfortable bed! Highly recommended for your trip to Tel-Aviv.",
+            "categories" : {
+                "cleanliness" : 5,
+                "accuracy" : 4.5,
+                "communication" : 5,
+                "location" : 4.5,
+                "checkIn" : 4,
+                "value" : 4.5
+            },
+            "createdAt" : 1638729175631.0,
+            "user" : {
+                "fullName" : "Homer Simpson"
+            }
+        }
+    ],
+    "propertyType" : "Appartment",
+    "capacity" : 5,
+    "amenities" : [ 
+        "Wifi", 
+        "Pets allowed"
+    ],
+    "host" : {},
+    "loc" : {
+        "country" : "Israel",
+        "city" : "Tel-Aviv"
+    }
+}
+
+/* 48 */
+{
+    "_id" : ObjectId("61af384632e9fb6b50be78b9"),
+    "name" : "inFront of the Beach house",
+    "price" : 1635,
+    "imgUrls" : [ 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638442037/sprint4_staysPics/telAviv/1/80593570-df24-400c-aec8-c7c64099f650_ytdt0f.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638442037/sprint4_staysPics/telAviv/1/ed89a868-e41f-4c6e-9d48-646f86b56438_qwy9qd.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638442037/sprint4_staysPics/telAviv/1/e6f04176-316b-40cb-97cf-b236d13cca3a_ueggfx.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638442037/sprint4_staysPics/telAviv/1/46116d12-da7a-4473-9ad8-2f020643ab2d_z8bbsx.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638442037/sprint4_staysPics/telAviv/1/ed89a868-e41f-4c6e-9d48-646f86b56438_qwy9qd.jpg"
+    ],
+    "summary" : "New Building front the Beach next the Royal Beach Hotel. Apartment freshly decorated with 2 bedrooms and 2 bathrooms.",
+    "createdAt" : 163872917032.0,
+    "reviews" : [ 
+        {
+            "txt" : "A fantastic studio in a central location that facilitated our exploration of Berlin. Alan and Guenther were extremely quick to respond when we had any questions and were always very nice. The apartment was clean, organized, and most importantly for us, had a very comfortable bed! Highly recommended for your trip to Tel-Aviv.",
+            "categories" : {
+                "cleanliness" : 5,
+                "accuracy" : 4.5,
+                "communication" : 5,
+                "location" : 4.5,
+                "checkIn" : 4,
+                "value" : 4.5
+            },
+            "createdAt" : 1638729175631.0,
+            "user" : {
+                "fullName" : "Moe Sizlack"
+            }
+        }
+    ],
+    "propertyType" : "Appartment",
+    "capacity" : 5,
+    "amenities" : [ 
+        "Wifi", 
+        "Pets allowed"
+    ],
+    "host" : {},
+    "loc" : {
+        "country" : "Israel",
+        "city" : "Tel-Aviv"
+    }
+}
+
+/* 49 */
+{
+    "_id" : ObjectId("61af38cf33e9fb6b20be78e3"),
+    "name" : "Sky penthouse near Eiffel tower",
+    "price" : 1227,
+    "imgUrls" : [ 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638442215/sprint4_staysPics/paris/2/e343f435-4f57-47ee-89cd-110dcea29234_nrknpp.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638442216/sprint4_staysPics/paris/2/37c0e266-e4ec-46a3-9e29-02ef2da76b44_x8nibg.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638442216/sprint4_staysPics/paris/2/fc761a5d-dc5c-4ba4-a445-a6ad28a48a3e_xzpoak.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638442215/sprint4_staysPics/paris/2/3d51f920-00cd-435a-b37a-10195c3806bb_eg6xc5.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638442215/sprint4_staysPics/paris/2/8208700e-b729-438d-b4fc-265b3f95ac12_ue2yxj.jpg"
+    ],
+    "summary" : "Beautiful modern and fully renovated apartment of 35m2. It is located on the top floor with a terrace of 16m2 and a spectacular view of the Eiffel Tower. The private room has an independent entrance.",
+    "createdAt" : 1638729175632.0,
+    "reviews" : [],
+    "propertyType" : "Appartment",
+    "capacity" : 5,
+    "amenities" : [],
+    "host" : {},
+    "loc" : {
+        "country" : "France",
+        "city" : "Paris"
+    }
+}
+
+/* 50 */
+{
+    "_id" : ObjectId("61af38cf33e9fb6b20be78e4"),
+    "name" : "Sky penthouse near Eiffel tower",
+    "price" : 667,
+    "imgUrls" : [ 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638442215/sprint4_staysPics/paris/2/3d51f920-00cd-435a-b37a-10195c3806bb_eg6xc5.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638442216/sprint4_staysPics/paris/2/37c0e266-e4ec-46a3-9e29-02ef2da76b44_x8nibg.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638442216/sprint4_staysPics/paris/2/37c0e266-e4ec-46a3-9e29-02ef2da76b44_x8nibg.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638442215/sprint4_staysPics/paris/2/e343f435-4f57-47ee-89cd-110dcea29234_nrknpp.jpg", 
+        "https://res.cloudinary.com/sprint4rad/image/upload/v1638442216/sprint4_staysPics/paris/2/fc761a5d-dc5c-4ba4-a445-a6ad28a48a3e_xzpoak.jpg"
+    ],
+    "summary" : "Beautiful modern and fully renovated apartment of 35m2. It is located on the top floor with a terrace of 16m2 and a spectacular view of the Eiffel Tower. The private room has an independent entrance.",
+    "createdAt" : 1638729175632.0,
+    "reviews" : [],
+    "propertyType" : "Appartment",
+    "capacity" : 5,
+    "amenities" : [],
+    "host" : {},
+    "loc" : {
+        "country" : "France",
+        "city" : "Paris"
+    }
+}
