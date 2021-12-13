@@ -499,11 +499,10 @@
   top: 0;
   left: 0;
   padding: 15px;
-  box-shadow: 0 5px 7px 0 rgba(0,0,0,.05);
-
+  box-shadow: 0 5px 7px 0 rgba(0, 0, 0, 0.05);
 
   .gradient-btn {
-    width: 180px !important; 
+    width: 180px !important;
     height: 48px;
     border-radius: 10px;
     outline: none;
@@ -513,25 +512,24 @@
     border: none;
     cursor: pointer;
   }
-  
 }
 
 .details-nav {
   gap: 30px;
-  margin-inline-start: 100px ;
- 
+  margin-inline-start: 100px;
 }
 
 .reserve-stay-mini {
   margin-inline-end: 100px;
   gap: 1rem;
-
 }
 
 .reserve-mini-info {
   flex-direction: column;
   align-items: flex-start;
-  span, h4,h3  {
+  span,
+  h4,
+  h3 {
     margin: 0;
   }
   span {
@@ -547,6 +545,23 @@
     line-height: 16px;
   }
 }
+
+.el-notification__title {
+  color: $clr1;
+  font-size: 26px;
+}
+
+.el-notification__content {
+  font-size: 18px;
+  color: $clr2;
+}
+.el-notification {
+  font-size: 30px;
+  border: 1px solid $clr4;
+  .reserve-popup {
+  }
+}
+
 // .el-input {
 //   .el-input__inner {
 //     border: 1px solid gray;

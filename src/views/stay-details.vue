@@ -1,7 +1,10 @@
 <template>
   <div class="stay-details">
-    <div class="details-reserve-header flex space-between align-center" :style="determinePos">
-      <div class="details-nav flex" >
+    <div
+      class="details-reserve-header flex space-between align-center"
+      :style="determinePos"
+    >
+      <div class="details-nav flex">
         <span>Photos</span>
         <span>Amenities</span>
         <span>Reviews</span>
@@ -14,8 +17,10 @@
             / night
           </h3>
           <h4>
-            <i class="fas fa-star review-star"></i> {{ stayRating }}
-            ({{ stay.reviews.length }} Reviews)
+            <i class="fas fa-star review-star"></i> {{ stayRating }} ({{
+              stay.reviews.length
+            }}
+            Reviews)
           </h4>
         </div>
         <gradientBtn @click="goToOrder" :text="'Reserve'" />
@@ -529,12 +534,11 @@ export default {
       });
       this.$notify({
         title: "Trip Reserved",
-        message: "Your order has been sent to the host",
+        message: "Your order has been sent to the host for approval.",
         position: "bottom-right",
         customClass: "reserve-popup",
       });
-
-      // console.log(this.order.totalPrice);
+      this.resetData();
     },
     calcTime() {
       console.log(this.time[0]);
@@ -604,8 +608,16 @@ export default {
       return sum / categoryNum;
     },
     goToOrder() {
-      window.moveBy(250, 250)
-    }
+      window.moveBy(250, 250);
+    },
+    resetData() {
+      this.time = "";
+      this.numOfGuests = 1;
+      this.totalPrice = 0;
+      this.serviceFee = 0;
+      this.taxes = 0;
+      this.order = this.$store.getters.getEmptyOrder;
+    },
   },
   computed: {
     reviewSum() {

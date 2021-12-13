@@ -16,7 +16,8 @@ Vue.config.productionTip = false
 Vue.use(VueGoogleMaps, {
     load: {
         // key: 'AIzaSyCXvZqRU_DCYIFXrUgXmAar8vH_PiQY9BU',
-        key: 'AIzaSyCsfDoCF0hauYXIqGlnI7bjvyK8o9eou3s', // sprint 4 email api key
+        // key: 'AIzaSyCsfDoCF0hauYXIqGlnI7bjvyK8o9eou3s', // sprint 4 email api key
+        key: 'AIzaSyAnMOpXd0LO5KueJQhD4aegzqIUAnWcgu4', // omar API
         libraries: 'places', // This is required if you use the Autocomplete plugin
     },
 })
