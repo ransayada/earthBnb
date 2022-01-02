@@ -36,5 +36,5 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 
 ### Live-Demo
 ```
-https://earth-bnb-2021.herokuapp.com/#/
+[https://earth-bnb-2021.herokuapp.com/#/]
 ```
