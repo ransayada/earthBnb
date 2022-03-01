@@ -487,9 +487,6 @@
   color: $clr1;
 }
 
-.vue-map-container {
-}
-
 .details-reserve-header {
   position: fixed;
   background: #ffffff;
@@ -558,8 +555,7 @@
 .el-notification {
   font-size: 30px;
   border: 1px solid $clr4;
-  .reserve-popup {
-  }
+  
 }
 
 // .el-input {

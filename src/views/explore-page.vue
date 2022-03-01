@@ -7,8 +7,8 @@
     <exploreFilter @filtered="setFilterBy" />
     <stay-list :stays="stays" />
   </div>
-   <div v-else>
-    <img 
+  <div v-else>
+    <img
       src="https://res.cloudinary.com/sprint4rad/image/upload/v1639236399/loadingGif/loadinganimation_lh356j.gif"
     />
   </div>
@@ -17,7 +17,7 @@
 <script>
 import stayList from "../cmps/stay-list.vue";
 import exploreFilter from "../cmps/explore-filter.vue";
-import {eventBusService} from '../services/event-bus.service.js'
+import { eventBusService } from "../services/event-bus.service.js";
 export default {
   data() {
     return {
@@ -33,7 +33,7 @@ export default {
           toPrice: Infinity,
         },
       },
-      isLoading:false
+      isLoading: false,
     };
   },
   created() {
@@ -44,11 +44,11 @@ export default {
       this.$store.commit({ type: "setFilterBy", filterBy: this.filterBy });
       this.stays = this.$store.getters.staysToShow;
     }
-    eventBusService.$emit('setIsLoading')
-    setTimeout(()=>{
+    eventBusService.$emit("setIsLoading");
+    setTimeout(() => {
       this.isLoading = true;
-      eventBusService.$emit('setIsLoading')
-    },500)
+      eventBusService.$emit("setIsLoading");
+    }, 500);
   },
   methods: {
     setFilterBy(filterBy) {
@@ -84,10 +84,8 @@ export default {
         : "Find a place to stay";
     },
   },
-  mounted(){
-   
+  mounted() {
     window.scrollTo(0, 0);
-  
   },
   components: {
     stayList,
@@ -95,3 +93,4 @@ export default {
   },
 };
 </script>
+<style></style>

@@ -24,9 +24,12 @@ Vue.use(VueGoogleMaps, {
 
 new Vue({
     created() {
-        this.$store.dispatch({ type: 'loadStays' })
-            // this.$store.dispatch({ type: 'loadUser' })
+
+  
+        console.log('asda');
+        // this.$store.dispatch({ type: 'loadUser' })
         this.$store.dispatch({ type: 'loadOrders' })
+
 
     },
     router,
