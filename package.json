@@ -15,7 +15,7 @@
     "chart.js": "^2.9.4",
     "core-js": "^3.6.5",
     "element-ui": "^2.15.6",
-    "sass": "^1.43.4",
+    "sass": "^1.79.0",
     "sass-loader": "^8.0.2",
     "socket.io-client": "^4.4.0",
     "vue": "^2.6.11",
