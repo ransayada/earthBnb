@@ -18,7 +18,7 @@
     "sass": "^1.43.4",
     "sass-loader": "^8.0.2",
     "socket.io-client": "^4.4.0",
-    "vue": "^2.6.11",
+    "vue": "^3.0.0",
     "vue-chartjs": "^3.5.1",
     "vue-router": "^3.2.0",
     "vue2-datepicker": "^3.10.4",
